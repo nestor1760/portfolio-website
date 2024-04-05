@@ -223,8 +223,7 @@ const AboutPart = () => {
             <button className={languagesBtn ? 'active' : ''}onClick={showLanguages}>Languages</button>
           </BtnContainer>
           {infoBtn
-            ?
-              <InfoContainer>
+            ? <InfoContainer>
                 <InfoItem><IoPersonSharp size={20}/><Span>{name}</Span></InfoItem>
                 <InfoItem><CiCalendar size={20}/><Span>{birth}</Span></InfoItem>
                 <InfoItem><MdOutlineEmail size={20}/><Span>{email}</Span></InfoItem>
@@ -235,8 +234,7 @@ const AboutPart = () => {
                 <InfoLink href={facebook} target='_blank'><FaFacebook size={20}/><Span>facebook</Span></InfoLink>
               </InfoContainer>
             : educationBtn
-              ?
-                <Container>
+              ? <Container>
                   <Title>
                     <PiStudentFill size={26}/>
                     <p>Education</p>
@@ -250,8 +248,7 @@ const AboutPart = () => {
                     </Item>
                   )}
                 </Container>
-              :
-                <Container>
+              : <Container>
                   <Title>
                     <IoLanguageOutline size={26}/>
                     <p>Languages</p>
