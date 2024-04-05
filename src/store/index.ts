@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import modalSlice from "./modalSlice";
+import technologySlice from "./technologySlice";
 
 
 const store =  configureStore({
   reducer: {
     modal: modalSlice,
+    technology: technologySlice,
   }
 })
 

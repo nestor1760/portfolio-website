@@ -134,6 +134,14 @@ const Sidebar = () => {
     dispatch(setToggleSidebar())
   }
 
+  const scrollToPart = (id: string) => {
+    const navItem = document.getElementById(id);
+    if (navItem) {
+      navItem.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    dispatch(setSidebar({sidebar: false, scroll: false}))
+  };
+
   return (
     <SidebarOverlay 
           className={sidebar ? 'open' : ''} 
@@ -149,10 +157,10 @@ const Sidebar = () => {
               </CloseBtn>
             </SidebarHeader>
             <SidebarBody>
-              <SidebarItem><FaAddressBook size={24}/><Span>About me</Span></SidebarItem>
-              <SidebarItem><BiCodeAlt size={24}/><Span>Skills</Span></SidebarItem>
-              <SidebarItem><BiFolder size={24}/><Span>Projects</Span></SidebarItem>
-              <SidebarItem><MdContactMail size={24}/><Span>Contact</Span></SidebarItem>
+              <SidebarItem onClick={() => scrollToPart('about')}><FaAddressBook size={24}/><Span>About me</Span></SidebarItem>
+              <SidebarItem onClick={() => scrollToPart('skills')}><BiCodeAlt size={24}/><Span>Skills</Span></SidebarItem>
+              <SidebarItem onClick={() => scrollToPart('')}><BiFolder size={24}/><Span>Projects</Span></SidebarItem>
+              <SidebarItem onClick={() => scrollToPart('')}><MdContactMail size={24}/><Span>Contact</Span></SidebarItem>
             </SidebarBody>
           </SidebarMenu>
       </SidebarOverlay>

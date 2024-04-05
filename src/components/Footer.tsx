@@ -1,7 +1,9 @@
 import styled from "styled-components"
 import { FC } from "react"
+import { setSidebar } from "../store/modalSlice"
+import { useAppDispatch } from "../hook"
 
-const StyledFooter = styled.article`
+const StyledFooter = styled.section`
   width: 100%;
   height: 150px;
   color: white;
@@ -22,12 +24,21 @@ const StyledFooter = styled.article`
   }
 `
 
-const FooterTitle = styled.div`
-  width: 50%;
+const FooterTitle = styled.button`
+  width: 200px;
   font-size: 14px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  transition: 0.2s;
+
+  &:hover {
+    color: #68BAA5;
+  }
 
   & p:first-child {
     font-size: 45px;
@@ -52,7 +63,7 @@ const FooterMain = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   & a {
     margin-bottom: 10px;
@@ -68,20 +79,29 @@ const FooterMain = styled.div`
     font-size: 14px;
     width: 80%;
     margin-bottom: 20px;
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 `
 
 const Footer: FC = () => {
+  const dispatch = useAppDispatch()
+
+  const scrollToStart = (): void => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    dispatch(setSidebar({sidebar: false, scroll: false}))
+  }
   return (
     <StyledFooter>
-      <FooterTitle>
+      <FooterTitle onClick={() => scrollToStart()}>
         <p>Fronted</p>
         <p>Developer</p>
       </FooterTitle>
       <FooterMain>
         <a href="#">Terms of Use and Privacy Policy</a>
-        <p>Copyright 2024-2026 © Roman Nesterchuk. All rights reserved.</p>
+        <p>© 2024 All rights reserved.</p>
       </FooterMain>
     </StyledFooter>
   )

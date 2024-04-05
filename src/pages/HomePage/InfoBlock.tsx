@@ -1,21 +1,20 @@
 import styled from "styled-components"
 
-const StyledContainer = styled.article`
+const InfoBlock = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 100px 0;
-  padding: 0 10%;
+  margin: 150px 0;
 
   @media screen and (max-width: 1256px) {
-    margin-top: 100px;
     flex-direction: column;
     padding: 20px 0;
+    margin-bottom: 80px;
   }
 `
 
-const InfoBlock = styled.div`
+const InfoBlockItem = styled.div`
   width: 500px;
   display: flex;
   align-items: center;
@@ -58,7 +57,7 @@ const TitleInfo = styled.div`
 
   @media (max-width: 661px) {
     & h1 {
-      font-size: 83px;
+      font-size: 73px;
     }
 
     & p {
@@ -77,12 +76,12 @@ const MainInfo = styled.div`
   & h2 {
     font-size: 32px;
     font-weight: 500;
-    margin-bottom: 15px;
   }
 
   & p {
     font-size: 16px;
     letter-spacing: 1.6px;
+    margin-top: 15px;
   }
 
   @media screen and (max-width: 992px) {
@@ -92,10 +91,10 @@ const MainInfo = styled.div`
   }
 `
 
-const HomePage = () => {
+const InfoPart = () => {
   return (
-    <StyledContainer>
-      <InfoBlock>
+    <InfoBlock>
+      <InfoBlockItem>
         <TitleInfo>
           <h1>Fronted</h1>
           <p>Developer</p>
@@ -105,10 +104,20 @@ const HomePage = () => {
           <h2>My name is Roman</h2>
           <p> I am a young and ambitious Frontend Developer. My goal is to create impressive and innovative web applications that not only meet the requirements of the modern user but also enhance the overall user experience.</p>
         </MainInfo>
-      </InfoBlock>
-      
-    </StyledContainer>
+      </InfoBlockItem>
+      <InfoBlockItem>
+        <TitleInfo>
+          <h1>Fronted</h1>
+          <p>Developer</p>
+        </TitleInfo>
+        <MainInfo>
+          <h2>Hello!</h2>
+          <h2>My name is Roman</h2>
+          <p> I am a young and ambitious Frontend Developer. My goal is to create impressive and innovative web applications that not only meet the requirements of the modern user but also enhance the overall user experience.</p>
+        </MainInfo>
+      </InfoBlockItem>
+    </InfoBlock>
   )
 }
 
-export default HomePage
+export default InfoPart

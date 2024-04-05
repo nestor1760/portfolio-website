@@ -3,13 +3,14 @@ import { CiMail } from "react-icons/ci";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 import { GrLinkedin } from "react-icons/gr";
 import { IoMenu } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
 import { FC, useEffect } from 'react';
 import Sidebar from '../UI/Sidebar';
 import { useAppDispatch, useAppSelector } from '../hook';
 import { setSidebar, setToggleSidebar } from '../store/modalSlice';
 import { useWindowWidth } from '../hooks/useWindowWindth';
 
-const StyledContainer = styled.article`
+const StyledContainer = styled.section`
   width: 100%;
   height: 80px;
   position: fixed;
@@ -88,12 +89,20 @@ const Header: FC = () => {
   const {sidebar, scroll} = useAppSelector(state => state.modal)
   const {windowWidth} = useWindowWidth()
 
+  const scrollToPart = (id: string) => {
+    const navItem = document.getElementById(id);
+    if (navItem) {
+      navItem.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+    dispatch(setSidebar({sidebar: false, scroll: false}))
+  };
+
   const toogleMenu = () => {
     dispatch(setToggleSidebar())
   }
 
   useEffect(() => {
-    if(windowWidth > 807) {
+    if(windowWidth > 865) {
       dispatch(setSidebar({sidebar: false, scroll: false}))
     }
   }, [windowWidth])
@@ -115,11 +124,12 @@ const Header: FC = () => {
           <a href=''><CiMail size={24}/></a>
           <a href=''><PiTelegramLogoDuotone size={24}/></a>
           <a href='https://www.linkedin.com/in/roman-nesterchuk-182434278/' target='_blank'><GrLinkedin size={24}/></a>
+          <a href='https://github.com/nestor1760' target='_blank'><FaGithub size={24}/></a>
         </HeaderContact>
-        {(windowWidth > 807) 
+        {(windowWidth > 865) 
           ? <NavigationMenu>
-              <NavItem>About me</NavItem>
-              <NavItem>Skills</NavItem>
+              <NavItem onClick={() => scrollToPart('about')}>About me</NavItem>
+              <NavItem onClick={() => scrollToPart('skills')}>Skills</NavItem>
               <NavItem>Projects</NavItem>
               <NavItem>Contact</NavItem>
             </NavigationMenu>
