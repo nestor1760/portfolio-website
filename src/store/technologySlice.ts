@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ISkillsItem } from "../types/types";
+import { ISkillsItem } from "../data/interfaces";
 
 type TechState = {
   data: ISkillsItem[],

@@ -1,14 +1,12 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import HomePage from "./pages/HomePage/HomePage"
-import { Wrapper } from "./styledTags/Wrapper"
+import Header from "./components/General/Components/Header/Header"
+import Home from "./components/General/Components/HomePart/Home"
+import { Wrapper } from "./styledTags/Wrapper/Wrapper"
 
 function App() {
   return (
     <Wrapper>
       <Header />
-      <HomePage />
-      <Footer />
+      <Home />
     </Wrapper>
   )
 }

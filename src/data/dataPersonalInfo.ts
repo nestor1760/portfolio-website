@@ -1,4 +1,4 @@
-import { IPersonalInfo } from "../types/types"
+import { IPersonalInfo } from "./interfaces";
 
 export const personalData:IPersonalInfo = {
   id: 1,

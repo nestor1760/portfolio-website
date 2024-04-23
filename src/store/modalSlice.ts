@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ISidebarState } from "../types/types";
+import { ISidebarState } from "./interfaces";
 
 type ModalState = {
   scroll: boolean,
@@ -19,12 +19,8 @@ const modalSlice = createSlice({
       state.sidebar = action.payload.sidebar;
       state.scroll = action.payload.scroll;
     },
-    setToggleSidebar: (state) => {
-      state.sidebar = !state.sidebar;
-      state.scroll = !state.scroll;
-    }
   },
 });
 
-export const {setSidebar, setToggleSidebar} = modalSlice.actions;
+export const {setSidebar} = modalSlice.actions;
 export default modalSlice.reducer;

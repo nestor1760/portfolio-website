@@ -1,0 +1,18 @@
+{
+  "header": {
+    "headerNav": [
+      {
+        "name": "Glówna"
+      },
+      {
+        "name": "O mnie"
+      },
+      {
+        "name": "Umiejętności"
+      },
+      {
+        "name": "Projekty"
+      }
+    ]
+  }
+}

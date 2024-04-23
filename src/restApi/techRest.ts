@@ -1,7 +1,6 @@
+import { ISkillsItem } from "../data/interfaces"
 import { AppDispatch } from "../store"
 import { setTechError, setTechLoading, setTechSuccess } from "../store/technologySlice"
-import { ISkillsItem } from "../types/types"
-
 
 export const techDataRest = (data: ISkillsItem[]) => async (dispatch: AppDispatch) => {
   dispatch(setTechLoading())

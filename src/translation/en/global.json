@@ -1,0 +1,18 @@
+{
+  "header": {
+    "headerNav": [
+      {
+        "name": "Home"
+      },
+      {
+        "name": "About me"
+      },
+      {
+        "name": "Skills"
+      },
+      {
+        "name": "Work"
+      }
+    ]
+  }
+}

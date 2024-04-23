@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 //for PersonalInfo.tsx
 interface IUniversity {
   id: number,
@@ -30,20 +28,9 @@ export interface IPersonalInfo {
   education: IUniversity[];
 }
 
-//for Wrapper.tsx
-export interface IWrapper {
-  children: ReactNode,
-}
-
 //for dataSkills.tsx
 export interface ISkillsItem {
   id: number,
   image: string,
   title: string,
-}
-
-//for modalSlice.ts
-export interface ISidebarState {
-  scroll: boolean,
-  sidebar: boolean,
 }

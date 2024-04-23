@@ -1,4 +1,5 @@
-import { ISkillsItem } from './../types/types';
+import { ISkillsItem } from "./interfaces";
+
 export const dataSkills: ISkillsItem[] = [
   {
     id: 1,
