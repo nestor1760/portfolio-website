@@ -26,6 +26,7 @@ export const ImageContainer = styled.div`
   @media ${tablet_screen} {
     width: 555px;
     height: 800px;
+    justify-content: center;
   }
 
   @media ${small_tablet_screen} {
@@ -70,7 +71,7 @@ export const Image = styled.img`
   object-fit: cover;
   z-index: 1;
 
-  media ${tablet_screen} {
+  @media ${tablet_screen} {
     width: 400px;
     margin: 40px 0 0 0;
   }
