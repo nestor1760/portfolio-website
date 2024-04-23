@@ -12,7 +12,3 @@ const Robot = () => {
 }
 
 export default Robot
-
-{/* <AnimatedItem top="0" right="150px" delay="2.3s">Modern</AnimatedItem>
-      <AnimatedItem top="100px" left="-80px" delay="2.2s">Responsive</AnimatedItem>
-      <AnimatedItem top="100px" right="-60px" delay="2.5s">Interactive</AnimatedItem> */}
