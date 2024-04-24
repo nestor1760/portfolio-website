@@ -11,7 +11,8 @@ export const IntroContainer = styled.div`
   color: ${white_color};
 
   @media ${tablet_screen} {
-    margin: 360px 0 60px 0;
+    width: 90%;
+    margin: 0 0 60px 0;
   }
 
   @media ${small_tablet_screen} {
@@ -20,6 +21,7 @@ export const IntroContainer = styled.div`
 
   @media ${mobile_screen} {
     width: 90%;
+    height: 400px;
     margin: 50px 0 0 0;
   }
 `

@@ -1,18 +1,29 @@
 {
   "header": {
-    "headerNav": [
-      {
-        "name": "Home"
-      },
-      {
-        "name": "About me"
-      },
-      {
-        "name": "Skills"
-      },
-      {
-        "name": "Work"
-      }
-    ]
+    "home": "Home",
+    "about": "About me",
+    "skills": "Skills",
+    "work": "Work",
+    "button": "Contact Me"
+  },
+  "intro": {
+    "greeting": "Hi, I'm",
+    "name": "Roman Nesterchuk",
+    "description": {
+      "firstPart": "I am a young and ambitious",
+      "span": "Frontend Developer.",
+      "secondPart": "My goal is to create impressive and innovative web applications."
+    },
+    "button": "Contact Me",
+    "animatedItem": {
+      "firstItem": "Modern",
+      "secondItem": "Responsive",
+      "thirdItem": "Interactive"
+    }
+  },
+  "aboutPart": {
+    "navItem": "About Me",
+    "slogan": "Turn dreams into living masterpieces.",
+    "description": "My Name Is Roma, I am a young and ambitious Frontend Developer with a great desire to create modern and innovative websites. During my studies, I received a degree in technologies such as HTML, CSS, JavaScript, and React, as well as an understanding of the fundamental concepts of frontend development. With the help of projects that I implemented during my studies, I learned how to solve real technical problems. I also gained experience working with various technologies and practiced project development from start to finish. I am ready to be part of your team and bring my energy and skills. My goal is not only to meet the needs of the modern user, but also to increase the level of user experience and participate in the creation of high-quality web applications."
   }
 }

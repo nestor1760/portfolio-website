@@ -1,18 +1,17 @@
+import { useLanguage } from "../../../../../hooks/useLanguage"
 import { AnimatedItem, Image, ImageContainer } from "./HomeImgStyles"
 
 const Robot = () => {
+  const { t } = useLanguage()
+
   return (
     <ImageContainer>
-      <AnimatedItem top="0" right="170px" delay="2.3s">Modern</AnimatedItem>
-      <AnimatedItem top="100px" left="-70px" delay="2.2s">Responsive</AnimatedItem>
-      <AnimatedItem top="100px" right="-30px" delay="2.5s">Interactive</AnimatedItem>
+      <AnimatedItem top="0" right="170px" delay="2.3s">{t("intro.animatedItem.firstItem")}</AnimatedItem>
+      <AnimatedItem top="100px" left="-70px" delay="2.2s">{t("intro.animatedItem.secondItem")}</AnimatedItem>
+      <AnimatedItem top="100px" right="-30px" delay="2.5s">{t("intro.animatedItem.thirdItem")}</AnimatedItem>
       <Image src="/public/media/robot.png" />
     </ImageContainer>
   )
 }
 
 export default Robot
-
-{/* <AnimatedItem top="0" right="150px" delay="2.3s">Modern</AnimatedItem>
-      <AnimatedItem top="100px" left="-80px" delay="2.2s">Responsive</AnimatedItem>
-      <AnimatedItem top="100px" right="-60px" delay="2.5s">Interactive</AnimatedItem> */}

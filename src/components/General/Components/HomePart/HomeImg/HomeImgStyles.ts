@@ -25,7 +25,7 @@ export const ImageContainer = styled.div`
 
   @media ${tablet_screen} {
     width: 555px;
-    height: 800px;
+    height: 500px;
     justify-content: center;
   }
 

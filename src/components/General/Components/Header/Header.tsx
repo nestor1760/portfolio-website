@@ -1,5 +1,5 @@
 import { IoMenu } from "react-icons/io5";
-import { ChangeEvent, FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { NavItem, NavigationMenu, SidebarBtn, StyledContainer, Title } from "./HeaderStyles";
 import { useWindowWidth } from "../../../../hooks/useWindowWidth";
 import { useAppDispatch } from "../../../../hook";
@@ -9,16 +9,14 @@ import Sidebar from "../../../UI/Sidebar/Sidebar";
 import Select from "../../../UI/Select/Select";
 import { Container } from "../../../../styledTags/Container/Container";
 import ContactBtn from "../../../UI/ContactBtn/ContactBtn";
-// import { useTranslation } from "react-i18next";
+import { useLanguage } from "../../../../hooks/useLanguage";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
   const { windowWidth } = useWindowWidth()
   const scrollPosition = useScroll()
-  // const [t, i18n] = useTranslation("global")
-  const [language, setLanguage] = useState('en')
-  const title = '<<span>Nestor</span>/>'
-
+  const { language, handleLanguage, t } = useLanguage()
+  const title = '<<span>Nestor</span>/>';
 
   const scrollToStart = () => {
     window.scrollTo({
@@ -46,11 +44,6 @@ const Header: FC = () => {
     }
   }, [windowWidth])
 
-  const handleLanguage = (e: ChangeEvent<HTMLSelectElement>): void => {
-    setLanguage(e.target.value)
-    // i18n.changeLanguage(language)
-  }
-
   return (
     <>
       <StyledContainer
@@ -59,13 +52,13 @@ const Header: FC = () => {
         className={(windowWidth > 977) ? (scrollPosition > 95) ? 'bigger' : '' : ''}
       >
         <Title dangerouslySetInnerHTML={{ __html: title }} onClick={scrollToStart} />
-        {(windowWidth > 993)
+        {(windowWidth > 1024)
           ? <>
             <NavigationMenu>
-              <NavItem onClick={() => scrollToPart('home')}>Home</NavItem>
-              <NavItem onClick={() => scrollToPart('about')}>About me</NavItem>
-              <NavItem onClick={() => scrollToPart('skills')}>Skills</NavItem>
-              <NavItem>Work</NavItem>
+              <NavItem onClick={() => scrollToPart('home')}>{t("header.home")}</NavItem>
+              <NavItem onClick={() => scrollToPart('about_me')}>{t("header.about")}</NavItem>
+              <NavItem onClick={() => scrollToPart('skills')}>{t("header.skills")}</NavItem>
+              <NavItem>{t("header.work")}</NavItem>
             </NavigationMenu>
             <Container align="center" justify="flex-end" width="auto">
               <Select
@@ -77,7 +70,7 @@ const Header: FC = () => {
                   { value: 'ua' },
                 ]}
               />
-              <ContactBtn width="190px" height="44px">Contact Me</ContactBtn>
+              <ContactBtn width="190px" height="44px">{t("header.button")}</ContactBtn>
             </Container>
           </>
           : <SidebarBtn><IoMenu size={24} onClick={openMenu} /></SidebarBtn>

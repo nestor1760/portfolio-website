@@ -3,8 +3,7 @@ import { back_color } from "../../GlobalStyles";
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  height: 1300px;
-  //change height: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   align-items: center;

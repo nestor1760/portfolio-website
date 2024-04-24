@@ -13,7 +13,6 @@ export const StyledContainer = styled.section<{ scrolled: number, windowWidth: n
   justify-content: space-between;
   overflow: hidden;
   z-index: 2;
-  border: 0.5px solid rgba(255, 255, 255, 0.7);
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
