@@ -3,14 +3,17 @@ import { FaAddressBook } from 'react-icons/fa';
 import { BiFolder } from "react-icons/bi";
 import { BiCodeAlt } from "react-icons/bi";
 import { FaHome } from "react-icons/fa";
-import { CloseBtn, SidebarBody, SidebarHeader, SidebarItem, SidebarMenu, SidebarOverlay, Span } from './SidebarStyles';
+import { CloseBtn, SidebarBody, SidebarFooter, SidebarHeader, SidebarItem, SidebarMenu, SidebarOverlay, Span } from './SidebarStyles';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hook';
 import { setSidebar } from '../../../store/modalSlice';
+import { useLanguage } from '../../../hooks/useLanguage';
+import Select from '../Select/Select';
 
 const Sidebar = () => {
   const dispatch = useAppDispatch()
   const { sidebar, scroll } = useAppSelector(state => state.modal)
+  const { language, handleLanguage, t } = useLanguage()
 
   const closeMenu = () => {
     dispatch(setSidebar({ sidebar: false, scroll: false }))
@@ -49,11 +52,22 @@ const Sidebar = () => {
           </CloseBtn>
         </SidebarHeader>
         <SidebarBody>
-          <SidebarItem onClick={() => scrollToPart('home')}><FaHome size={24} /><Span>Home</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('about_me')}><FaAddressBook size={24} /><Span>About me</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('skills')}><BiCodeAlt size={24} /><Span>Skills</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('')}><BiFolder size={24} /><Span>Work</Span></SidebarItem>
+          <SidebarItem onClick={() => scrollToPart('home')}><FaHome size={24} /><Span>{t("header.home")}</Span></SidebarItem>
+          <SidebarItem onClick={() => scrollToPart('about_me')}><FaAddressBook size={24} /><Span>{t("header.about")}</Span></SidebarItem>
+          <SidebarItem onClick={() => scrollToPart('skills')}><BiCodeAlt size={24} /><Span>{t("header.skills")}</Span></SidebarItem>
+          <SidebarItem onClick={() => scrollToPart('')}><BiFolder size={24} /><Span>{t("header.work")}</Span></SidebarItem>
         </SidebarBody>
+        <SidebarFooter>
+          <Select
+            value={language}
+            onChange={handleLanguage}
+            options={[
+              { value: 'en' },
+              { value: 'pl' },
+              { value: 'ua' },
+            ]}
+          />
+        </SidebarFooter>
       </SidebarMenu>
     </SidebarOverlay>
   )

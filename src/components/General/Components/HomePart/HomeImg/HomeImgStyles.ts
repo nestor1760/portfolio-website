@@ -53,11 +53,13 @@ export const AnimatedItem = styled.div<IAnimatedItemProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
   color: ${white_color};
   font-size: 24px;
   position: absolute;
-  background: linear-gradient(85deg, rgba(238,238,238,1) 13%, rgba(35,101,255,1) 82%);
+  overflow: hidden;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
   animation: ${upAndDownAnimation} ${props => props.delay || '1s'} ease-in-out infinite;
   transition: 0.250ms;
   top: ${props => props.top || 'auto'}; 

@@ -46,6 +46,7 @@ const closeAnimation = keyframes`
 `
 
 export const SidebarMenu = styled.div`
+  position: relative;
   width: 300px;
   height: 100%;
   display: flex;
@@ -77,7 +78,7 @@ export const SidebarHeader = styled.div`
 export const SidebarBody = styled.div`
   width: 100%;
   height: 50%;
-  margin: 50px 0 0 30px;
+  margin: 50px 0 30px 0;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -118,4 +119,16 @@ export const SidebarItem = styled.div`
 
 export const Span = styled.span`
   margin-left: 10px;
+`
+
+export const SidebarFooter = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: ${white_color};
+  padding: 0 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 `

@@ -3,47 +3,47 @@ import { ISkillsItem } from "./interfaces";
 export const dataSkills: ISkillsItem[] = [
   {
     id: 1,
-    image: '/media/icons/ts.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
     title: 'Typescript',
   },
   {
     id: 2,
-    image: '/media/icons/js.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
     title: 'Javascript',
   },
   {
     id: 3,
-    image: '/media/icons/react.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
     title: 'React JS',
   },
   {
     id: 4,
-    image: '/media/icons/css.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
     title: 'CSS 3',
   },
   {
     id: 5,
-    image: '/media/icons/html.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
     title: 'HTML 5',
   },
   {
     id: 6,
-    image: '/media/icons/bootstrap.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
     title: 'Bootstrap',
   },
   {
     id: 7,
-    image: '/media/icons/figma.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
     title: 'Figma',
   },
   {
     id: 8,
-    image: '/media/icons/git.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     title: 'Git',
   },
   {
     id: 9,
-    image: '/media/icons/redux.png',
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
     title: 'Redux',
   },
   {
@@ -60,15 +60,5 @@ export const dataSkills: ISkillsItem[] = [
     id: 12,
     image: '/media/icons/styledComponents.png',
     title: 'Styled components',
-  },
-  {
-    id: 13,
-    image: '/media/icons/restApi.png',
-    title: 'Rest API',
-  },
-  {
-    id: 14,
-    image: '/media/icons/responsive.png',
-    title: 'Responsive web design',
   },
 ]

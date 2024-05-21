@@ -4,7 +4,7 @@ import { HomeContainer } from "./HomeStyles"
 
 const Home = () => {
   return (
-    <HomeContainer id='home'>
+    <HomeContainer>
       <HomeIntro />
       <Robot />
     </HomeContainer>

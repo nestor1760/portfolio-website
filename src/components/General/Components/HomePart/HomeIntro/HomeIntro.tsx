@@ -13,7 +13,7 @@ const HomeIntro = () => {
   const sizeText = windowWidth > 889 ? '24px' : '18px';
 
   return (
-    <IntroContainer>
+    <IntroContainer id="home">
       <StyledText size={sizeTitle} margin="0 0 10px 0" weight="600">{t("intro.greeting")}</StyledText>
       <StyledText size={sizeName} margin="0 0 30px 0" weight="600">{t("intro.name")}</StyledText>
       <StyledText size={sizeText} margin="0 0 50px 0" weight="600">
