@@ -23,7 +23,15 @@
   },
   "aboutPart": {
     "navItem": "About Me",
+    "name": "Roman Nesterchuk",
     "slogan": "Turn dreams into living masterpieces.",
     "description": "My name is Roman, I am a young and ambitious Frontend developer with a great desire to create modern and innovative websites. During my training, I gained knowledge of technologies such as HTML, CSS, JavaScript, Typescript and React, as well as an understanding of the fundamental concepts of front-end development. Through the projects I implemented during my studies, I learned how to solve real-world technical problems. I also gained experience working with various technologies and practiced project development from start to finish. I am ready to be part of your team and bring my energy and skills. My goal is not only to meet the needs of the modern user, but also to improve the level of user experience and participate in the creation of quality web applications."
+  },
+  "skillsPart": {
+    "navItem": "Skills",
+    "title": {
+      "firstPart": "The skills, tools and technologies",
+      "secondPart": "I am really good at:"
+    }
   }
 }

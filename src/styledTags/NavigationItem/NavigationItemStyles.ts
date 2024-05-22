@@ -7,4 +7,5 @@ export const NavItem = styled.p<INavItemProps>`
   height: 20px;
   color: ${white_color};
   margin: ${props => props.margin || "0"};
+  text-align: ${props => props.align || "left"}
 `
