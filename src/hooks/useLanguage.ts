@@ -25,7 +25,6 @@ export const useLanguage = () => {
     i18n.changeLanguage(language)
   }, [language])
 
-
   const handleLanguage = (e: ChangeEvent<HTMLSelectElement>): void => {
     const selectedLanguage = e.target.value;
     setLanguage(selectedLanguage)
