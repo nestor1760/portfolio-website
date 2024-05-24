@@ -7,7 +7,7 @@ import { useSkills } from "../../../../../hooks/useSkills";
 const SkillsList = ({ delay }: { delay: number }) => {
   const { ref: skillsRef, inView: skillsIsVisible } = useInView()
   const { getSkillsFromData, showSkills } = useSkills(delay)
-
+  
   useEffect(() => {
     if (skillsIsVisible) {
       showSkills(dataSkills)
