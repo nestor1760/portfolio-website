@@ -22,7 +22,7 @@ export const SkillsContainer = styled.article`
 export const Title = styled.p`
   font-size: 32px;
   font-weight: 600;
-  margin: 0 0 540px 0;
+  margin: 0 0 40px 0;
   text-align: center;
   color: ${first_color};
 

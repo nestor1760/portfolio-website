@@ -7,7 +7,6 @@ const HomeIntro = () => {
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
 
-
   const sizeTitle = windowWidth > 889 ? '28px' : '22px';
   const sizeName = windowWidth > 889 ? '40px' : '32px';
   const sizeText = windowWidth > 889 ? '24px' : '18px';

@@ -9,23 +9,13 @@ import { useAppDispatch, useAppSelector } from '../../../hook';
 import { setSidebar } from '../../../store/modalSlice';
 import { useLanguage } from '../../../hooks/useLanguage';
 import Select from '../Select/Select';
+import { useNavMenu } from '../../../hooks/useNavMenu';
 
 const Sidebar = () => {
   const dispatch = useAppDispatch()
   const { sidebar, scroll } = useAppSelector(state => state.modal)
   const { language, handleLanguage, t } = useLanguage()
-
-  const closeMenu = () => {
-    dispatch(setSidebar({ sidebar: false, scroll: false }))
-  }
-
-  const scrollToPart = (id: string) => {
-    const navItem = document.getElementById(id);
-    if (navItem) {
-      navItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-    dispatch(setSidebar({ sidebar: false, scroll: false }))
-  };
+  const { scrollToPart, closeMenu } = useNavMenu()
 
   useEffect(() => {
     if (scroll) {

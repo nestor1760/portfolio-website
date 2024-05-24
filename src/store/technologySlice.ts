@@ -1,8 +1,8 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ISkillsItem } from "../data/interfaces";
+import { TItem } from "../data/interface";
 
 type TechState = {
-  data: ISkillsItem[],
+  data: TItem[],
   loading: boolean,
   error: boolean | string,
 }
@@ -17,7 +17,7 @@ const technologySlice = createSlice({
   name: 'technologies',
   initialState,
   reducers: {
-    setTechSuccess: (state, action: PayloadAction<ISkillsItem[]>) => {
+    setTechSuccess: (state, action: PayloadAction<TItem[]>) => {
       state.data = action.payload;
       state.loading = false;
       state.error = false;
@@ -35,5 +35,5 @@ const technologySlice = createSlice({
   },
 });
 
-export const {setTechSuccess, setTechError, setTechLoading} = technologySlice.actions;
+export const { setTechSuccess, setTechError, setTechLoading } = technologySlice.actions;
 export default technologySlice.reducer;

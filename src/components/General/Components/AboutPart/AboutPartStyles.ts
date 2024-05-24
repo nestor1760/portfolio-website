@@ -43,7 +43,7 @@ export const PersonalInfo = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column; 
-  background: linear-gradient(145deg, rgba(35, 101, 255, 0.9) 100%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
   border-radius: 10px;
   border: 1px solid ${white_color};
   position: absolute;

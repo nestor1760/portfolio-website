@@ -2,6 +2,7 @@ import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
 import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
+import SkillsList from "./SkillsList/SkillsList"
 import { SkillsContainer, Title } from "./SkillsPartStyles"
 
 
@@ -26,6 +27,7 @@ const SkillsPart = () => {
             {t("skillsPart.title.secondPart")}
           </Title>
         </Container>
+        <SkillsList delay={300} />
       </Container>
     </SkillsContainer>
   )
