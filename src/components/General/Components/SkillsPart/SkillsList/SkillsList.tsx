@@ -2,11 +2,11 @@ import { useEffect } from "react";
 import { dataSkills } from "../../../../../data/dataSkills";
 import { FlexContainer } from "./SkillsListStyles";
 import { useInView } from "react-intersection-observer";
-import { useSkills } from "../../../../../hooks/useSkills";
+import { SkillsUtils } from "./SkillsUtils";
 
 const SkillsList = ({ delay }: { delay: number }) => {
   const { ref: skillsRef, inView: skillsIsVisible } = useInView()
-  const { getSkillsFromData, showSkills } = useSkills(delay)
+  const { getSkillsFromData, showSkills } = SkillsUtils(delay)
 
   useEffect(() => {
     if (skillsIsVisible) {

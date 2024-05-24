@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { TItem } from "../data/interface";
-import SkillsItem from "../components/General/Components/SkillsPart/SkillsItem/SkillsItem";
+import { TItem } from "../../../../../data/interface";
+import SkillsItem from "../SkillsItem/SkillsItem";
 
 
-export const useSkills = (delay: number) => {
+
+export const SkillsUtils = (delay: number) => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
 
   const showSkills = (data: TItem[]) => {
