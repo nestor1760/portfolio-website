@@ -1,7 +1,8 @@
+import { useEffect, useState } from "react"
 import { useLanguage } from "../../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../../hooks/useWindowWidth"
 import ContactBtn from "../../../../UI/ContactBtn/ContactBtn"
-import { IntroContainer, StyledText } from "./HomeIntroStyles"
+import { AnimatedLetter, IntroContainer, StyledText } from "./HomeIntroStyles"
 
 const HomeIntro = () => {
   const { windowWidth } = useWindowWidth()
@@ -11,10 +12,42 @@ const HomeIntro = () => {
   const sizeName = windowWidth > 889 ? '40px' : '32px';
   const sizeText = windowWidth > 889 ? '24px' : '18px';
 
+  const name = t("intro.name");
+
+  const [letters, setLetters] = useState<string[]>([]);
+
+  const animatedString = (name: string) => {
+    setLetters([]);
+    const newArr = name.split('');
+    const timeouts: NodeJS.Timeout[] = [];
+
+    newArr.forEach((char, index) => {
+      const timeout = setTimeout(() => {
+        setLetters(prev => [...prev, char]);
+      }, 300 * index);
+      timeouts.push(timeout);
+    });
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  };
+
+  useEffect(() => {
+    const clearTimers = animatedString(name);
+    return clearTimers;
+  }, [name]);
+
   return (
     <IntroContainer id="home">
       <StyledText size={sizeTitle} margin="0 0 10px 0" weight="600">{t("intro.greeting")}</StyledText>
-      <StyledText size={sizeName} margin="0 0 30px 0" weight="600">{t("intro.name")}</StyledText>
+      <div style={{ display: 'flex', height: '90px' }}>
+        <StyledText size={sizeName} margin="0 0 30px 0" weight="600">
+          {letters.map((char, index) =>
+            <AnimatedLetter key={index}>{char === ' ' ? '\u00A0' : char}</AnimatedLetter>
+          )}
+        </StyledText>
+      </div>
       <StyledText size={sizeText} margin="0 0 50px 0" weight="600">
         {t("intro.description.firstPart")}<span> {t("intro.description.span")}</span> <br />{t("intro.description.secondPart")}
       </StyledText>

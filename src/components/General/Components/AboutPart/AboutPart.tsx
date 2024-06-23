@@ -19,7 +19,7 @@ const AboutPart = () => {
     <AboutContainer>
       <Container align={windowWidth > 998 ? "flex-end" : "center"} justify="center" wrap="wrap" direction={windowWidth > 768 ? "row" : "column"}>
         <InfoContainer>
-          <Photo src="/public/media/iphone_avatar.png" alt="iphone_avatar" />
+          <Photo src="/media/iphone_avatar.png" alt="iphone_avatar" />
           <PersonalInfo>
             <span>{t("aboutPart.name")}</span>
             <Container justify="space-around" margin="0">

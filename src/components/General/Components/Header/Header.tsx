@@ -21,8 +21,6 @@ const Header: FC = () => {
   const { language, handleLanguage, t } = useLanguage()
   const { openMenu, scrollToPart, scrollToStart } = useNavMenu()
 
-
-
   useEffect(() => {
     if (windowWidth > 865) {
       dispatch(setSidebar({ sidebar: false, scroll: false }))
@@ -60,7 +58,6 @@ const Header: FC = () => {
           </>
           : <SidebarBtn><IoMenu size={24} onClick={openMenu} /></SidebarBtn>
         }
-
       </StyledContainer>
       <Sidebar />
     </>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { first_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { ITextProps } from "./interface";
 
@@ -36,3 +36,26 @@ export const StyledText = styled.p<ITextProps>`
     color: ${first_color};
   }
 `
+
+const elevateAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  75% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
+export const AnimatedLetter = styled.span`
+  display: inline-block;
+  animation: ${elevateAnimation} 300ms ease-in;
+`;
