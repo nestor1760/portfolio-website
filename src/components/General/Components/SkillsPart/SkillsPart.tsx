@@ -1,10 +1,10 @@
+import { dataSkills } from "../../../../data/dataSkills"
 import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
 import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
 import SkillsList from "./SkillsList/SkillsList"
 import { SkillsContainer, Title } from "./SkillsPartStyles"
-
 
 const SkillsPart = () => {
   const { windowWidth } = useWindowWidth()
@@ -27,7 +27,7 @@ const SkillsPart = () => {
             {t("skillsPart.title.secondPart")}
           </Title>
         </Container>
-        <SkillsList delay={300} />
+        <SkillsList delay={300} data={dataSkills} />
       </Container>
     </SkillsContainer>
   )

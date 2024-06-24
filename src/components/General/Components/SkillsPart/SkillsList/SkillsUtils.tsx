@@ -19,7 +19,7 @@ export const SkillsUtils = (delay: number) => {
         <SkillsItem item={item} key={item.id} isVisible={visibleItems.includes(index)} />
       ));
     }
-    return null;
+
   };
 
   return { getSkillsFromData, showSkills };

@@ -1,24 +1,50 @@
-import { useEffect } from "react";
-import { dataSkills } from "../../../../../data/dataSkills";
-import { FlexContainer } from "./SkillsListStyles";
-import { useInView } from "react-intersection-observer";
+import { useEffect, useRef, useState } from "react";
 import { SkillsUtils } from "./SkillsUtils";
+import { FlexContainer } from "./SkillsListStyles";
+import { TItem } from "../../../../../data/interface";
 
-const SkillsList = ({ delay }: { delay: number }) => {
-  const { ref: skillsRef, inView: skillsIsVisible } = useInView()
-  const { getSkillsFromData, showSkills } = SkillsUtils(delay)
+const SkillsList = ({ delay, data }: { delay: number, data: TItem[] }) => {
+  const { getSkillsFromData, showSkills } = SkillsUtils(delay);
+  const [skillsIsVisible, setSkillsIsVisible] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const skillsRef = useRef(null);
 
   useEffect(() => {
-    if (skillsIsVisible) {
-      showSkills(dataSkills)
+    if (skillsIsVisible && !hasBeenVisible) {
+      showSkills(data);
+      setHasBeenVisible(true);
     }
-  }, [delay, skillsIsVisible]);
+  }, [skillsIsVisible, hasBeenVisible, data, showSkills]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setSkillsIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (skillsRef.current) {
+      observer.observe(skillsRef.current);
+    }
+
+    return () => {
+      if (skillsRef.current) {
+        observer.unobserve(skillsRef.current);
+      }
+    };
+  }, [skillsRef]);
 
   return (
     <FlexContainer ref={skillsRef}>
-      {getSkillsFromData(dataSkills, skillsIsVisible)}
+      {getSkillsFromData(data, hasBeenVisible)}
     </FlexContainer>
-  )
-}
+  );
+};
 
-export default SkillsList
+export default SkillsList;
