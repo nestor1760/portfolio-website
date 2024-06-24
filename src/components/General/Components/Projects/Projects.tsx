@@ -21,7 +21,6 @@ const Projects = () => {
         <Title>{t("projectsPart.title")}</Title>
       </Container>
 
-
       <ProjectList>
         <Item>Item</Item>
         <Item>Item</Item>
