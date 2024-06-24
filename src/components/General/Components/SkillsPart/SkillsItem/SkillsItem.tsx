@@ -1,7 +1,6 @@
 import { TItem } from "../../../../../data/interface"
 import { Img, ItemContainer, Text } from "./SkillsItemStyles"
 
-
 const SkillsItem = ({ item, isVisible }: { item: TItem, isVisible: boolean }) => {
   const { image, title } = item
 

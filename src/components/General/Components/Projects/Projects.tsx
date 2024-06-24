@@ -2,7 +2,8 @@ import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
 import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
-import { Item, ProjectList, ProjectsContainer, Title } from "./ProjectsStyles"
+import ProjectList from "./ProjectList/ProjectList"
+import { ProjectsContainer, Title } from "./ProjectsStyles"
 
 const Projects = () => {
   const { windowWidth } = useWindowWidth()
@@ -20,14 +21,7 @@ const Projects = () => {
         </NavigationItem>
         <Title>{t("projectsPart.title")}</Title>
       </Container>
-
-
-      <ProjectList>
-        <Item>Item</Item>
-        <Item>Item</Item>
-        <Item>Item</Item>
-        <Item>Item</Item>
-      </ProjectList>
+      <ProjectList />
     </ProjectsContainer>
   )
 }

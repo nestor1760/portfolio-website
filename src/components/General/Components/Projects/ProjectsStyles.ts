@@ -39,19 +39,3 @@ export const Title = styled.p`
     font-size: 22px;
   }
 `
-
-export const ProjectList = styled.div`
-  max-width: 1110px;
-  border: 1px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-`
-
-export const Item = styled.div`
-  width: 250px;
-  height: 200px;
-  border: 1px solid blue;
-  margin: 0 50px;
-`
