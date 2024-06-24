@@ -45,7 +45,7 @@ const Sidebar = () => {
           <SidebarItem onClick={() => scrollToPart('home')}><FaHome size={24} /><Span>{t("header.home")}</Span></SidebarItem>
           <SidebarItem onClick={() => scrollToPart('about_me')}><FaAddressBook size={24} /><Span>{t("header.about")}</Span></SidebarItem>
           <SidebarItem onClick={() => scrollToPart('skills')}><BiCodeAlt size={24} /><Span>{t("header.skills")}</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('')}><BiFolder size={24} /><Span>{t("header.work")}</Span></SidebarItem>
+          <SidebarItem onClick={() => scrollToPart('projects')}><BiFolder size={24} /><Span>{t("header.work")}</Span></SidebarItem>
         </SidebarBody>
         <SidebarFooter>
           <Select

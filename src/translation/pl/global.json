@@ -33,5 +33,9 @@
       "firstPart": "Umiejętności, narzędzia i technologie,",
       "secondPart": "w których jestem naprawdę dobry:"
     }
+  },
+  "projectsPart": {
+    "navItem": "Projekty",
+    "title": "Oto projekty, które zbudowałem do tej pory"
   }
 }

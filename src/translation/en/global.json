@@ -33,5 +33,9 @@
       "firstPart": "The skills, tools and technologies",
       "secondPart": "I am really good at:"
     }
+  },
+  "projectsPart": {
+    "navItem": "Work",
+    "title": "Things I've built so far"
   }
 }

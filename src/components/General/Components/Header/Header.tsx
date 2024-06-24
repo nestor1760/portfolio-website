@@ -41,7 +41,7 @@ const Header: FC = () => {
               <NavItem onClick={() => scrollToPart('home')}>{t("header.home")}</NavItem>
               <NavItem onClick={() => scrollToPart('about_me')}>{t("header.about")}</NavItem>
               <NavItem onClick={() => scrollToPart('skills')}>{t("header.skills")}</NavItem>
-              <NavItem>{t("header.work")}</NavItem>
+              <NavItem onClick={() => scrollToPart('projects')}>{t("header.work")}</NavItem>
             </NavigationMenu>
             <Container align="center" justify="flex-end" width="auto">
               <Select
