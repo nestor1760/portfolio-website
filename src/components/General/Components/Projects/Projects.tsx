@@ -21,6 +21,7 @@ const Projects = () => {
         </NavigationItem>
         <Title>{t("projectsPart.title")}</Title>
       </Container>
+
       <ProjectList />
     </ProjectsContainer>
   )
