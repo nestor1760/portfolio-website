@@ -1,12 +1,13 @@
-import { FlexContainer, Item } from "./ProjectListStyled"
+import ProjectItem from "../ProjectItem/ProjectItem"
+import { FlexContainer } from "./ProjectListStyles"
 
 const ProjectList = () => {
   return (
     <FlexContainer>
-      <Item>Item</Item>
-      <Item>Item</Item>
-      <Item>Item</Item>
-      <Item>Item</Item>
+      <ProjectItem />
+      <ProjectItem />
+      <ProjectItem />
+      <ProjectItem />
     </FlexContainer>
   )
 }
