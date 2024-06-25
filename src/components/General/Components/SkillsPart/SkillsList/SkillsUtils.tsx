@@ -4,7 +4,7 @@ import SkillsItem from "../SkillsItem/SkillsItem";
 
 export const SkillsUtils = (delay: number) => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
-
+  
   const showSkills = (data: TItem[]) => {
     data.forEach((_, index) => {
       setTimeout(() => {
