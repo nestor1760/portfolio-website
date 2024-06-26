@@ -49,17 +49,13 @@ export const TechContainer = styled.div`
 `
 
 export const TechItem = styled.div`
-  margin: 2px 5px;
+  margin: 2px 5px 2px 0;
   padding: 2px 3px;
   border-radius: 5px;
   color: black;
   background: white;
   cursor: pointer;
   transition: 0.3s;
-
-  &:first-child {
-    margin-left: 0;
-  }
 
   &:hover {
     background: ${first_color};
