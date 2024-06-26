@@ -15,10 +15,10 @@ export const ItemContainer = styled.div`
   border: 1px solid ${white_color};
 `
 
-export const Image = styled.div`
+export const Image = styled.img`
   width: 100%;
-  height: 200px;
-  background: gray;
+  min-height: 200px;
+  object-fit: cover;
 `
 
 export const InfoBlog = styled.div`

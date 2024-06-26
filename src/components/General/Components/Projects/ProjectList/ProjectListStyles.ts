@@ -5,7 +5,7 @@ export const FlexContainer = styled.div`
   max-width: 1100px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 20px 0;
 

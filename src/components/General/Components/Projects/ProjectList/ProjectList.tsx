@@ -1,13 +1,13 @@
+import { dataProjects } from "../../../../../data/dataProjects"
 import ProjectItem from "../ProjectItem/ProjectItem"
 import { FlexContainer } from "./ProjectListStyles"
 
 const ProjectList = () => {
   return (
     <FlexContainer>
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
-      <ProjectItem />
+      {dataProjects.map((item) => (
+        <ProjectItem project={item} key={item.id} />
+      ))}
     </FlexContainer>
   )
 }

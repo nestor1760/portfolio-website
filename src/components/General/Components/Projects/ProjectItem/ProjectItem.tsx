@@ -2,29 +2,30 @@ import { Image, InfoBlog, ItemContainer, LinkItem, ProjectDescription, ProjectLi
 
 import { ImGithub } from "react-icons/im";
 import { FaLink } from "react-icons/fa6";
+import { FC } from "react";
+import { IProjectItem } from "../../../../../data/interface";
 
 
-const ProjectItem = () => {
+const ProjectItem: FC<IProjectItem> = ({ project }) => {
+  const { name, description, image_path, preview_link, tech, github_link } = project
+
   return (
     <ItemContainer>
-      <Image />
+      <Image src={image_path} alt={name} />
       <InfoBlog>
-        <ProjectName>Item name</ProjectName>
-        <ProjectDescription>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quasi consectetur perspiciatis reiciendis cumque eligendi, nostrum sapiente</ProjectDescription>
+        <ProjectName>{name}</ProjectName>
+        <ProjectDescription>{description}</ProjectDescription>
         <TechContainer>
-          <TechItem>javascript</TechItem>
-          <TechItem>typescript</TechItem>
-          <TechItem>css</TechItem>
-          <TechItem>react</TechItem>
+          {tech.map((item, index) => <TechItem key={index}>{item}</TechItem>)}
         </TechContainer>
         <ProjectLinks>
           <LinkItem>
             <FaLink color="white" size={20} />
-            <StyledLink href="#" target="_blank">Live preview</StyledLink>
+            <StyledLink href={preview_link} target="_blank">Live preview</StyledLink>
           </LinkItem>
           <LinkItem>
             <ImGithub color="white" size={20} />
-            <StyledLink href="#" target="_blank">View code</StyledLink>
+            <StyledLink href={github_link} target="_blank">View code</StyledLink>
           </LinkItem>
         </ProjectLinks>
       </InfoBlog>
