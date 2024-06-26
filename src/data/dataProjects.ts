@@ -3,7 +3,7 @@ import { IProjectProps } from "./interface";
 export const dataProjects: IProjectProps[] = [
   {
     id: 1,
-    name: 'expamle name 1',
+    name: 'Calyptus page',
     description: 'Example body Example body Example body Example body Example body Example body Example body Example body',
     github_link: 'link',
     image_path: 'path',
@@ -12,7 +12,7 @@ export const dataProjects: IProjectProps[] = [
   },
   {
     id: 2,
-    name: 'expamle name 2',
+    name: 'Horyzont page',
     description: 'Example body Example body Example body Example body Example body Example body Example body Example body',
     github_link: 'link',
     image_path: 'path',
