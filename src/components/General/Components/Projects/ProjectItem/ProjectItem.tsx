@@ -7,7 +7,7 @@ import { IProjectItem } from "../../../../../data/interface";
 
 
 const ProjectItem: FC<IProjectItem> = ({ project }) => {
-  const { name, description, image_path, preview_link, tech, github_link } = project
+  const { name, description, image_path, preview_link, tech, github_link, git_label, preview_label } = project
 
   return (
     <ItemContainer>
@@ -21,11 +21,11 @@ const ProjectItem: FC<IProjectItem> = ({ project }) => {
         <ProjectLinks>
           <LinkItem>
             <FaLink color="white" size={20} />
-            <StyledLink href={preview_link} target="_blank">Live preview</StyledLink>
+            <StyledLink href={preview_link} target="_blank">{preview_label}</StyledLink>
           </LinkItem>
           <LinkItem>
             <ImGithub color="white" size={20} />
-            <StyledLink href={github_link} target="_blank">View code</StyledLink>
+            <StyledLink href={github_link} target="_blank">{git_label}</StyledLink>
           </LinkItem>
         </ProjectLinks>
       </InfoBlog>

@@ -14,6 +14,8 @@ export interface IProjectProps {
   tech: string[],
   github_link: string,
   preview_link: string,
+  preview_label: string,
+  git_label: string,
 }
 
 export interface IProjectItem {
