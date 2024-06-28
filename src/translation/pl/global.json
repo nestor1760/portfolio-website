@@ -88,5 +88,17 @@
         ]
       }
     ]
+  },
+  "contactForm": {
+    "title": "Formularz kontaktowy",
+    "name": "Pełne imię i nazwisko",
+    "name_ph": "Wprowadź swoje pełne imię i nazwisko",
+    "email": "Adres e-mail",
+    "email_ph": "Wprowadź swój e-mail",
+    "message": "Twoja wiadomość",
+    "message_ph": "Wprowadź swoją wiadomość",
+    "btn_label": "Wyślij wiadomość",
+    "req_title": "Sukces!",
+    "req_text": "Wiadomość została pomyślnie wysłana!"
   }
 }

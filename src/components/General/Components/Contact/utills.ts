@@ -1,9 +1,9 @@
-import { FormEventHandler } from 'react';
+import { FormEvent } from 'react';
 import Swal from 'sweetalert2';
 
 const forms_key = import.meta.env.VITE_FORMS_KEY;
 
-export const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
+export const handleSubmit = (title: string, text: string) => async (e: FormEvent<HTMLFormElement>) => {
   e.preventDefault();
   const formData = new FormData(e.target as HTMLFormElement);
 
@@ -21,20 +21,11 @@ export const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     body: json
   }).then((res) => res.json());
 
-  if (res.error) {
-    console.log("Success", res);
-    Swal.fire({
-      title: "Success!",
-      text: "Message sent successfully!",
-      icon: "error"
-    });
-  }
-
   if (res.success) {
     console.log("Success", res);
     Swal.fire({
-      title: "Success!",
-      text: "Message sent successfully!",
+      title: `${title}`,
+      text: `${text}`,
       icon: "success"
     });
   }
