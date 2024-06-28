@@ -5,7 +5,6 @@ import { FlexContainer } from "./ProjectListStyles"
 
 const ProjectList = () => {
   const { t } = useLanguage()
-
   const projects = t("projectsPart.projects", { returnObjects: true }) as IProjectProps[];
 
   return (
