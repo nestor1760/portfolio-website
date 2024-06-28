@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { first_color, white_color } from "../../../../../GlobalStyles";
+import { first_color, gradient, white_color } from "../../../../../GlobalStyles";
 
 export const ItemContainer = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const ItemContainer = styled.div`
   height: 450px;
   overflow: hidden;
   margin: 20px 10px;
-  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
+  background: ${gradient};
   border-radius: 10px;
 `
 

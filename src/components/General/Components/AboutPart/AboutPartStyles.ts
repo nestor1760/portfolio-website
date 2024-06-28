@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { first_color, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { first_color, gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -43,7 +43,7 @@ export const PersonalInfo = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column; 
-  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
+  background: ${gradient};
   border-radius: 10px;
   border: 1px solid ${white_color};
   position: absolute;

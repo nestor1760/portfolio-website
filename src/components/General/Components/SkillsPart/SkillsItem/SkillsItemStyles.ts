@@ -1,5 +1,5 @@
 import styled, { css, keyframes } from "styled-components";
-import { white_color } from "../../../../../GlobalStyles";
+import { gradient, white_color } from "../../../../../GlobalStyles";
 
 const fadeIn = keyframes`
   from {
@@ -17,7 +17,7 @@ export const ItemContainer = styled.div<{ isVisible: boolean }>`
   height: 150px;
   margin: 20px;
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
+  background: ${gradient};
   display: flex;
   align-items: center;
   justify-content: center;

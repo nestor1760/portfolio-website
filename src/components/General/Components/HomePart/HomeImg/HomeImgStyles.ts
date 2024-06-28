@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { first_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { first_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { IAnimatedItemProps } from "./interface";
 
 export const ImageContainer = styled.div`
@@ -59,7 +59,7 @@ export const AnimatedItem = styled.div<IAnimatedItemProps>`
   overflow: hidden;
   border: 1.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
+  background: ${gradient};
   animation: ${upAndDownAnimation} ${props => props.delay || '1s'} ease-in-out infinite;
   transition: 0.250ms;
   top: ${props => props.top || 'auto'}; 
