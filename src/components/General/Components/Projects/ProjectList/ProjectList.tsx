@@ -8,8 +8,6 @@ const ProjectList = () => {
 
   const projects = t("projectsPart.projects", { returnObjects: true }) as IProjectProps[];
 
-  console.log(projects);
-
   return (
     <FlexContainer>
       {projects.map((item) => (

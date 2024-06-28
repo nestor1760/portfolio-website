@@ -73,7 +73,7 @@
       {
         "id": 3,
         "name": "Rick & Morty",
-        "description": "To jest wielostronicowa strona internetowa, którą wykorzystałem do ćwiczenia moich umiejętności w technologiach takich jak:",
+        "description": "To jest wielostronicowa strona internetowa, którą wykorzystałem do ćwiczenia moich umiejętności takich jak:",
         "github_link": "https://github.com/nestor1760/Rick-Morty-Page",
         "image_path": "/public/media/projects_media/rick&morty.png",
         "preview_link": "https://rick-morty-page-sigma.vercel.app/",

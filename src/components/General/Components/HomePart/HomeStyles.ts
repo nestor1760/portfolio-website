@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mobile_screen, small_tablet_screen, tablet_screen } from "../../../../GlobalStyles";
 
-export const HomeContainer = styled.article`
+export const HomeContainer = styled.section`
   width: 100%;
   height: 650px;
   display: flex;

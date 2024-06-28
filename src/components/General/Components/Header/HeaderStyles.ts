@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { first_color, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles"
 
-export const StyledContainer = styled.section<{ scrolled: number, windowWidth: number }>`
+export const StyledContainer = styled.header<{ scrolled: number, windowWidth: number }>`
   width: ${({ scrolled, windowWidth }) => (windowWidth > 959) ? (scrolled > 95 ? '100%' : '1110px') : '100%'};
   position: fixed;
   top: 20px;

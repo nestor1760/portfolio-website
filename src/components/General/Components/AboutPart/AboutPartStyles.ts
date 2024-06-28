@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { first_color, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
-export const AboutContainer = styled.article`
+export const AboutContainer = styled.section`
   width: 100%;
   display: flex;
   align-items: center;

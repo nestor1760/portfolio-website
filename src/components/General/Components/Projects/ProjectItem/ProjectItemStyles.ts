@@ -12,13 +12,11 @@ export const ItemContainer = styled.div`
   margin: 20px 10px;
   background: linear-gradient(145deg, rgba(35, 101, 255, 0.5) 53%, rgba(255, 255, 255, 0.3) 100%);
   border-radius: 10px;
-  border: 1px solid ${white_color};
 `
 
 export const Image = styled.img`
   width: 100%;
   min-height: 200px;
-  object-fit: cover;
 `
 
 export const InfoBlog = styled.div`
