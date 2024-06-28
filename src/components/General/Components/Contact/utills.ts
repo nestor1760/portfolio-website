@@ -21,15 +21,6 @@ export const onSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     body: json
   }).then((res) => res.json());
 
-  if (res.error) {
-    console.log("Success", res);
-    Swal.fire({
-      title: "Success!",
-      text: "Message sent successfully!",
-      icon: "error"
-    });
-  }
-
   if (res.success) {
     console.log("Success", res);
     Swal.fire({
