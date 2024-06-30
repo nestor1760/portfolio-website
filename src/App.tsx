@@ -1,5 +1,4 @@
 import AboutPart from "./components/General/Components/AboutPart/AboutPart"
-// import Contact from "./components/General/Components/Contact/Contact"
 import Header from "./components/General/Components/Header/Header"
 import Home from "./components/General/Components/HomePart/Home"
 import Projects from "./components/General/Components/Projects/Projects"

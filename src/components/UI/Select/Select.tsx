@@ -5,7 +5,7 @@ import { ISelect } from "./interfaces"
 const Select = ({ options, value, onChange }: ISelect) => {
   return (
     <StyledSelect
-      value={value}
+      value={value !== null ? value : ""}
       onChange={onChange}
     >
       {options.map(option =>
