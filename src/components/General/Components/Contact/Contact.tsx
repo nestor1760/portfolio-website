@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useAppDispatch } from "../../../../hook";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { setShow } from "../../../../store/modalSlice";
@@ -8,11 +9,6 @@ import { IoCloseOutline } from "react-icons/io5";
 
 const Contact = () => {
   const dispatch = useAppDispatch()
-
-  const closeModal = (): void => {
-    dispatch(setShow({ show: false, scroll: false }))
-  }
-
   const { t } = useLanguage()
 
   const title = t("contactForm.title");
@@ -26,6 +22,17 @@ const Contact = () => {
   const req_title = t("contactForm.req_title");
   const req_text = t("contactForm.req_text");
 
+  const [nameState, setNameState] = useState('')
+  const [mailState, setMailState] = useState('')
+  const [messageState, setMessageState] = useState('')
+
+  const closeModal = (): void => {
+    dispatch(setShow({ show: false, scroll: false }))
+    setNameState('')
+    setMailState('')
+    setMessageState('')
+  }
+
   return (
     <ContactContainer>
       <Form onSubmit={handleSubmit(req_title, req_text)}>
@@ -35,15 +42,15 @@ const Contact = () => {
         </HeaderBox>
         <InputBox>
           <Label>{name}</Label>
-          <Input type="text" placeholder={name_ph} name="name" required />
+          <Input value={nameState} onChange={e => setNameState(e.target.value)} type="text" placeholder={name_ph} name="name" required />
         </InputBox>
         <InputBox>
           <Label>{email}</Label>
-          <Input type="email" placeholder={email_ph} name="email" required />
+          <Input value={mailState} onChange={e => setMailState(e.target.value)} type="email" placeholder={email_ph} name="email" required />
         </InputBox>
         <InputBox>
           <Label>{message}</Label>
-          <TextArea name="message" id="" placeholder={message_ph} required />
+          <TextArea value={messageState} onChange={e => setMessageState(e.target.value)} name="message" id="" placeholder={message_ph} required />
         </InputBox>
         <ContactBtn width="100%" height="55px">{btn_label}</ContactBtn>
       </Form>
