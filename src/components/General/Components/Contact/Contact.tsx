@@ -1,9 +1,18 @@
-import { useLanguage } from "../../../../hooks/useLanguage"
-import ContactBtn from "../../../UI/ContactBtn/ContactBtn"
-import { ContactContainer, Form, Input, InputBox, Label, TextArea, Title } from "./ContactStyles"
-import { handleSubmit } from "./utills"
+import { useAppDispatch } from "../../../../hook";
+import { useLanguage } from "../../../../hooks/useLanguage";
+import { setShow } from "../../../../store/modalSlice";
+import ContactBtn from "../../../UI/ContactBtn/ContactBtn";
+import { CloseBtn, ContactContainer, Form, HeaderBox, Input, InputBox, Label, TextArea, Title } from "./ContactStyles";
+import { handleSubmit } from "./utills";
+import { IoCloseOutline } from "react-icons/io5";
 
 const Contact = () => {
+  const dispatch = useAppDispatch()
+
+  const closeModal = (): void => {
+    dispatch(setShow({ show: false, scroll: false }))
+  }
+
   const { t } = useLanguage()
 
   const title = t("contactForm.title");
@@ -20,7 +29,10 @@ const Contact = () => {
   return (
     <ContactContainer>
       <Form onSubmit={handleSubmit(req_title, req_text)}>
-        <Title>{title}</Title>
+        <HeaderBox>
+          <Title>{title}</Title>
+          <CloseBtn type="button" onClick={closeModal}><IoCloseOutline size={30} /></CloseBtn>
+        </HeaderBox>
         <InputBox>
           <Label>{name}</Label>
           <Input type="text" placeholder={name_ph} name="name" required />
@@ -35,7 +47,6 @@ const Contact = () => {
         </InputBox>
         <ContactBtn width="100%" height="55px">{btn_label}</ContactBtn>
       </Form>
-
     </ContactContainer>
   )
 }

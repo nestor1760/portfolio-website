@@ -1,14 +1,16 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ISidebarState } from "./interfaces";
+import { IModalFormState, ISidebarState } from "./interfaces";
 
 type ModalState = {
   scroll: boolean,
   sidebar: boolean,
+  show: boolean
 }
 
 const initialState: ModalState = {
   scroll: false,
   sidebar: false,
+  show: false
 }
 
 const modalSlice = createSlice({
@@ -19,8 +21,12 @@ const modalSlice = createSlice({
       state.sidebar = action.payload.sidebar;
       state.scroll = action.payload.scroll;
     },
+    setShow: (state, action: PayloadAction<IModalFormState>) => {
+      state.show = action.payload.show
+      state.scroll = action.payload.scroll
+    }
   },
 });
 
-export const {setSidebar} = modalSlice.actions;
+export const { setSidebar, setShow } = modalSlice.actions;
 export default modalSlice.reducer;

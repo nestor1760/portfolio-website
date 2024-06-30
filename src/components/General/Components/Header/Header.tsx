@@ -2,30 +2,38 @@ import { IoMenu } from "react-icons/io5";
 import { FC, useEffect } from 'react';
 import { NavItem, NavigationMenu, SidebarBtn, StyledContainer, Title } from "./HeaderStyles";
 import { useWindowWidth } from "../../../../hooks/useWindowWidth";
-import { setSidebar } from "../../../../store/modalSlice";
+import { setShow, setSidebar } from "../../../../store/modalSlice";
 import { useScroll } from "../../../../hooks/useScroll";
 import Sidebar from "../../../UI/Sidebar/Sidebar";
 import Select from "../../../UI/Select/Select";
 import { Container } from "../../../../styledTags/Container/Container";
 import ContactBtn from "../../../UI/ContactBtn/ContactBtn";
 import { useLanguage } from "../../../../hooks/useLanguage";
-import { useAppDispatch } from "../../../../hook";
+import { useAppDispatch, useAppSelector } from "../../../../hook";
 import { useNavMenu } from "../../../../hooks/useNavMenu";
+import Modal from "../../../UI/Modal/Modal";
+import Contact from "../Contact/Contact";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
-  const title = '<<span>Nestor</span>/>';
-
+  const { show } = useAppSelector(state => state.modal)
   const { windowWidth } = useWindowWidth()
   const scrollPosition = useScroll()
   const { language, handleLanguage, t } = useLanguage()
   const { openMenu, scrollToPart, scrollToStart } = useNavMenu()
+
+  const title = '<<span>Nestor</span>/>';
 
   useEffect(() => {
     if (windowWidth > 865) {
       dispatch(setSidebar({ sidebar: false, scroll: false }))
     }
   }, [windowWidth, dispatch])
+
+  const showModal = (): void => {
+    dispatch(setShow({ show: true, scroll: true }))
+  }
+
 
   return (
     <>
@@ -53,13 +61,16 @@ const Header: FC = () => {
                   { value: 'ua' },
                 ]}
               />
-              <ContactBtn width="190px" height="44px">{t("header.button")}</ContactBtn>
+              <ContactBtn width="190px" height="44px" onClick={showModal}>{t("header.button")}</ContactBtn>
             </Container>
           </>
           : <SidebarBtn><IoMenu size={24} onClick={openMenu} /></SidebarBtn>
         }
       </StyledContainer>
       <Sidebar />
+      <Modal show={show}>
+        <Contact />
+      </Modal>
     </>
   )
 }
