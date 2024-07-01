@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { first_color, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles"
+import { blue_color, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles"
 
 export const StyledContainer = styled.header<{ scrolled: number, windowWidth: number }>`
   width: ${({ scrolled, windowWidth }) => (windowWidth > 959) ? (scrolled > 95 ? '100%' : '1110px') : '100%'};
@@ -48,7 +48,7 @@ export const Title = styled.p`
   font-size: 36px;
   font-weight: 600;
   text-transform: uppercase;
-  color: ${first_color};
+  color: ${blue_color};
   cursor: pointer;
   transition: 0.3s;
   & >span {
@@ -57,7 +57,7 @@ export const Title = styled.p`
   &:hover {
     color: ${white_color};
     & span {
-      color: ${first_color};
+      color: ${blue_color};
     }
   }
 `
@@ -69,23 +69,6 @@ export const NavigationMenu = styled.div`
   justify-content: center;
 `
 
-export const NavItem = styled.a`
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 400;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  margin-right: 30px;
-  transition: 0.3s;
-  &:last-child {
-    margin-right: 0px;
-  }
-  &:hover {
-    color: ${first_color};
-  }
-`
-
 export const SidebarBtn = styled.button`
   border: none;
   background: transparent;
@@ -93,6 +76,6 @@ export const SidebarBtn = styled.button`
   cursor: pointer;
   transition: 0.2s;
   &:hover {
-    color: ${first_color}; 
+    color: ${blue_color}; 
   }
 `

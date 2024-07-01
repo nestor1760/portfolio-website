@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { first_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { blue_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { IAnimatedItemProps } from "./interface";
 
 export const ImageContainer = styled.div`
@@ -15,7 +15,7 @@ export const ImageContainer = styled.div`
     position: absolute;
     width: 318px;
     height: 325px;
-    background-color: ${first_color};
+    background-color: ${blue_color};
     filter: blur(50px);
     border-radius: 50%;
     right: 110px;

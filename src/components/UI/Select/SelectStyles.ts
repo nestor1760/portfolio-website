@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { back_color, first_color, white_color } from "../../../GlobalStyles";
+import { back_color, blue_color, white_color } from "../../../GlobalStyles";
 
 export const StyledSelect = styled.select`
   outline: none;
@@ -13,7 +13,7 @@ export const StyledSelect = styled.select`
   transition: 0.3s;
 
   &:hover {
-    color: ${first_color};
+    color: ${blue_color};
   }
 
   & option {

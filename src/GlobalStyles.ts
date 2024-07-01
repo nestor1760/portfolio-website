@@ -1,7 +1,5 @@
 //colors variables
-export const first_color = '#2365FF'
-export const second_color = '#68BAA5'
-export const third_color = '#594E7E'
+export const blue_color = '#2365FF'
 export const black_color = '#000000'
 export const white_color = '#FFFFFF'
 export const back_color = '#262626'

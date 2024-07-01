@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { first_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { blue_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { ITextProps } from "./interface";
 
 export const IntroContainer = styled.div`
@@ -33,7 +33,7 @@ export const StyledText = styled.p<ITextProps>`
   font-weight: ${props => props.weight || '400'};
 
   & span {
-    color: ${first_color};
+    color: ${blue_color};
   }
 `
 

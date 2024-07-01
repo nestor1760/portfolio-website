@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { first_color, gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -70,7 +70,7 @@ export const Title = styled.p`
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 20px 0;
-  color: ${first_color};
+  color: ${blue_color};
 
   @media ${tablet_screen} {
     font-size: 28px;

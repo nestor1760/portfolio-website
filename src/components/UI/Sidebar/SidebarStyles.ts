@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { first_color, white_color } from "../../../GlobalStyles"
+import { blue_color, white_color } from "../../../GlobalStyles"
 
 export const SidebarOverlay = styled.div`
   display: flex;
@@ -93,7 +93,7 @@ export const CloseBtn = styled.button`
   transition: 0.2s;
   margin-right: 10px;
   &:hover {
-    color: ${first_color}; 
+    color: ${blue_color}; 
   }
 `
 
@@ -112,7 +112,7 @@ export const SidebarItem = styled.div`
   color: ${white_color};
   transition: 0.2s;
   &:hover {
-    color: ${first_color};
+    color: ${blue_color};
     background: ${white_color};
   }
 `

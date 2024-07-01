@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { first_color, gradient, white_color } from "../../../../../GlobalStyles";
+import { blue_color, gradient, white_color } from "../../../../../GlobalStyles";
 
 export const ItemContainer = styled.div`
   display: flex;
@@ -56,7 +56,7 @@ export const TechItem = styled.div`
   transition: 0.3s;
 
   &:hover {
-    background: ${first_color};
+    background: ${blue_color};
     color: ${white_color};
   }
 `
