@@ -3,9 +3,9 @@ import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
 import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
 import { AboutContainer, InfoContainer, PersonalInfo, Photo, StyledLink, Title } from "./AboutPartStyles"
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaFacebookSquare } from "react-icons/fa"
+import { FaLinkedin } from "react-icons/fa"
+import { FaGithubSquare } from "react-icons/fa"
 
 const AboutPart = () => {
   const linkedin = import.meta.env.VITE_LINK_URL;

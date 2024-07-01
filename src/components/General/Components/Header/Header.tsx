@@ -34,6 +34,12 @@ const Header: FC = () => {
     dispatch(setShow({ show: true, scroll: true }))
   }
 
+  const menuData = [
+    { label: t("header.home"), part: 'home' },
+    { label: t("header.about"), part: 'about_me' },
+    { label: t("header.skills"), part: 'skills' },
+    { label: t("header.work"), part: 'projects' }
+  ];
 
   return (
     <>
@@ -46,10 +52,9 @@ const Header: FC = () => {
         {(windowWidth > 1024)
           ? <>
             <NavigationMenu>
-              <NavItem onClick={() => scrollToPart('home')}>{t("header.home")}</NavItem>
-              <NavItem onClick={() => scrollToPart('about_me')}>{t("header.about")}</NavItem>
-              <NavItem onClick={() => scrollToPart('skills')}>{t("header.skills")}</NavItem>
-              <NavItem onClick={() => scrollToPart('projects')}>{t("header.work")}</NavItem>
+              {menuData.map(({ label, part }) =>
+                <NavItem onClick={() => scrollToPart(part)} key={part}>{label}</NavItem>
+              )}
             </NavigationMenu>
             <Container align="center" justify="flex-end" width="auto">
               <Select

@@ -27,6 +27,18 @@ const Sidebar = () => {
     }
   }, [scroll])
 
+  const HomeIcon = ({ size }: { size: number }) => <FaHome size={size} />;
+  const AboutIcon = ({ size }: { size: number }) => <FaAddressBook size={size} />;
+  const SkillsIcon = ({ size }: { size: number }) => <BiCodeAlt size={size} />;
+  const ProjectIcon = ({ size }: { size: number }) => <BiFolder size={size} />;
+
+  const menuData = [
+    { label: t("header.home"), part: 'home', icon: HomeIcon },
+    { label: t("header.about"), part: 'about_me', icon: AboutIcon },
+    { label: t("header.skills"), part: 'skills', icon: SkillsIcon },
+    { label: t("header.work"), part: 'projects', icon: ProjectIcon }
+  ];
+
   return (
     <SidebarOverlay
       className={sidebar ? 'open' : ''}
@@ -42,10 +54,11 @@ const Sidebar = () => {
           </CloseBtn>
         </SidebarHeader>
         <SidebarBody>
-          <SidebarItem onClick={() => scrollToPart('home')}><FaHome size={24} /><Span>{t("header.home")}</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('about_me')}><FaAddressBook size={24} /><Span>{t("header.about")}</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('skills')}><BiCodeAlt size={24} /><Span>{t("header.skills")}</Span></SidebarItem>
-          <SidebarItem onClick={() => scrollToPart('projects')}><BiFolder size={24} /><Span>{t("header.work")}</Span></SidebarItem>
+          {menuData.map(({ label, part, icon: Icon }) =>
+            <SidebarItem onClick={() => scrollToPart(part)} key={part}>
+              <Icon size={24} /><Span>{label}</Span>
+            </SidebarItem>
+          )}
         </SidebarBody>
         <SidebarFooter>
           <Select
