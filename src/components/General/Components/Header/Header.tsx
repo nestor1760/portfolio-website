@@ -37,7 +37,7 @@ const Header: FC = () => {
   const showModal = (): void => {
     dispatch(setShow({ show: true, scroll: true }))
   }
-
+  
   const menuData = [
     { label: t("header.home"), part: 'home' },
     { label: t("header.about"), part: 'about_me' },
