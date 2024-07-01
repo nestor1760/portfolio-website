@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import { blue_color } from "../../../../../GlobalStyles";
-// import { blue_color } from "../../../../../GlobalStyles";
 
 // export const StyledMenuItem = styled.a`
 //   text-transform: uppercase;
