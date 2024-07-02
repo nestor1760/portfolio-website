@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FlexContainer = styled.div`
+export const SkillsListContainer = styled.div`
   max-width: 1100px;
   display: flex;
   align-items: center;

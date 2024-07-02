@@ -1,5 +1,5 @@
 export interface INavItem {
   label: string,
-  isSelected: boolean,
+  isSelected?: boolean,
   handleClick: () => void,
 }

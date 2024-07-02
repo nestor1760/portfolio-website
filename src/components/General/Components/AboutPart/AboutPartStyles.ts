@@ -66,7 +66,7 @@ export const StyledLink = styled.a`
   }
 `
 
-export const Title = styled.p`
+export const AboutTitle = styled.p`
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 20px 0;

@@ -57,5 +57,5 @@ const elevateAnimation = keyframes`
 
 export const AnimatedLetter = styled.span`
   display: inline-block;
-  animation: ${elevateAnimation} 300ms ease-in;
+  animation: ${elevateAnimation} 200ms ease-in;
 `;

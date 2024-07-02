@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { small_tablet_screen, tablet_screen } from "../../../../../GlobalStyles";
 
-export const FlexContainer = styled.div`
+export const ProjectsListContainer = styled.div`
   max-width: 1100px;
   display: flex;
   align-items: center;

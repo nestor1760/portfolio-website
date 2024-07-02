@@ -2,15 +2,16 @@ import { Image, InfoBlog, ItemContainer, LinkItem, ProjectDescription, ProjectLi
 
 import { ImGithub } from "react-icons/im";
 import { FaLink } from "react-icons/fa6";
-import { FC } from "react";
+import { forwardRef } from "react";
 import { IProjectItem } from "../../../../../data/interface";
+import { motion } from "framer-motion";
 
 
-const ProjectItem: FC<IProjectItem> = ({ project }) => {
+const ProjectItem = forwardRef<HTMLDivElement, IProjectItem>(({ project }, ref) => {
   const { name, description, image_path, preview_link, tech, github_link, git_label, preview_label } = project
 
   return (
-    <ItemContainer>
+    <ItemContainer ref={ref}>
       <Image src={image_path} alt={name} />
       <InfoBlog>
         <ProjectName>{name}</ProjectName>
@@ -31,6 +32,7 @@ const ProjectItem: FC<IProjectItem> = ({ project }) => {
       </InfoBlog>
     </ItemContainer>
   )
-}
+})
 
+export const MProjectItem = motion(ProjectItem)
 export default ProjectItem

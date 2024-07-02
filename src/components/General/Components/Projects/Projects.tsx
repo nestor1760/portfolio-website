@@ -1,29 +1,30 @@
+import { MProjectTitle, MProjectsContainer, fadeIn, leftAnimation } from "../../../../animation"
 import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
-import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
+import { MNavigationItem } from "../../../../styledTags/NavigationItem/NavigationItem"
 import ProjectList from "./ProjectList/ProjectList"
-import { ProjectsContainer, Title } from "./ProjectsStyles"
 
 const Projects = () => {
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
 
   return (
-    <ProjectsContainer>
+    <MProjectsContainer initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
       <Container width="auto" direction="column" justify="center">
-        <NavigationItem
+        <MNavigationItem
+          variants={fadeIn}
+          custom={1}
           align="center"
           margin={windowWidth > 768 ? "50px 0 30px 0" : "50px 0 20px 0"}
           id="projects"
         >
           {t("projectsPart.navItem")}
-        </NavigationItem>
-        <Title>{t("projectsPart.title")}</Title>
+        </MNavigationItem>
+        <MProjectTitle variants={leftAnimation} custom={1}>{t("projectsPart.title")}</MProjectTitle>
       </Container>
-
       <ProjectList />
-    </ProjectsContainer>
+    </MProjectsContainer>
   )
 }
 

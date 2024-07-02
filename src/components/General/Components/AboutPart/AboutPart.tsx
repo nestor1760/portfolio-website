@@ -1,11 +1,13 @@
+import { MAboutContainer, MInfoContainer, MTitle, fadeIn, leftAnimation, rightAnimation } from "../../../../animation"
 import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
-import NavigationItem from "../../../../styledTags/NavigationItem/NavigationItem"
-import { AboutContainer, InfoContainer, PersonalInfo, Photo, StyledLink, Title } from "./AboutPartStyles"
+import { MNavigationItem } from "../../../../styledTags/NavigationItem/NavigationItem"
+import { PersonalInfo, Photo, StyledLink } from "./AboutPartStyles"
 import { FaFacebookSquare } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithubSquare } from "react-icons/fa"
+import { motion } from 'framer-motion'
 
 const AboutPart = () => {
   const linkedin = import.meta.env.VITE_LINK_URL;
@@ -16,9 +18,9 @@ const AboutPart = () => {
   const { t } = useLanguage()
 
   return (
-    <AboutContainer>
+    <MAboutContainer initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
       <Container align={windowWidth > 998 ? "flex-end" : "center"} justify="center" wrap="wrap" direction={windowWidth > 768 ? "row" : "column"}>
-        <InfoContainer>
+        <MInfoContainer variants={rightAnimation} custom={1}>
           <Photo src="/media/iphone_avatar.png" alt="iphone_avatar" />
           <PersonalInfo>
             <span>{t("aboutPart.name")}</span>
@@ -28,14 +30,21 @@ const AboutPart = () => {
               <StyledLink href={facebook} target="blank"><FaFacebookSquare size={30} /></StyledLink>
             </Container>
           </PersonalInfo>
-        </InfoContainer>
+        </MInfoContainer>
         <Container width={windowWidth > 768 ? "50%" : "90%"} margin="0" direction="column">
-          <NavigationItem margin={windowWidth > 768 ? "0 0 30px 0" : "0 0 20px 0"} id="about_me">{t("aboutPart.navItem")}</NavigationItem>
-          <Title>{t("aboutPart.slogan")}</Title>
-          <p>{t("aboutPart.description")}</p>
+          <MNavigationItem
+            variants={fadeIn}
+            custom={1}
+            margin={windowWidth > 768 ? "0 0 30px 0" : "0 0 20px 0"}
+            id="about_me"
+          >
+            {t("aboutPart.navItem")}
+          </MNavigationItem>
+          <MTitle variants={leftAnimation} custom={1}>{t("aboutPart.slogan")}</MTitle>
+          <motion.p variants={leftAnimation} custom={2}>{t("aboutPart.description")}</motion.p>
         </Container>
       </Container>
-    </AboutContainer>
+    </MAboutContainer>
   )
 }
 

@@ -1,15 +1,18 @@
-import { TItem } from "../../../../../data/interface"
+import { forwardRef } from "react"
+import { SkillItemProps } from "../../../../../data/interface"
 import { Img, ItemContainer, Text } from "./SkillsItemStyles"
+import { motion } from "framer-motion"
 
-const SkillsItem = ({ item, isVisible }: { item: TItem, isVisible: boolean }) => {
+const SkillItem = forwardRef<HTMLDivElement, SkillItemProps>(({ item }, ref) => {
   const { image, title } = item
 
   return (
-    <ItemContainer isVisible={isVisible}>
+    <ItemContainer ref={ref}>
       <Img src={image} alt={title} />
       <Text>{title}</Text>
     </ItemContainer>
   )
-}
+})
 
-export default SkillsItem
+export const MSkillItem = motion(SkillItem)
+export default SkillItem

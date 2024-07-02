@@ -19,7 +19,7 @@ export const SkillsContainer = styled.section`
   }
 `
 
-export const Title = styled.p`
+export const SkillsTitle = styled.p`
   font-size: 32px;
   font-weight: 600;
   margin: 0 0 40px 0;

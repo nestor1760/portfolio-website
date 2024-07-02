@@ -1,23 +1,16 @@
 import { FC } from "react"
 import { INavItem } from "./interface"
-import { ActiveLine, StyledMenuItem } from "./MenuItemStyles"
-import { motion } from "framer-motion"
-import { blue_color, white_color } from "../../../../../GlobalStyles"
+import { StyledMenuItem } from "./MenuItemStyles"
 
 const MenuItem: FC<INavItem> = (props) => {
-  const { label, handleClick, isSelected } = props
-
-  const MItem = motion(StyledMenuItem)
+  const { label, handleClick } = props
 
   return (
-    <MItem
+    <StyledMenuItem
       onClick={handleClick}
-      initial={{ color: white_color }}
-      animate={{ color: isSelected ? blue_color : white_color }}
     >
-      {isSelected && <ActiveLine />}
       {label}
-    </MItem>
+    </StyledMenuItem>
   )
 }
 

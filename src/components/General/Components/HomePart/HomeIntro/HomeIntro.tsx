@@ -7,7 +7,8 @@ import { setShow } from "../../../../../store/modalSlice"
 import Modal from "../../../../UI/Modal/Modal"
 import Contact from "../../Contact/Contact"
 import IntroUtills from "./utills"
-import ContactBtn from "../../../../UI/ContactBtn/ContactBtn"
+import { MContactBtn } from "../../../../UI/ContactBtn/ContactBtn"
+import { MStyledText, upAnimation, leftAnimation } from "../../../../../animation"
 
 const HomeIntro = () => {
   const { windowWidth } = useWindowWidth()
@@ -33,8 +34,14 @@ const HomeIntro = () => {
 
   return (
     <>
-      <IntroContainer id="home" >
-        <StyledText size={sizeTitle} margin="0 0 10px 0" weight="600">{t("intro.greeting")}</StyledText>
+      <IntroContainer id="home">
+        <StyledText
+          size={sizeTitle}
+          margin="0 0 10px 0"
+          weight="600"
+        >
+          {t("intro.greeting")}
+        </StyledText>
         <div style={{ display: 'flex', height: '90px' }}>
           <StyledText size={sizeName} margin="0 0 30px 0" weight="600">
             {letters.map((char, index) =>
@@ -42,10 +49,30 @@ const HomeIntro = () => {
             )}
           </StyledText>
         </div>
-        <StyledText size={sizeText} margin="0 0 50px 0" weight="600">
+        <MStyledText
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={leftAnimation}
+          custom={10}
+          size={sizeText}
+          margin="0 0 50px 0"
+          weight="600"
+        >
           {t("intro.description.firstPart")}<span> {t("intro.description.span")}</span> <br />{t("intro.description.secondPart")}
-        </StyledText>
-        <ContactBtn width="190px" height="44px" onClick={showModal}>{t("intro.button")}</ContactBtn>
+        </MStyledText>
+        <MContactBtn
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ amount: 0.2, once: true }}
+          variants={upAnimation}
+          custom={10}
+          width="190px"
+          height="44px"
+          onClick={showModal}
+        >
+          {t("intro.button")}
+        </MContactBtn>
       </IntroContainer>
       <Modal show={show}>
         <Contact />

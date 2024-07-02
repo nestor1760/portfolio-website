@@ -5,6 +5,10 @@ export type TItem = {
   image: string,
 }
 
+export interface SkillItemProps {
+  item: TItem;
+}
+
 //interface for list of projects
 export interface IProjectProps {
   id: number,
