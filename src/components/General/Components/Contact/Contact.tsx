@@ -2,10 +2,10 @@ import { useState } from "react";
 import { useAppDispatch } from "../../../../hook";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { setShow } from "../../../../store/modalSlice";
-import ContactBtn from "../../../UI/ContactBtn/ContactBtn";
 import { CloseBtn, ContactContainer, Form, HeaderBox, Input, InputBox, Label, TextArea, Title } from "./ContactStyles";
 import { handleSubmit } from "./utills";
 import { IoCloseOutline } from "react-icons/io5";
+import Button from "../../../UI/StyledButton/StyledButton";
 
 const Contact = () => {
   const dispatch = useAppDispatch()
@@ -52,7 +52,7 @@ const Contact = () => {
           <Label>{message}</Label>
           <TextArea value={messageState} onChange={e => setMessageState(e.target.value)} name="message" id="" placeholder={message_ph} required />
         </InputBox>
-        <ContactBtn width="100%" height="55px">{btn_label}</ContactBtn>
+        <Button width="100%" height="55px">{btn_label}</Button>
       </Form>
     </ContactContainer>
   )

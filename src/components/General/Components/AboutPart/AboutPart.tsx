@@ -7,12 +7,14 @@ import { PersonalInfo, Photo, StyledLink } from "./AboutPartStyles"
 import { FaFacebookSquare } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithubSquare } from "react-icons/fa"
+import { FaTelegram } from "react-icons/fa";
 import { motion } from 'framer-motion'
 
 const AboutPart = () => {
   const linkedin = import.meta.env.VITE_LINK_URL;
   const facebook = import.meta.env.VITE_FACE_URL;
   const github = import.meta.env.VITE_GIT_URL;
+  const telegram = import.meta.env.VITE_TELEGRAM_URL;
 
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
@@ -28,6 +30,7 @@ const AboutPart = () => {
               <StyledLink href={github} target="blank"><FaGithubSquare size={30} /></StyledLink>
               <StyledLink href={linkedin} target="blank"><FaLinkedin size={30} /></StyledLink>
               <StyledLink href={facebook} target="blank"><FaFacebookSquare size={30} /></StyledLink>
+              <StyledLink href={telegram} target="blank"><FaTelegram size={30} /></StyledLink>
             </Container>
           </PersonalInfo>
         </MInfoContainer>

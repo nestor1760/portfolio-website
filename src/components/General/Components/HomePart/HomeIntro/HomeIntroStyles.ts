@@ -59,3 +59,16 @@ export const AnimatedLetter = styled.span`
   display: inline-block;
   animation: ${elevateAnimation} 200ms ease-in;
 `;
+
+export const BtnContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  @media ${mobile_screen} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+`

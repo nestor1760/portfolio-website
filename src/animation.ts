@@ -6,6 +6,8 @@ import { SkillsContainer, SkillsTitle } from "./components/General/Components/Sk
 import { ProjectTitle, ProjectsContainer } from "./components/General/Components/Projects/ProjectsStyles"
 import { ProjectsListContainer } from "./components/General/Components/Projects/ProjectList/ProjectListStyles"
 import { SkillsListContainer } from "./components/General/Components/SkillsPart/SkillsList/SkillsListStyles"
+import { FooterContainer, Label } from "./components/General/Components/Footer/FooterStyles"
+import { FooterBtn, FooterLink } from "./components/General/Components/Footer/FooterList/FooterListStyles"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -25,6 +27,11 @@ export const MProjectTitle = motion(ProjectTitle)
 export const MProjectsList = motion(ProjectsListContainer)
 //For SkillsList.tsx
 export const MSkillsList = motion(SkillsListContainer)
+//For Footer.tsx
+export const MFooterContainer = motion(FooterContainer)
+export const MLabel = motion(Label)
+export const MFooterLink = motion(FooterLink)
+export const MFooterBtn = motion(FooterBtn)
 
 export const leftAnimation = {
   hidden: {
@@ -53,6 +60,18 @@ export const rightAnimation = {
 export const upAnimation = {
   hidden: {
     y: 30,
+    opacity: 0,
+  },
+  visible: (custom: number) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 }
+  }),
+}
+
+export const downAnimation = {
+  hidden: {
+    y: -30,
     opacity: 0,
   },
   visible: (custom: number) => ({

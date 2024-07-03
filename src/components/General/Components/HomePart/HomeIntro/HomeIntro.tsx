@@ -1,14 +1,16 @@
 import { useEffect } from "react"
 import { useLanguage } from "../../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../../hooks/useWindowWidth"
-import { AnimatedLetter, IntroContainer, StyledText } from "./HomeIntroStyles"
+import { AnimatedLetter, BtnContainer, IntroContainer, StyledText } from "./HomeIntroStyles"
 import { useAppDispatch, useAppSelector } from "../../../../../hook"
 import { setShow } from "../../../../../store/modalSlice"
 import Modal from "../../../../UI/Modal/Modal"
 import Contact from "../../Contact/Contact"
 import IntroUtills from "./utills"
-import { MContactBtn } from "../../../../UI/ContactBtn/ContactBtn"
+import { MButton } from "../../../../UI/StyledButton/StyledButton"
 import { MStyledText, upAnimation, leftAnimation } from "../../../../../animation"
+import { MdOutlineFileDownload } from "react-icons/md";
+import { blue_color, white_color } from "../../../../../GlobalStyles"
 
 const HomeIntro = () => {
   const { windowWidth } = useWindowWidth()
@@ -61,18 +63,35 @@ const HomeIntro = () => {
         >
           {t("intro.description.firstPart")}<span> {t("intro.description.span")}</span> <br />{t("intro.description.secondPart")}
         </MStyledText>
-        <MContactBtn
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ amount: 0.2, once: true }}
-          variants={upAnimation}
-          custom={10}
-          width="190px"
-          height="44px"
-          onClick={showModal}
-        >
-          {t("intro.button")}
-        </MContactBtn>
+        <BtnContainer>
+          <MButton
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            variants={upAnimation}
+            custom={10}
+            onClick={showModal}
+            height="44px"
+            margin="0 10px 0 0"
+          >
+            {t("intro.button")}
+          </MButton>
+          <MButton
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ amount: 0.2, once: true }}
+            variants={upAnimation}
+            custom={12}
+            height="44px"
+            color={blue_color}
+            background={white_color}
+            hoverColor={white_color}
+            hoverBack={blue_color}
+          >
+            {t("intro.downloadButton")}
+            <MdOutlineFileDownload size={30} />
+          </MButton>
+        </BtnContainer>
       </IntroContainer>
       <Modal show={show}>
         <Contact />

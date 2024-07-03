@@ -7,7 +7,6 @@ import { useScroll } from "../../../../hooks/useScroll";
 import Sidebar from "../../../UI/Sidebar/Sidebar";
 import Select from "../../../UI/Select/Select";
 import { Container } from "../../../../styledTags/Container/Container";
-import ContactBtn from "../../../UI/ContactBtn/ContactBtn";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { useAppDispatch, useAppSelector } from "../../../../hook";
 import { useNavMenu } from "../../../../hooks/useNavMenu";
@@ -15,6 +14,7 @@ import Modal from "../../../UI/Modal/Modal";
 import Contact from "../Contact/Contact";
 import MenuItem from "./MenuItem/MenuItem";
 import { LayoutGroup } from "framer-motion";
+import Button from "../../../UI/StyledButton/StyledButton";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
@@ -37,7 +37,7 @@ const Header: FC = () => {
   const showModal = (): void => {
     dispatch(setShow({ show: true, scroll: true }))
   }
-  
+
   const menuData = [
     { label: t("header.home"), part: 'home' },
     { label: t("header.about"), part: 'about_me' },
@@ -82,7 +82,7 @@ const Header: FC = () => {
                   { value: 'ua' },
                 ]}
               />
-              <ContactBtn width="190px" height="44px" onClick={showModal}>{t("header.button")}</ContactBtn>
+              <Button width="190px" height="44px" onClick={showModal}>{t("header.button")}</Button>
             </Container>
           </>
           : <SidebarBtn><IoMenu size={24} onClick={openMenu} /></SidebarBtn>
