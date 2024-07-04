@@ -20,7 +20,7 @@ const HomeIntro = () => {
   const { animatedString, letters } = IntroUtills()
 
   const sizeTitle = windowWidth > 889 ? '28px' : '22px';
-  const sizeName = windowWidth > 889 ? '40px' : '32px';
+  const sizeName = windowWidth > 889 ? '40px' : '30px';
   const sizeText = windowWidth > 889 ? '24px' : '18px';
 
   const name = t("intro.name");
@@ -72,7 +72,7 @@ const HomeIntro = () => {
             custom={10}
             onClick={showModal}
             height="44px"
-            margin="0 10px 0 0"
+            margin={windowWidth > 480 ? '0 10px 0 0' : '0 0 15px 0'}
           >
             {t("intro.button")}
           </MButton>
@@ -86,7 +86,8 @@ const HomeIntro = () => {
             color={blue_color}
             background={white_color}
             hoverColor={white_color}
-            hoverBack={blue_color}
+            hoverBack='transparent'
+            border='2px solid white'
           >
             {t("intro.downloadButton")}
             <MdOutlineFileDownload size={30} />

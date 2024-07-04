@@ -15,6 +15,7 @@ import Contact from "../Contact/Contact";
 import MenuItem from "./MenuItem/MenuItem";
 import { LayoutGroup } from "framer-motion";
 import Button from "../../../UI/StyledButton/StyledButton";
+import { GeneralTitle } from "../../../../GlobalStyles";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
@@ -25,8 +26,6 @@ const Header: FC = () => {
   const { openMenu, scrollToPart, scrollToStart } = useNavMenu()
 
   const [activeIndex, setActiveIndex] = useState<number>(0)
-
-  const title = '<<span>Nestor</span>/>';
 
   useEffect(() => {
     if (windowWidth > 865) {
@@ -57,7 +56,7 @@ const Header: FC = () => {
         scrolled={scrollPosition}
         className={(windowWidth > 977) ? (scrollPosition > 95) ? 'bigger' : '' : ''}
       >
-        <Title dangerouslySetInnerHTML={{ __html: title }} onClick={scrollToStart} />
+        <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
         {(windowWidth > 1024)
           ? <>
             <LayoutGroup>

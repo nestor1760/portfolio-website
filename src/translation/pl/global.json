@@ -101,5 +101,20 @@
     "btn_label": "Wyślij wiadomość",
     "req_title": "Sukces!",
     "req_text": "Wiadomość została pomyślnie wysłana!"
+  },
+  "footer": {
+    "title": "Polityka prywatności",
+    "text": "Roman Nesterchuk. Wszelkie prawa zastrzeżone."
+  },
+  "privacyPolicy": {
+    "btnLabel": "Głowna strona",
+    "title": "",
+    "description": [
+      {
+        "id": 1,
+        "title": "",
+        "text": ""
+      }
+    ]
   }
 }

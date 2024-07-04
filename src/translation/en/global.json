@@ -101,5 +101,20 @@
     "btn_label": "Send message",
     "req_title": "Success!",
     "req_text": "Message sent successfully!"
+  },
+  "footer": {
+    "title": "Privacy Policy",
+    "text": "Roman Nesterchuk. All rights reserved."
+  },
+  "privacyPolicy": {
+    "btnLabel": "Home page",
+    "title": "",
+    "description": [
+      {
+        "id": 1,
+        "title": "",
+        "text": ""
+      }
+    ]
   }
 }

@@ -101,5 +101,20 @@
     "btn_label": "Відправити повідомлення",
     "req_title": "Успіх!",
     "req_text": "Повідомлення успішно відправлено!"
+  },
+  "footer": {
+    "title": "Політика конфіденційності",
+    "text": "Roman Nesterchuk. Всі права захищені."
+  },
+  "privacyPolicy": {
+    "btnLabel": "Головна сторінка",
+    "title": "",
+    "description": [
+      {
+        "id": 1,
+        "title": "",
+        "text": ""
+      }
+    ]
   }
 }

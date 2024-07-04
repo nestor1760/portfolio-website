@@ -1,20 +1,15 @@
-import AboutPart from "./components/General/Components/AboutPart/AboutPart"
-import Footer from "./components/General/Components/Footer/Footer"
-import Header from "./components/General/Components/Header/Header"
-import Home from "./components/General/Components/HomePart/Home"
-import Projects from "./components/General/Components/Projects/Projects"
-import SkillsPart from "./components/General/Components/SkillsPart/SkillsPart"
+import { Route, Routes } from "react-router-dom"
 import { Wrapper } from "./styledTags/Wrapper/Wrapper"
+import Layout from "./components/General/Components/Layout/Layout"
+import PrivacyPolicy from "./components/General/Components/PrivacyPolicy/PrivacyPolicy"
 
 function App() {
   return (
     <Wrapper>
-      <Header />
-      <Home />
-      <AboutPart />
-      <SkillsPart />
-      <Projects />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Layout />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      </Routes>
     </Wrapper>
   )
 }

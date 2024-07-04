@@ -6,8 +6,9 @@ import { SkillsContainer, SkillsTitle } from "./components/General/Components/Sk
 import { ProjectTitle, ProjectsContainer } from "./components/General/Components/Projects/ProjectsStyles"
 import { ProjectsListContainer } from "./components/General/Components/Projects/ProjectList/ProjectListStyles"
 import { SkillsListContainer } from "./components/General/Components/SkillsPart/SkillsList/SkillsListStyles"
-import { FooterContainer, Label } from "./components/General/Components/Footer/FooterStyles"
+import { FooterContainer, Label, PrivacyPolicyContainer } from "./components/General/Components/Footer/FooterStyles"
 import { FooterBtn, FooterLink } from "./components/General/Components/Footer/FooterList/FooterListStyles"
+import { PPContainer, PPHeader } from "./components/General/Components/PrivacyPolicy/PPStyles"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -32,6 +33,10 @@ export const MFooterContainer = motion(FooterContainer)
 export const MLabel = motion(Label)
 export const MFooterLink = motion(FooterLink)
 export const MFooterBtn = motion(FooterBtn)
+export const MPPContainer = motion(PrivacyPolicyContainer)
+//For PrivacyPolicy.tsx
+export const MPrivacyBox = motion(PPContainer)
+export const MHeader = motion(PPHeader)
 
 export const leftAnimation = {
   hidden: {
