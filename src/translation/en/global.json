@@ -108,12 +108,12 @@
   },
   "privacyPolicy": {
     "btnLabel": "Home page",
-    "title": "",
+    "title": "Nestor Website Privacy Policy",
     "description": [
       {
         "id": 1,
-        "title": "",
-        "text": ""
+        "title": "Introduction",
+        "text": "1.1 These Privacy Terms are an official document that constitutes an integral part of the Terms of Use of the website <path>. They regulate the relationship between the owner of the website <path> (hereinafter referred to as 'we', 'our') and its users regarding confidential information, methods of its collection, storage, processing, disclosure, analysis, and processing, as well as ensuring security during the use of the website <path>. We strongly recommend that users carefully review these Privacy Terms before starting to use the website <path>, its content, or other related products. By using this website and its products, you confirm your agreement with the terms set forth below. If you do not fully or partially agree with these Privacy Terms, we kindly ask you to discontinue using the website <path>."
       }
     ]
   }

@@ -1,18 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import { MHeader, MPrivacyBox, downAnimation, rightAnimation } from "../../../../animation";
+import { MHeader, MPrivacyBox, MTitleText, downAnimation, rightAnimation } from "../../../../animation";
 import { MButton } from "../../../UI/StyledButton/StyledButton";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { FaArrowLeft } from "react-icons/fa6";
-import { ItemBox, PPText, PPTitle, Title, TitleText } from "./PPStyles";
+import { Title } from "./PPStyles";
 import Select from "../../../UI/Select/Select";
 import { GeneralTitle } from "../../../../GlobalStyles";
 import { useNavMenu } from "../../../../hooks/useNavMenu";
+import { IPrivacy } from "./interface";
+import { MPrivacyItem } from "./PrivacyItem/PrivacyItem";
 
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate()
   const { language, handleLanguage, t } = useLanguage()
   const { scrollToStart } = useNavMenu()
+  const test = t("privacyPolicy.description", { returnObjects: true }) as IPrivacy[];
 
   return (
     <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
@@ -28,14 +31,10 @@ const PrivacyPolicy = () => {
           ]}
         />
       </MHeader>
-      <TitleText>Title</TitleText>
-      <ItemBox>
-        <PPTitle>1. Test Title</PPTitle>
-        <PPText>1.1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore iure nam, est similique cumque voluptate, nobis, aspernatur dolor accusantium perferendis delectus blanditiis error hic repellat. Laudantium iure voluptatum aliquam accusamus?</PPText>
-        <PPText>2.1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore iure nam, est similique cumque voluptate, nobis, aspernatur dolor accusantium perferendis delectus blanditiis error hic repellat. Laudantium iure voluptatum aliquam accusamus?</PPText>
-        <PPText>3.1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore iure nam, est similique cumque voluptate, nobis, aspernatur dolor accusantium perferendis delectus blanditiis error hic repellat. Laudantium iure voluptatum aliquam accusamus?</PPText>
-      </ItemBox>
-
+      <MTitleText variants={rightAnimation} custom={0.5}>{t('privacyPolicy.title')}</MTitleText>
+      {test.map((item, index) =>
+        <MPrivacyItem item={item} key={item.id} variants={rightAnimation} custom={index} />
+      )}
       <MButton
         variants={rightAnimation}
         custom={1}
