@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { Link } from "react-router-dom";
 
 export const ContactContainer = styled.section`
   width: 600px;
@@ -140,5 +141,21 @@ export const TextArea = styled.textarea`
 
   @media ${mobile_screen} {
     font-size: 14px;
+  }
+`
+
+export const ContantFooter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const StyledLink = styled(Link)`
+  color: ${white_color};
+  margin: 0 0 5px 0;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${blue_color};
   }
 `
