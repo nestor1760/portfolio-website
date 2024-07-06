@@ -46,7 +46,8 @@ export const Label = styled.p`
 
 export const PrivacyPolicyContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-self: flex-end;
+  align-items: flex-end;
   justify-content: center;
   flex-direction: column;
   color: ${white_color};

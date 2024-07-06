@@ -6,10 +6,15 @@ import { IPrivacyProps } from "../interface"
 const PrivacyItem = forwardRef<HTMLDivElement, IPrivacyProps>(({ item }, ref) => {
   const { text, title } = item
 
+  console.log(text);
+
+
   return (
     <ItemBox ref={ref}>
       <PPTitle>{title}</PPTitle>
-      <PPText>{text}</PPText>
+      {text.map((paragraph) => (
+        <PPText key={paragraph.id}>{paragraph.body}</PPText>
+      ))}
     </ItemBox>
   )
 })

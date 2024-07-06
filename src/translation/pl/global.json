@@ -113,7 +113,12 @@
       {
         "id": 1,
         "title": "Wprowadzenie",
-        "text": "1.1 Te Warunki Prywatności są oficjalnym dokumentem, który stanowi integralną część Warunków Korzystania z serwisu internetowego <path>. Regulują one relacje między właścicielem serwisu internetowego <path> (dalej 'my', 'nasz') a jego użytkownikami w zakresie informacji poufnych, metod ich zbierania, przechowywania, przetwarzania, ujawniania, analizy oraz procesingu, a także zapewnienia bezpieczeństwa podczas korzystania z serwisu internetowego <path>. Zalecamy użytkownikom dokładne zapoznanie się z tymi Warunkami Prywatności przed rozpoczęciem korzystania z serwisu internetowego <path>, jego zawartości lub innych powiązanych produktów. Korzystając z tego serwisu internetowego i jego produktów, potwierdzasz swoją zgodę na warunki określone poniżej. Jeśli nie zgadzasz się w pełni lub częściowo z tymi Warunkami Prywatności, uprzejmie prosimy o zaprzestanie korzystania z serwisu internetowego <path>."
+        "text": [
+          {
+            "id": 1,
+            "body": "1.1 Te Warunki Prywatności są oficjalnym dokumentem, który stanowi integralną część Warunków Korzystania z serwisu internetowego <path>. Regulują one relacje między właścicielem serwisu internetowego <path> (dalej 'my', 'nasz') a jego użytkownikami w zakresie informacji poufnych, metod ich zbierania, przechowywania, przetwarzania, ujawniania, analizy oraz procesingu, a także zapewnienia bezpieczeństwa podczas korzystania z serwisu internetowego <path>. Zalecamy użytkownikom dokładne zapoznanie się z tymi Warunkami Prywatności przed rozpoczęciem korzystania z serwisu internetowego <path>, jego zawartości lub innych powiązanych produktów. Korzystając z tego serwisu internetowego i jego produktów, potwierdzasz swoją zgodę na warunki określone poniżej. Jeśli nie zgadzasz się w pełni lub częściowo z tymi Warunkami Prywatności, uprzejmie prosimy o zaprzestanie korzystania z serwisu internetowego <path>."
+          }
+        ]
       }
     ]
   }
