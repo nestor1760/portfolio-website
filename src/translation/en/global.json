@@ -108,15 +108,116 @@
   },
   "privacyPolicy": {
     "btnLabel": "Home page",
+    "lastUpdate": "last update: ",
     "title": "Nestor Website Privacy Policy",
     "description": [
       {
         "id": 1,
-        "title": "Introduction",
+        "title": "1. Introduction",
         "text": [
           {
             "id": 1,
-            "body": "1.1 These Privacy Terms are an official document that constitutes an integral part of the Terms of Use of the website <path>. They regulate the relationship between the owner of the website <path> (hereinafter referred to as 'we', 'our') and its users regarding confidential information, methods of its collection, storage, processing, disclosure, analysis, and processing, as well as ensuring security during the use of the website <path>. We strongly recommend that users carefully review these Privacy Terms before starting to use the website <path>, its content, or other related products. By using this website and its products, you confirm your agreement with the terms set forth below. If you do not fully or partially agree with these Privacy Terms, we kindly ask you to discontinue using the website <path>."
+            "body": "1.1 Welcome to our website <path>! We respect your privacy and are committed to protecting the personal information you provide through our site. This privacy policy explains how we collect, use, and protect your information."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "2. Information We Collect",
+        "text": [
+          {
+            "id": 1,
+            "body": "2.1 Personal Data: When you register on our site, subscribe to our newsletter, or fill out forms, we may collect your name, email address, phone number, and other contact information."
+          },
+          {
+            "id": 2,
+            "body": "2.2 Automatically Collected Information: We may collect information about your use of our site, including your IP address, browser type, browser language, access times, and referring URLs."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "3. Use of Information",
+        "text": [
+          {
+            "id": 1,
+            "body": "3.1 Providing and supporting our services."
+          },
+          {
+            "id": 2,
+            "body": "3.2 Personalizing your experience on our site."
+          },
+          {
+            "id": 3,
+            "body": "3.3 Providing you with information about our products and services."
+          },
+          {
+            "id": 4,
+            "body": "3.4 Improving our site based on your feedback."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "4. Protection of Your Information",
+        "text": [
+          {
+            "id": 1,
+            "body": "4.1 We employ all possible measures to protect your personal information to ensure its security and confidentiality."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "5. Disclosure of Information to Third Parties",
+        "text": [
+          {
+            "id": 1,
+            "body": "5.1 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except trusted partners who assist us in managing our website or servicing you, provided that these parties agree to keep this information confidential."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "6. Cookies",
+        "text": [
+          {
+            "id": 1,
+            "body": "6.1 Our website may use cookies to improve site functionality and gather information about visitors. You can disable cookies in your browser settings."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "7. Links to Third-Party Websites",
+        "text": [
+          {
+            "id": 1,
+            "body": "7.1 Sometimes our website may contain links to third-party sites. These third-party sites have their own privacy policies, and we are not responsible for their content or activities."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "8. Changes to Privacy Policy",
+        "text": [
+          {
+            "id": 1,
+            "body": "8.1 We may update this privacy policy from time to time. All changes will be posted on this page."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "9. Contact Information",
+        "text": [
+          {
+            "id": 1,
+            "body": "email: romannesterchuk01@gmail.com"
+          },
+          {
+            "id": 2,
+            "body": "number: +48 886 191 807"
           }
         ]
       }

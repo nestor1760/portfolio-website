@@ -8,7 +8,6 @@ const PrivacyItem = forwardRef<HTMLDivElement, IPrivacyProps>(({ item }, ref) =>
 
   console.log(text);
 
-
   return (
     <ItemBox ref={ref}>
       <PPTitle>{title}</PPTitle>

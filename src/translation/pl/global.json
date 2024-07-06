@@ -108,15 +108,116 @@
   },
   "privacyPolicy": {
     "btnLabel": "Głowna strona",
+    "lastUpdate": "ostatnia aktualizacja:",
     "title": "Polityka prywatności strony internetowej Nestor",
     "description": [
       {
         "id": 1,
-        "title": "Wprowadzenie",
+        "title": "1. Wprowadzenie",
         "text": [
           {
             "id": 1,
-            "body": "1.1 Te Warunki Prywatności są oficjalnym dokumentem, który stanowi integralną część Warunków Korzystania z serwisu internetowego <path>. Regulują one relacje między właścicielem serwisu internetowego <path> (dalej 'my', 'nasz') a jego użytkownikami w zakresie informacji poufnych, metod ich zbierania, przechowywania, przetwarzania, ujawniania, analizy oraz procesingu, a także zapewnienia bezpieczeństwa podczas korzystania z serwisu internetowego <path>. Zalecamy użytkownikom dokładne zapoznanie się z tymi Warunkami Prywatności przed rozpoczęciem korzystania z serwisu internetowego <path>, jego zawartości lub innych powiązanych produktów. Korzystając z tego serwisu internetowego i jego produktów, potwierdzasz swoją zgodę na warunki określone poniżej. Jeśli nie zgadzasz się w pełni lub częściowo z tymi Warunkami Prywatności, uprzejmie prosimy o zaprzestanie korzystania z serwisu internetowego <path>."
+            "body": "1.1 Witamy na naszej stronie <path>! Szanujemy Twoją prywatność i zobowiązujemy się chronić dane osobowe, które podajesz za pośrednictwem naszej strony. Niniejsza polityka prywatności wyjaśnia, jak zbieramy, wykorzystujemy i chronimy Twoje dane."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "2. Informacje, które zbieramy",
+        "text": [
+          {
+            "id": 1,
+            "body": "2.1 Dane osobowe: Kiedy rejestrujesz się na naszej stronie, zapisujesz się na nasz newsletter lub wypełniasz formularze, możemy zbierać Twoje imię, adres e-mail, numer telefonu i inne dane kontaktowe."
+          },
+          {
+            "id": 2,
+            "body": "2.2 Automatycznie zbierane informacje: Możemy zbierać informacje o Twoim korzystaniu z naszej strony, w tym Twój adres IP, typ przeglądarki, język przeglądarki, czas dostępu oraz adresy URL odsyłaczy."
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "3. Wykorzystanie informacji",
+        "text": [
+          {
+            "id": 1,
+            "body": "3.1 Świadczenie i wspieranie naszych usług."
+          },
+          {
+            "id": 2,
+            "body": "3.2 Personalizacja Twoich doświadczeń na naszej stronie."
+          },
+          {
+            "id": 3,
+            "body": "3.3 Dostarczanie Ci informacji o naszych produktach i usługach."
+          },
+          {
+            "id": 4,
+            "body": "3.4 Udoskonalanie naszej strony na podstawie Twojej opinii."
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "4. Ochrona Twoich informacji",
+        "text": [
+          {
+            "id": 1,
+            "body": "4.1 Stosujemy wszystkie możliwe środki, aby chronić Twoje dane osobowe i zapewnić ich bezpieczeństwo i poufność."
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "5. Ujawnianie informacji osobom trzecim",
+        "text": [
+          {
+            "id": 1,
+            "body": "5.1 Nie sprzedajemy, nie wymieniamy ani nie przekazujemy Twoich danych osobowych osobom trzecim bez Twojej zgody, z wyjątkiem zaufanych partnerów, którzy pomagają nam w zarządzaniu naszą stroną internetową lub obsłudze Ciebie, pod warunkiem że te strony zobowiążą się zachować tę informację w tajemnicy."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "6. Pliki cookie",
+        "text": [
+          {
+            "id": 1,
+            "body": "6.1 Nasza witryna może używać plików cookie w celu poprawy funkcjonalności strony i zbierania informacji o odwiedzających. Możesz wyłączyć obsługę plików cookie w ustawieniach swojej przeglądarki."
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "7. Linki do zewnętrznych zasobów",
+        "text": [
+          {
+            "id": 1,
+            "body": "7.1 Czasami na naszej stronie mogą znajdować się odnośniki do zewnętrznych stron. Te strony zewnętrzne mają własne polityki prywatności, za które nie ponosimy odpowiedzialności za ich treść ani działania."
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "8. Zmiany w polityce prywatności",
+        "text": [
+          {
+            "id": 1,
+            "body": "8.1 Możemy aktualizować niniejszą politykę prywatności od czasu do czasu. Wszelkie zmiany będą publikowane na tej stronie."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "9. Informacje kontaktowe",
+        "text": [
+          {
+            "id": 1,
+            "body": "email: romannesterchuk01@gmail.com"
+          },
+          {
+            "id": 2,
+            "body": "telefon: +48 886 191 807"
           }
         ]
       }

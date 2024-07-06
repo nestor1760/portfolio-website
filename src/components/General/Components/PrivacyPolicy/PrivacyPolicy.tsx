@@ -9,42 +9,54 @@ import { GeneralTitle } from "../../../../GlobalStyles";
 import { useNavMenu } from "../../../../hooks/useNavMenu";
 import { IPrivacy } from "./interface";
 import { MPrivacyItem } from "./PrivacyItem/PrivacyItem";
+import Footer from "../Footer/Footer";
+import Contact from "../Contact/Contact";
+import Modal from "../../../UI/Modal/Modal";
+import { useAppSelector } from "../../../../hook";
 
 
 const PrivacyPolicy = () => {
   const navigate = useNavigate()
   const { language, handleLanguage, t } = useLanguage()
   const { scrollToStart } = useNavMenu()
+  const { show } = useAppSelector(state => state.modal)
   const test = t("privacyPolicy.description", { returnObjects: true }) as IPrivacy[];
 
   return (
-    <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
-      <MHeader variants={downAnimation} custom={1}>
-        <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
-        <Select
-          value={language}
-          onChange={handleLanguage}
-          options={[
-            { value: 'en' },
-            { value: 'pl' },
-            { value: 'ua' },
-          ]}
-        />
-      </MHeader>
-      <MTitleText variants={rightAnimation} custom={0.5}>{t('privacyPolicy.title')}</MTitleText>
-      {test.map((item, index) =>
-        <MPrivacyItem item={item} key={item.id} variants={rightAnimation} custom={index} />
-      )}
-      <MButton
-        variants={rightAnimation}
-        custom={1}
-        height="44px"
-        margin='30px 0'
-        onClick={() => navigate('/')}
-      >
-        <FaArrowLeft style={{ marginRight: '5px' }} />{t('privacyPolicy.btnLabel')}
-      </MButton>
-    </MPrivacyBox>
+    <>
+      <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
+        <MHeader variants={downAnimation} custom={1}>
+          <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
+          <Select
+            value={language}
+            onChange={handleLanguage}
+            options={[
+              { value: 'en' },
+              { value: 'pl' },
+              { value: 'ua' },
+            ]}
+          />
+        </MHeader>
+        <MTitleText variants={rightAnimation} custom={0.5}>{t('privacyPolicy.title')}</MTitleText>
+        <p>{t('privacyPolicy.lastUpdate')} 06.07.2024</p>
+        {test.map((item, index) =>
+          <MPrivacyItem item={item} key={item.id} variants={rightAnimation} custom={index} />
+        )}
+        <MButton
+          variants={rightAnimation}
+          custom={1}
+          height="44px"
+          margin='30px 0'
+          onClick={() => navigate('/')}
+        >
+          <FaArrowLeft style={{ marginRight: '5px' }} />{t('privacyPolicy.btnLabel')}
+        </MButton>
+      </MPrivacyBox>
+      <Footer />
+      <Modal show={show}>
+        <Contact />
+      </Modal>
+    </>
   )
 }
 
