@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue_color, white_color } from "../../../GlobalStyles";
+import { blue_color, mobile_screen, small_tablet_screen, white_color } from "../../../GlobalStyles";
 import { IButtonProps } from "./interface";
 
 export const StyledButton = styled.button<IButtonProps>`
@@ -21,5 +21,13 @@ export const StyledButton = styled.button<IButtonProps>`
   &:hover {
     background: ${props => props.hoverBack || white_color};;
     color: ${props => props.hoverColor || blue_color};;
+  }
+
+  @media ${small_tablet_screen} {
+    font-size: 16px;
+  }
+
+  @media ${mobile_screen} {
+    font-size: 14px;
   }
 `

@@ -85,4 +85,3 @@ export const TitleText = styled.h1`
   font-size: 45px;
   margin: 70px 0 30px 0;
 `
-

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useAppDispatch } from "../../../../hook";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { setShow } from "../../../../store/modalSlice";
-import { CloseBtn, ContactContainer, ContantFooter, Form, HeaderBox, Input, InputBox, Label, StyledLink, TextArea, Title } from "./ContactStyles";
+import { CheckBox, CheckBoxText, CloseBtn, ContactContainer, ContantFooter, Form, HeaderBox, Input, InputBox, InputCont, Label, StyledLink, TextArea, Title } from "./ContactStyles";
 import { handleSubmit } from "./utills";
 import { IoCloseOutline } from "react-icons/io5";
 import Button from "../../../UI/StyledButton/StyledButton";
@@ -25,13 +25,14 @@ const Contact = () => {
   const [nameState, setNameState] = useState('')
   const [mailState, setMailState] = useState('')
   const [messageState, setMessageState] = useState('')
-  // const [checked, setChecked] = useState<boolean>(false)
+  const [checked, setChecked] = useState<boolean>(false)
 
   const closeModal = (): void => {
     dispatch(setShow({ show: false, scroll: false }))
     setNameState('')
     setMailState('')
     setMessageState('')
+    setChecked(false)
   }
 
   return (
@@ -54,14 +55,13 @@ const Contact = () => {
           <TextArea value={messageState} onChange={e => setMessageState(e.target.value)} name="message" id="" placeholder={message_ph} required />
         </InputBox>
         <ContantFooter>
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-          }}>
-            <input type="checkbox" />
-            <p>I have read and agree to the <br /><StyledLink to='/privacy-policy' onClick={() => closeModal()}>Privacy Policy</StyledLink></p>
-          </div>
+          <InputCont>
+            <CheckBox type="checkbox" required checked={checked} onChange={() => setChecked(prev => !prev)} />
+            <CheckBoxText>
+              I have read and agree to the <br />
+              <StyledLink to='/privacy-policy' onClick={() => closeModal()}>Privacy Policy</StyledLink>
+            </CheckBoxText>
+          </InputCont>
           <Button width="40%" height="55px">{btn_label}</Button>
         </ContantFooter>
       </Form>

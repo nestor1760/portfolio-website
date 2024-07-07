@@ -4,11 +4,13 @@ import Home from '../HomePart/Home'
 import AboutPart from '../AboutPart/AboutPart'
 import SkillsPart from '../SkillsPart/SkillsPart'
 import Projects from '../Projects/Projects'
+import { ProgressBar } from '../../../UI/ProgressBar/ProgressBar'
 
 
 const Layout = () => {
   return (
     <>
+      <ProgressBar />
       <Header />
       <Home />
       <AboutPart />

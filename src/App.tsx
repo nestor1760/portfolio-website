@@ -1,9 +1,16 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import { Wrapper } from "./styledTags/Wrapper/Wrapper"
 import Layout from "./components/General/Components/Layout/Layout"
 import PrivacyPolicy from "./components/General/Components/PrivacyPolicy/PrivacyPolicy"
+import { useEffect } from "react"
 
 function App() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
   return (
     <Wrapper>
       <Routes>

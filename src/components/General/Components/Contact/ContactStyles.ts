@@ -150,6 +150,12 @@ export const ContantFooter = styled.div`
   justify-content: space-between;
 `
 
+export const InputCont = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
 export const StyledLink = styled(Link)`
   color: ${white_color};
   margin: 0 0 5px 0;
@@ -157,5 +163,30 @@ export const StyledLink = styled(Link)`
 
   &:hover {
     color: ${blue_color};
+  }
+`
+
+export const CheckBox = styled.input`
+  width: 20px;
+  height: 20px;
+  margin: 0 15px 0 0;
+
+  @media ${mobile_screen} {
+    width: 15px;
+    height: 15px;
+    margin: 0 7px 0 0;
+  }
+`
+
+export const CheckBoxText = styled.p`
+  font-size: 16px;
+  font-weight: 400;
+
+  @media ${small_tablet_screen} {
+    font-size: 14px;
+  }
+
+  @media ${mobile_screen} {
+    font-size: 12px;
   }
 `

@@ -26,7 +26,7 @@ export const handleSubmit = (title: string, text: string) => async (e: FormEvent
     Swal.fire({
       title: `${title}`,
       text: `${text}`,
-      icon: "success"
+      icon: "success",
     });
   }
 };

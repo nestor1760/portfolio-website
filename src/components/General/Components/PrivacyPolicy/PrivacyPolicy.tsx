@@ -13,6 +13,7 @@ import Footer from "../Footer/Footer";
 import Contact from "../Contact/Contact";
 import Modal from "../../../UI/Modal/Modal";
 import { useAppSelector } from "../../../../hook";
+import { ProgressBar } from "../../../UI/ProgressBar/ProgressBar";
 
 
 const PrivacyPolicy = () => {
@@ -20,10 +21,11 @@ const PrivacyPolicy = () => {
   const { language, handleLanguage, t } = useLanguage()
   const { scrollToStart } = useNavMenu()
   const { show } = useAppSelector(state => state.modal)
-  const test = t("privacyPolicy.description", { returnObjects: true }) as IPrivacy[];
+  const descriptions = t("privacyPolicy.description", { returnObjects: true }) as IPrivacy[];
 
   return (
     <>
+      <ProgressBar />
       <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
         <MHeader variants={downAnimation} custom={1}>
           <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
@@ -39,7 +41,7 @@ const PrivacyPolicy = () => {
         </MHeader>
         <MTitleText variants={rightAnimation} custom={0.5}>{t('privacyPolicy.title')}</MTitleText>
         <p>{t('privacyPolicy.lastUpdate')} 06.07.2024</p>
-        {test.map((item, index) =>
+        {descriptions.map((item, index) =>
           <MPrivacyItem item={item} key={item.id} variants={rightAnimation} custom={index} />
         )}
         <MButton
