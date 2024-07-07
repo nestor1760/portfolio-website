@@ -12,10 +12,7 @@ const spring = {
 export const Switcher = () => {
   const { switchOn } = useAppSelector(state => state.switcher)
   const dispatch = useAppDispatch()
-
-  console.log(switchOn);
-
-
+  
   const toogleSwitch = () => {
     dispatch(toggleIsOn())
   }
