@@ -12,18 +12,20 @@ export const PPContainer = styled.section`
   padding: 0 30px;
 
   @media ${tablet_screen} {
-    padding: 0 15px;
+    padding: 0 25px;
     width: 100%;
   }
 
   @media ${small_tablet_screen} {
-    padding: 0 15px;
+    padding: 0 20px;
     width: 100%;
+    justify-content: center;
   }
 
   @media ${mobile_screen} {
-    padding: 0;
+    padding: 0 15px;
     width: 100%;
+    justify-content: center;
   }
 `
 
@@ -84,4 +86,14 @@ export const TitleText = styled.h1`
   width: 100%;
   font-size: 45px;
   margin: 70px 0 30px 0;
+
+  @media ${small_tablet_screen} {
+    font-size: 36px;
+    margin: 30px 0 30px 0;
+  }
+
+  @media ${mobile_screen} {
+    font-size: 34px;
+    margin: 20px 0 30px 0;
+  }
 `

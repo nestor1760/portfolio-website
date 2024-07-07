@@ -16,13 +16,16 @@ border: 1px solid black;
   border-radius: 20px;
 
   @media ${small_tablet_screen} {
-    width: 100%;
-    padding: 7px;
+    align-self: center;
+    width: 70%;
+    padding: 15px;
+    margin: 20px 0 10px 0;
   }
 
   @media ${mobile_screen} {
     width: 100%;
-    padding: 5px;
+    padding: 10px;
+    margin: 15px 0;
   }
 `
 
@@ -33,11 +36,11 @@ export const PPTitle = styled.p`
   color: ${blue_color};
 
   @media ${small_tablet_screen} {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   @media ${mobile_screen} {
-    font-size: 30px;
+    font-size: 24px;
   }
 `
 

@@ -6,6 +6,7 @@ export const FooterContainer = styled.footer`
   width: 80%;
   height: 160px;
   margin: 150px 0 0 0;
+  overflow: hidden;
   border-top: 2px solid white;
   color: ${white_color};
   display: flex;

@@ -8,6 +8,7 @@ export const HomeContainer = styled.section`
   padding: 15% 0 0 0;
   align-items: center;
   justify-content: space-around;
+  overflow: hidden;
 
   @media ${tablet_screen} {
     width: 100%;

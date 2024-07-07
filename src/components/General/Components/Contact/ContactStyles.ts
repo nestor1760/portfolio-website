@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { back_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 import { Link } from "react-router-dom";
 
 export const ContactContainer = styled.section`
@@ -162,7 +162,7 @@ export const StyledLink = styled(Link)`
   transition: 0.3s;
 
   &:hover {
-    color: ${blue_color};
+    color: ${back_color};
   }
 `
 

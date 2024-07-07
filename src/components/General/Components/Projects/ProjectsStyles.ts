@@ -9,7 +9,7 @@ export const ProjectsContainer = styled.section`
   flex-direction: column;
   color: white;
   margin-top: 50px;
-
+  overflow: hidden;
 
   @media ${tablet_screen} {
     margin-top: 20px;

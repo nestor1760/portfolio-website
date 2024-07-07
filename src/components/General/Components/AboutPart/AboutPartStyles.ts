@@ -6,6 +6,7 @@ export const AboutContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   margin: 156px 0 172px 0;
   color: white;
 

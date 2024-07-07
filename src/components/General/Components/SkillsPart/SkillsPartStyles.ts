@@ -7,6 +7,7 @@ export const SkillsContainer = styled.section`
   align-items: center;
   justify-content: center;
   color: white;
+  overflow: hidden;
 
   @media ${tablet_screen} {
     margin-top: 20px;
