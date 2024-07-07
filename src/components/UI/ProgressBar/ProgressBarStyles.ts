@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { blue_color, mobile_screen, small_tablet_screen } from "../../../GlobalStyles";
 
-
 export const ScrollBar = styled.div`
   position: fixed;
   top: 0;
