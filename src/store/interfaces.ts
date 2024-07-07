@@ -8,3 +8,8 @@ export interface IModalFormState {
   show: boolean,
   scroll: boolean,
 }
+
+//for switcherSlice.ts
+export interface ISwitcherState {
+  switchOn: boolean,
+}

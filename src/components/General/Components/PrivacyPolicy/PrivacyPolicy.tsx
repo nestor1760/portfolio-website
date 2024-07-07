@@ -14,6 +14,7 @@ import Contact from "../Contact/Contact";
 import Modal from "../../../UI/Modal/Modal";
 import { useAppSelector } from "../../../../hook";
 import { ProgressBar } from "../../../UI/ProgressBar/ProgressBar";
+import { Switcher } from "../../../UI/ThemeSwitcher/ThemeSwitcher";
 
 
 const PrivacyPolicy = () => {
@@ -29,6 +30,7 @@ const PrivacyPolicy = () => {
       <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
         <MHeader variants={downAnimation} custom={1}>
           <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
+          <Switcher />
           <Select
             value={language}
             onChange={handleLanguage}
