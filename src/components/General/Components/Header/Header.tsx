@@ -1,5 +1,5 @@
 import { IoMenu } from "react-icons/io5";
-import { FC, useEffect, useState } from 'react';
+import { FC, useEffect } from 'react';
 import { NavigationMenu, SidebarBtn, StyledContainer, Title } from "./HeaderStyles";
 import { useWindowWidth } from "../../../../hooks/useWindowWidth";
 import { setShow, setSidebar } from "../../../../store/modalSlice";
@@ -13,9 +13,9 @@ import { useNavMenu } from "../../../../hooks/useNavMenu";
 import Modal from "../../../UI/Modal/Modal";
 import Contact from "../Contact/Contact";
 import MenuItem from "./MenuItem/MenuItem";
-import { LayoutGroup } from "framer-motion";
 import Button from "../../../UI/StyledButton/StyledButton";
 import { GeneralTitle } from "../../../../GlobalStyles";
+import { Switcher } from "../../../UI/ThemeSwitcher/ThemeSwitcher";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
@@ -24,8 +24,6 @@ const Header: FC = () => {
   const scrollPosition = useScroll()
   const { language, handleLanguage, t } = useLanguage()
   const { openMenu, scrollToPart, scrollToStart } = useNavMenu()
-
-  const [activeIndex, setActiveIndex] = useState<number>(0)
 
   useEffect(() => {
     if (windowWidth > 865) {
@@ -44,9 +42,8 @@ const Header: FC = () => {
     { label: t("header.work"), part: 'projects' }
   ];
 
-  const handleClick = (index: number, part: string) => {
+  const handleClick = (part: string) => {
     scrollToPart(part)
-    setActiveIndex(index)
   }
 
   return (
@@ -57,21 +54,19 @@ const Header: FC = () => {
         className={(windowWidth > 977) ? (scrollPosition > 95) ? 'bigger' : '' : ''}
       >
         <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
-        {(windowWidth > 1024)
+        {(windowWidth > 1050)
           ? <>
-            <LayoutGroup>
-              <NavigationMenu>
-                {menuData.map(({ label, part }, index) =>
-                  <MenuItem
-                    key={label}
-                    label={label}
-                    isSelected={activeIndex === index}
-                    handleClick={() => handleClick(index, part)}
-                  />
-                )}
-              </NavigationMenu>
-            </LayoutGroup>
+            <NavigationMenu>
+              {menuData.map(({ label, part }) =>
+                <MenuItem
+                  key={label}
+                  label={label}
+                  handleClick={() => handleClick(part)}
+                />
+              )}
+            </NavigationMenu>
             <Container align="center" justify="flex-end" width="auto">
+              <Switcher />
               <Select
                 value={language}
                 onChange={handleLanguage}

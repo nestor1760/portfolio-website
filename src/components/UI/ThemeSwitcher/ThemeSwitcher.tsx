@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
 import { useAppDispatch, useAppSelector } from "../../../hook";
 import { toggleIsOn } from "../../../store/switcherSlices";
-import { Handle, SwitcherBox } from "./ThemeSwitcherStyles";
+import { SwitcherBox } from "./ThemeSwitcherStyles";
+import { MHandle } from "../../../animation";
 
 const spring = {
   type: "spring",
@@ -10,20 +10,15 @@ const spring = {
 };
 
 export const Switcher = () => {
-  const { switchOn } = useAppSelector(state => state.switcher)
+  const { switcher } = useAppSelector(state => state.switcher)
   const dispatch = useAppDispatch()
-
-  console.log(switchOn);
-
 
   const toogleSwitch = () => {
     dispatch(toggleIsOn())
   }
 
-  const MHandle = motion(Handle)
-
   return (
-    <SwitcherBox onClick={toogleSwitch} className={switchOn ? 'switchOn' : ''}>
+    <SwitcherBox onClick={toogleSwitch} className={switcher ? 'switchOn' : ''}>
       <MHandle layout transition={spring} />
     </SwitcherBox>
   );

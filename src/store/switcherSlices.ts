@@ -2,23 +2,22 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ISwitcherState } from "./interfaces";
 
 type SwitcherState = {
-  switchOn: boolean,
+  switcher: boolean,
+}
+
+//to save swicther value to localStorage
+const saveToLocalStorage = (switcher: boolean) => {
+  localStorage.setItem('switcher', JSON.stringify(switcher));
+}
+
+//get switcher value from localStorage
+const loadFromLocalStorage = () => {
+  const switcher = localStorage.getItem('switcher');
+  return switcher ? JSON.parse(switcher) : true;
 }
 
 const initialState: SwitcherState = {
-  switchOn: true,
-}
-
-
-//to save selected language to localStorage
-const saveToLocalStorage = (switchOn: string) => {
-  localStorage.setItem('switchOn', JSON.stringify(switchOn));
-}
-
-//get selected language from localStorage
-const loadFromLocalStorage = () => {
-  const selectedLanguage = localStorage.getItem('switchOn');
-  return selectedLanguage ? JSON.parse(selectedLanguage) : null;
+  switcher: loadFromLocalStorage(),
 }
 
 const switcherSlice = createSlice({
@@ -26,10 +25,12 @@ const switcherSlice = createSlice({
   initialState,
   reducers: {
     setToggleIsOn: (state, action: PayloadAction<ISwitcherState>) => {
-      state.switchOn = action.payload.switchOn;
+      state.switcher = action.payload.switcher;
+      saveToLocalStorage(state.switcher);
     },
     toggleIsOn: (state) => {
-      state.switchOn = !state.switchOn;
+      state.switcher = !state.switcher;
+      saveToLocalStorage(state.switcher);
     }
   },
 });

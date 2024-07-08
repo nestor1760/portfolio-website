@@ -26,7 +26,7 @@ const AboutPart = () => {
           <Photo src="/media/iphone_avatar.png" alt="iphone_avatar" />
           <PersonalInfo>
             <span>{t("aboutPart.name")}</span>
-            <Container justify="space-around" margin="0">
+            <Container justify="space-around" margin="0" width="100%">
               <StyledLink href={github} target="blank"><FaGithubSquare size={30} /></StyledLink>
               <StyledLink href={linkedin} target="blank"><FaLinkedin size={30} /></StyledLink>
               <StyledLink href={facebook} target="blank"><FaFacebookSquare size={30} /></StyledLink>

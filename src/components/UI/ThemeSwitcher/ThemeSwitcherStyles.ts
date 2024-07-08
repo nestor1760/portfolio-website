@@ -9,6 +9,7 @@ export const SwitcherBox = styled.div`
   align-items: center;
   border-radius: 50px;
   padding: 5px;
+  margin: 0 10px 0 0;
   cursor: pointer;
   transition: 0.5s;
 

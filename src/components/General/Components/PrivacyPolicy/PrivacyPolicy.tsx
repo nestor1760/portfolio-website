@@ -15,6 +15,7 @@ import Modal from "../../../UI/Modal/Modal";
 import { useAppSelector } from "../../../../hook";
 import { ProgressBar } from "../../../UI/ProgressBar/ProgressBar";
 import { Switcher } from "../../../UI/ThemeSwitcher/ThemeSwitcher";
+import { Container } from "../../../../styledTags/Container/Container";
 
 
 const PrivacyPolicy = () => {
@@ -30,16 +31,18 @@ const PrivacyPolicy = () => {
       <MPrivacyBox initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
         <MHeader variants={downAnimation} custom={1}>
           <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
-          <Switcher />
-          <Select
-            value={language}
-            onChange={handleLanguage}
-            options={[
-              { value: 'en' },
-              { value: 'pl' },
-              { value: 'ua' },
-            ]}
-          />
+          <Container margin="0" align="center">
+            <Switcher />
+            <Select
+              value={language}
+              onChange={handleLanguage}
+              options={[
+                { value: 'en' },
+                { value: 'pl' },
+                { value: 'ua' },
+              ]}
+            />
+          </Container>
         </MHeader>
         <MTitleText variants={rightAnimation} custom={0.5}>{t('privacyPolicy.title')}</MTitleText>
         <p>{t('privacyPolicy.lastUpdate')} 06.07.2024</p>

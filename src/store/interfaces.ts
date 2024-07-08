@@ -11,5 +11,5 @@ export interface IModalFormState {
 
 //for switcherSlice.ts
 export interface ISwitcherState {
-  switchOn: boolean,
+  switcher: boolean,
 }

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { IContainerProps } from "./interface";
 
 export const StyledContainer = styled.div<IContainerProps>`
-  width: ${props => props.width || '100%'};
+  width: ${props => props.width || ''};
   height: ${props => props.height || 'auto'};
   display: ${props => props.display || 'flex'};
   align-items: ${props => props.align || 'flex-start'};
