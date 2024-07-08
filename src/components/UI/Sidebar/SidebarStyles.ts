@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { blue_color, white_color } from "../../../GlobalStyles"
+import { Link } from "react-router-dom"
 
 export const SidebarOverlay = styled.div`
   display: flex;
@@ -46,15 +47,14 @@ const closeAnimation = keyframes`
 `
 
 export const SidebarMenu = styled.div`
-  position: relative;
   width: 300px;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   border-left: 0.5px solid rgba(255, 255, 255, 0.7);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 15px 0 0 15px;
   overflow: hidden;
   animation: ${closeAnimation} 250ms ease-in-out forwards;
@@ -70,19 +70,9 @@ export const SidebarHeader = styled.div`
   height: 50px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding-left: 10px;
   color: ${white_color};
-`
-
-export const SidebarBody = styled.div`
-  width: 100%;
-  height: 50%;
-  margin: 50px 0 30px 0;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
 `
 
 export const CloseBtn = styled.button`
@@ -121,14 +111,13 @@ export const Span = styled.span`
   margin-left: 10px;
 `
 
-export const SidebarFooter = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+export const StyledLink = styled(Link)`
+  font-size: 18px;
+  margin: 0 0 10px 0;
   color: ${white_color};
-  padding: 0 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  transition: 0.3s;
+
+  &:hover {
+    color: ${blue_color};
+  }
 `

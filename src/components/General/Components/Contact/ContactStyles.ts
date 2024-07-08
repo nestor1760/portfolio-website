@@ -22,14 +22,6 @@ export const ContactContainer = styled.section`
   }
 `
 
-export const HeaderBox = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-`
-
 export const CloseBtn = styled.button`
   position: absolute;
   right: -10px;
@@ -142,18 +134,6 @@ export const TextArea = styled.textarea`
   @media ${mobile_screen} {
     font-size: 14px;
   }
-`
-
-export const ContantFooter = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-export const InputCont = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `
 
 export const StyledLink = styled(Link)`

@@ -12,4 +12,5 @@ export interface IContainerProps {
   padding?: string,
   background?: string,
   wrap?: string,
+  position?: string,
 }

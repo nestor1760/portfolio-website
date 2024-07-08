@@ -19,14 +19,6 @@ export const Image = styled.img`
   min-height: 200px;
 `
 
-export const InfoBlog = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  padding: 0 10px;
-`
-
 export const ProjectName = styled.p`
   font-size: 24px;
   margin-top: 10px;
@@ -35,15 +27,6 @@ export const ProjectName = styled.p`
 export const ProjectDescription = styled.p`
   font-size: 16px;
   margin: 10px 0;
-`
-
-export const TechContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 100%;
-  margin: 0 0 30px 0;
 `
 
 export const TechItem = styled.div`
@@ -59,19 +42,6 @@ export const TechItem = styled.div`
     background: ${blue_color};
     color: ${white_color};
   }
-`
-
-export const ProjectLinks = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-export const LinkItem = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
 `
 
 export const StyledLink = styled.a`

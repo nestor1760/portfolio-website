@@ -14,7 +14,7 @@ const SkillsPart = () => {
     <MSkillsContainer
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.2, once: true }}
+      viewport={{ amount: 0.1, once: true }}
     >
       <Container direction="column" justify="center" align="center">
         <Container width="auto" direction="column" justify="center">

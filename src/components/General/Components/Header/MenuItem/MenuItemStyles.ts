@@ -9,6 +9,7 @@ export const StyledMenuItem = styled.div`
   background: transparent;
   cursor: pointer;
   margin-right: 30px;
+  
   &:last-child {
     margin-right: 0px;
   }

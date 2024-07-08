@@ -69,7 +69,3 @@ export const StyledLink = styled(Link)`
     color: ${blue_color};
   }
 `
-
-export const Text = styled.p`
-  
-`

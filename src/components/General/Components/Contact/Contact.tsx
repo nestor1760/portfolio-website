@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useAppDispatch } from "../../../../hook";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { setShow } from "../../../../store/modalSlice";
-import { CheckBox, CheckBoxText, CloseBtn, ContactContainer, ContantFooter, Form, HeaderBox, Input, InputBox, InputCont, Label, StyledLink, TextArea, Title } from "./ContactStyles";
+import { CheckBox, CheckBoxText, CloseBtn, ContactContainer, Form, Input, InputBox, Label, StyledLink, TextArea, Title } from "./ContactStyles";
 import { handleSubmit } from "./utills";
 import { IoCloseOutline } from "react-icons/io5";
 import Button from "../../../UI/StyledButton/StyledButton";
+import { Container } from "../../../../styledTags/Container/Container";
 
 const Contact = () => {
   const dispatch = useAppDispatch()
@@ -38,10 +39,10 @@ const Contact = () => {
   return (
     <ContactContainer>
       <Form onSubmit={handleSubmit(req_title, req_text)}>
-        <HeaderBox>
+        <Container align="center" justify="center" margin="0" width="100%">
           <Title>{title}</Title>
           <CloseBtn type="button" onClick={closeModal}><IoCloseOutline size={30} /></CloseBtn>
-        </HeaderBox>
+        </Container>
         <InputBox>
           <Label>{name}</Label>
           <Input value={nameState} onChange={e => setNameState(e.target.value)} type="text" placeholder={name_ph} name="name" required />
@@ -54,16 +55,16 @@ const Contact = () => {
           <Label>{message}</Label>
           <TextArea value={messageState} onChange={e => setMessageState(e.target.value)} name="message" id="" placeholder={message_ph} required />
         </InputBox>
-        <ContantFooter>
-          <InputCont>
+        <Container align="center" justify="space-between" margin="0">
+          <Container align="center" justify="space-between" margin="0">
             <CheckBox type="checkbox" required checked={checked} onChange={() => setChecked(prev => !prev)} />
             <CheckBoxText>
               I have read and agree to the <br />
               <StyledLink to='/privacy-policy' onClick={() => closeModal()}>Privacy Policy</StyledLink>
             </CheckBoxText>
-          </InputCont>
+          </Container>
           <Button width="40%" height="55px">{btn_label}</Button>
-        </ContantFooter>
+        </Container>
       </Form>
     </ContactContainer>
   )

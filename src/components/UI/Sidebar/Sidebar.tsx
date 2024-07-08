@@ -3,13 +3,16 @@ import { FaAddressBook } from 'react-icons/fa';
 import { BiFolder } from "react-icons/bi";
 import { BiCodeAlt } from "react-icons/bi";
 import { FaHome } from "react-icons/fa";
-import { CloseBtn, SidebarBody, SidebarFooter, SidebarHeader, SidebarItem, SidebarMenu, SidebarOverlay, Span } from './SidebarStyles';
+import { CloseBtn, SidebarHeader, SidebarItem, SidebarMenu, SidebarOverlay, Span, StyledLink } from './SidebarStyles';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hook';
 import { setSidebar } from '../../../store/modalSlice';
 import { useLanguage } from '../../../hooks/useLanguage';
 import Select from '../Select/Select';
 import { useNavMenu } from '../../../hooks/useNavMenu';
+import { Container } from '../../../styledTags/Container/Container';
+import { Switcher } from '../ThemeSwitcher/ThemeSwitcher';
+import { white_color } from '../../../GlobalStyles';
 
 const Sidebar = () => {
   const dispatch = useAppDispatch()
@@ -52,15 +55,7 @@ const Sidebar = () => {
           <CloseBtn onClick={closeMenu}>
             <IoCloseSharp size={28} />
           </CloseBtn>
-        </SidebarHeader>
-        <SidebarBody>
-          {menuData.map(({ label, part, icon: Icon }) =>
-            <SidebarItem onClick={() => scrollToPart(part)} key={part}>
-              <Icon size={24} /><Span>{label}</Span>
-            </SidebarItem>
-          )}
-        </SidebarBody>
-        <SidebarFooter>
+          <Switcher />
           <Select
             value={language}
             onChange={handleLanguage}
@@ -70,7 +65,23 @@ const Sidebar = () => {
               { value: 'ua' },
             ]}
           />
-        </SidebarFooter>
+        </SidebarHeader>
+        <Container width='100%' height='50%' margin='50px 0 30px 0' justify='center' direction='column'>
+          {menuData.map(({ label, part, icon: Icon }) =>
+            <SidebarItem onClick={() => scrollToPart(part)} key={part}>
+              <Icon size={24} /><Span>{label}</Span>
+            </SidebarItem>
+          )}
+        </Container>
+        <Container direction='column' padding='0 10px' margin='auto 0 10px 0'>
+          <StyledLink
+            to="/privacy-policy"
+            onClick={() => dispatch(setSidebar({ sidebar: false, scroll: false }))}
+          >
+            {t("footer.title")}
+          </StyledLink>
+          <p style={{ color: white_color, fontSize: '18px' }}>&copy; 2024 {t("footer.text")}</p>
+        </Container>
       </SidebarMenu>
     </SidebarOverlay>
   )

@@ -4,7 +4,7 @@ import { useLanguage } from "../../../../hooks/useLanguage";
 import { useNavMenu } from "../../../../hooks/useNavMenu";
 import { useWindowWidth } from "../../../../hooks/useWindowWidth";
 import FooterList from "./FooterList/FooterList";
-import { FooterMenu, StyledLink, Text } from "./FooterStyles";
+import { FooterMenu, StyledLink } from "./FooterStyles";
 
 const Footer = () => {
   const { t } = useLanguage()
@@ -32,7 +32,7 @@ const Footer = () => {
       </FooterMenu>
       <MPPContainer variants={upAnimation} custom={1}>
         <StyledLink to="/privacy-policy">{t("footer.title")}</StyledLink>
-        <Text>&copy; 2024 {t("footer.text")}</Text>
+        <p>&copy; 2024 {t("footer.text")}</p>
       </MPPContainer>
     </MFooterContainer>
   )
