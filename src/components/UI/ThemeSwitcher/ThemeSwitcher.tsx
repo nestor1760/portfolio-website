@@ -13,6 +13,9 @@ export const Switcher = () => {
   const { switcher } = useAppSelector(state => state.switcher)
   const dispatch = useAppDispatch()
 
+  console.log(switcher);
+
+
   const toogleSwitch = () => {
     dispatch(toggleIsOn())
   }
