@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { back_color, blue_color, white_color } from "../../../GlobalStyles";
+import { dark_back_color, blue_color, white_color } from "../../../GlobalStyles";
 
 export const StyledSelect = styled.select`
   outline: none;
@@ -18,7 +18,7 @@ export const StyledSelect = styled.select`
 
   & option {
     color: white;
-    background: ${back_color};
+    background: ${dark_back_color};
   }
 `
 

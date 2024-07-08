@@ -1,5 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { ISwitcherState } from "./interfaces";
+import { createSlice } from "@reduxjs/toolkit";
 
 type SwitcherState = {
   switcher: boolean,
@@ -24,16 +23,12 @@ const switcherSlice = createSlice({
   name: 'switcher',
   initialState,
   reducers: {
-    setToggleIsOn: (state, action: PayloadAction<ISwitcherState>) => {
-      state.switcher = action.payload.switcher;
-      saveToLocalStorage(state.switcher);
-    },
-    toggleIsOn: (state) => {
+    toggleSwitcher: (state) => {
       state.switcher = !state.switcher;
       saveToLocalStorage(state.switcher);
     }
   },
 });
 
-export const { setToggleIsOn, toggleIsOn } = switcherSlice.actions;
+export const { toggleSwitcher } = switcherSlice.actions;
 export default switcherSlice.reducer;

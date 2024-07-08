@@ -1,14 +1,14 @@
 import styled, { keyframes } from "styled-components";
-import { blue_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { blue_color, gray_text, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { ITextProps } from "./interface";
 
-export const IntroContainer = styled.div`
+export const IntroContainer = styled.div<{ darkTheme: boolean }>`
   width: 45%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
 
   @media ${tablet_screen} {
     width: 90%;
@@ -27,7 +27,6 @@ export const IntroContainer = styled.div`
 `
 
 export const StyledText = styled.p<ITextProps>`
-  color: ${white_color};
   margin: ${props => props.margin || '0'};
   font-size: ${props => props.size || '28px'};
   font-weight: ${props => props.weight || '400'};

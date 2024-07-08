@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue_color, gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, dark_gradient, light_gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -8,7 +8,7 @@ export const AboutContainer = styled.section`
   justify-content: center;
   overflow: hidden;
   margin: 156px 0 172px 0;
-  color: white;
+  color: ${white_color};
 
   @media ${tablet_screen} {
     margin-top: 20px;
@@ -37,14 +37,14 @@ export const InfoContainer = styled.div`
   }
 `
 
-export const PersonalInfo = styled.div`
+export const PersonalInfo = styled.div<{ darkTheme: boolean }>`
   width: 290px;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column; 
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   border-radius: 10px;
   border: 1px solid ${white_color};
   position: absolute;

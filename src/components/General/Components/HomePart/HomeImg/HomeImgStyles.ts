@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
-import { blue_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
-import { IAnimatedItemProps } from "./interface";
+import { blue_color, dark_gradient, gray_text, light_gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { IAnimatedItem } from "./interface";
 
 export const ImageContainer = styled.div`
   width: 455px;
@@ -47,19 +47,19 @@ const upAndDownAnimation = keyframes`
   }
 `;
 
-export const AnimatedItem = styled.div<IAnimatedItemProps>`
+export const AnimatedItem = styled.div<IAnimatedItem>`
   width: 220px;
   height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   font-size: 24px;
   position: absolute;
   overflow: hidden;
   border: 1.5px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   animation: ${upAndDownAnimation} ${props => props.delay || '1s'} ease-in-out infinite;
   transition: 0.250ms;
   top: ${props => props.top || 'auto'}; 

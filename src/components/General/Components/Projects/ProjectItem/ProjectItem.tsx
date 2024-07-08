@@ -6,13 +6,16 @@ import { forwardRef } from "react";
 import { IProjectItem } from "../../../../../data/interface";
 import { motion } from "framer-motion";
 import { Container } from "../../../../../styledTags/Container/Container";
+import { useAppSelector } from "../../../../../hook";
 
 
 const ProjectItem = forwardRef<HTMLDivElement, IProjectItem>(({ project }, ref) => {
   const { name, description, image_path, preview_link, tech, github_link, git_label, preview_label } = project
+  const { switcher } = useAppSelector(state => state.switcher)
+
 
   return (
-    <ItemContainer ref={ref}>
+    <ItemContainer darkTheme={switcher} ref={ref}>
       <Image src={image_path} alt={name} />
       <Container direction="column" margin="0" padding="0 10px">
         <ProjectName>{name}</ProjectName>

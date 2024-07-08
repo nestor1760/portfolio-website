@@ -1,12 +1,16 @@
 import styled from "styled-components";
-import { gradient, white_color } from "../../GlobalStyles";
+import { dark_gradient, light_gradient, white_color } from "../../GlobalStyles";
 import { INavItemProps } from "./interface";
 
-export const NavItem = styled.p<INavItemProps>`
+interface ItemProps extends INavItemProps {
+  darkTheme: boolean,
+}
+
+export const NavItem = styled.p<ItemProps>`
   padding: 5px 10px;
   color: ${white_color};
   margin: ${props => props.margin || "0"};
   align-self: ${props => props.align || "start"};
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   border-radius: 10px;
 `

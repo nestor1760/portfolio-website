@@ -16,6 +16,7 @@ const HomeIntro = () => {
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
   const { show } = useAppSelector(state => state.modal)
+  const { switcher } = useAppSelector(state => state.switcher)
   const dispatch = useAppDispatch()
   const { animatedString, letters } = IntroUtills()
 
@@ -36,8 +37,9 @@ const HomeIntro = () => {
 
   return (
     <>
-      <IntroContainer id="home">
+      <IntroContainer darkTheme={switcher} id="home">
         <StyledText
+          darkTheme={switcher}
           size={sizeTitle}
           margin="0 0 10px 0"
           weight="600"

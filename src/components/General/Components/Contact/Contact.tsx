@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useAppDispatch } from "../../../../hook";
+import { useAppDispatch, useAppSelector } from "../../../../hook";
 import { useLanguage } from "../../../../hooks/useLanguage";
 import { setShow } from "../../../../store/modalSlice";
 import { CheckBox, CheckBoxText, CloseBtn, ContactContainer, Form, Input, InputBox, Label, StyledLink, TextArea, Title } from "./ContactStyles";
@@ -28,6 +28,8 @@ const Contact = () => {
   const [messageState, setMessageState] = useState('')
   const [checked, setChecked] = useState<boolean>(false)
 
+  const { switcher } = useAppSelector(state => state.switcher)
+
   const closeModal = (): void => {
     dispatch(setShow({ show: false, scroll: false }))
     setNameState('')
@@ -38,7 +40,7 @@ const Contact = () => {
 
   return (
     <ContactContainer>
-      <Form onSubmit={handleSubmit(req_title, req_text)}>
+      <Form darkTheme={switcher} onSubmit={handleSubmit(req_title, req_text)}>
         <Container align="center" justify="center" margin="0" width="100%">
           <Title>{title}</Title>
           <CloseBtn type="button" onClick={closeModal}><IoCloseOutline size={30} /></CloseBtn>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { back_color, gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { dark_back_color, dark_gradient, light_gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 import { Link } from "react-router-dom";
 
 export const ContactContainer = styled.section`
@@ -49,10 +49,10 @@ export const CloseBtn = styled.button`
   }
 `
 
-export const Form = styled.form`
+export const Form = styled.form<{ darkTheme: boolean }>`
   border: 1px solid ${white_color};
   width: 100%;
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   padding: 25px 30px;  
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
@@ -142,7 +142,7 @@ export const StyledLink = styled(Link)`
   transition: 0.3s;
 
   &:hover {
-    color: ${back_color};
+    color: ${dark_back_color};
   }
 `
 

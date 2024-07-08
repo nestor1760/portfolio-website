@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../../hook";
-import { toggleIsOn } from "../../../store/switcherSlices";
+import { toggleSwitcher } from "../../../store/switcherSlices";
 import { SwitcherBox } from "./ThemeSwitcherStyles";
 import { MHandle } from "../../../animation";
 
@@ -14,7 +14,7 @@ export const Switcher = () => {
   const dispatch = useAppDispatch()
 
   const toogleSwitch = () => {
-    dispatch(toggleIsOn())
+    dispatch(toggleSwitcher())
   }
 
   return (

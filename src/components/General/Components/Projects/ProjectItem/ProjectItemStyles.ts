@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { blue_color, gradient, white_color } from "../../../../../GlobalStyles";
+import { blue_color, dark_gradient, light_gradient, white_color } from "../../../../../GlobalStyles";
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.div<{ darkTheme: boolean }>`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -10,7 +10,7 @@ export const ItemContainer = styled.div`
   height: 450px;
   overflow: hidden;
   margin: 20px 10px;
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   border-radius: 10px;
 `
 

@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import { gradient, white_color } from "../../../../../GlobalStyles";
+import { dark_gradient, light_gradient, white_color } from "../../../../../GlobalStyles";
 
-export const ItemContainer = styled.div`
+export const ItemContainer = styled.div<{ darkTheme: boolean }>`
   width: 150px;
   height: 150px;
   margin: 20px;
   border-radius: 10px;
-  background: ${gradient};
+  background: ${({ darkTheme }) => (darkTheme ? dark_gradient : light_gradient)};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,8 +15,9 @@ export const ItemContainer = styled.div`
 `
 
 export const Img = styled.img`
-  max-width: 100px;
-  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 `
 
 export const Text = styled.p`
