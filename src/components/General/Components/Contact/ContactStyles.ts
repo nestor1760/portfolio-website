@@ -8,7 +8,7 @@ export const ContactContainer = styled.section`
   align-items: center;
   justify-content: flex-start;
   margin-top: 50px;
-
+  
   @media ${tablet_screen} {
     width: 100%;
   }
