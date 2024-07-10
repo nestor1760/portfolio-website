@@ -12,5 +12,6 @@ export const StyledContainer = styled.div<IContainerProps>`
   margin: ${props => props.margin || 'auto'};
   flex-wrap: ${props => props.wrap || 'no-wrap'};
   background: ${props => props.background || 'transparent'}; 
+  color: ${props => props.color || 'white'}; 
   position: ${props => props.position || 'relative'};
 `

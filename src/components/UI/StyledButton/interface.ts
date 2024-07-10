@@ -8,6 +8,7 @@ export interface IButtonProps {
   color?: string,
   hoverColor?: string,
   hoverBack?: string,
+  hoverBorder?: string,
   background?: string,
   border?: string,
   onClick?: () => void,

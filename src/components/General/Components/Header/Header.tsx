@@ -1,6 +1,6 @@
 import { IoMenu } from "react-icons/io5";
 import { FC, useEffect } from 'react';
-import { NavigationMenu, SidebarBtn, StyledContainer, Title } from "./HeaderStyles";
+import { SidebarBtn, StyledContainer } from "./HeaderStyles";
 import { useWindowWidth } from "../../../../hooks/useWindowWidth";
 import { setShow, setSidebar } from "../../../../store/modalSlice";
 import { useScroll } from "../../../../hooks/useScroll";
@@ -14,16 +14,18 @@ import Modal from "../../../UI/Modal/Modal";
 import Contact from "../Contact/Contact";
 import MenuItem from "./MenuItem/MenuItem";
 import Button from "../../../UI/StyledButton/StyledButton";
-import { GeneralTitle } from "../../../../GlobalStyles";
+import { blue_color, gray_text, white_color } from "../../../../GlobalStyles";
 import { Switcher } from "../../../UI/ThemeSwitcher/ThemeSwitcher";
+import TitleLabel from "../../../UI/Title/TitleLabel";
 
 const Header: FC = () => {
   const dispatch = useAppDispatch()
   const { show } = useAppSelector(state => state.modal)
+  const { switcher } = useAppSelector(state => state.switcher)
   const { windowWidth } = useWindowWidth()
   const scrollPosition = useScroll()
   const { language, handleLanguage, t } = useLanguage()
-  const { openMenu, scrollToPart, scrollToStart } = useNavMenu()
+  const { openMenu, scrollToPart } = useNavMenu()
 
   useEffect(() => {
     if (windowWidth > 865) {
@@ -49,14 +51,15 @@ const Header: FC = () => {
   return (
     <>
       <StyledContainer
+        darkTheme={switcher}
         windowWidth={windowWidth}
         scrolled={scrollPosition}
         className={(windowWidth > 977) ? (scrollPosition > 95) ? 'bigger' : '' : ''}
       >
-        <Title dangerouslySetInnerHTML={{ __html: GeneralTitle }} onClick={scrollToStart} />
+        <TitleLabel />
         {(windowWidth > 1050)
           ? <>
-            <NavigationMenu>
+            <Container width="100%" align="center" justify="center" margin="0" color={switcher ? white_color : gray_text}>
               {menuData.map(({ label, part }) =>
                 <MenuItem
                   key={label}
@@ -64,7 +67,7 @@ const Header: FC = () => {
                   handleClick={() => handleClick(part)}
                 />
               )}
-            </NavigationMenu>
+            </Container>
             <Container align="center" justify="flex-end" width="auto">
               <Switcher />
               <Select
@@ -76,10 +79,10 @@ const Header: FC = () => {
                   { value: 'ua' },
                 ]}
               />
-              <Button width="190px" height="44px" onClick={showModal}>{t("header.button")}</Button>
+              <Button hoverBorder={switcher ? 'none' : `2px solid ${blue_color}`} width="190px" height="44px" onClick={showModal}>{t("header.button")}</Button>
             </Container>
           </>
-          : <SidebarBtn><IoMenu size={24} onClick={openMenu} /></SidebarBtn>
+          : <SidebarBtn darkTheme={switcher}><IoMenu size={24} onClick={openMenu} /></SidebarBtn>
         }
       </StyledContainer>
       <Sidebar />

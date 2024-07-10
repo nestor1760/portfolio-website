@@ -13,4 +13,5 @@ export interface IContainerProps {
   background?: string,
   wrap?: string,
   position?: string,
+  color?: string,
 }

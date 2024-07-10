@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue_color, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, gray_text, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const PPContainer = styled.section`
   width: 80%;
@@ -29,21 +29,21 @@ export const PPContainer = styled.section`
   }
 `
 
-export const PPHeader = styled.header`
+export const PPHeader = styled.header<{ darkTheme: boolean }>`
   position: sticky;
   width: 100%;
   top: 20px;
   left: 0;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   display: flex;
   align-items: center;
   justify-content: space-between;
   overflow: hidden;
   z-index: 2;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
+  background: ${({ darkTheme }) => (darkTheme ? 'rgba(255, 255, 255, 0.05)' : white_color)};
   backdrop-filter: blur(10px);
-  box-shadow: 0px 26px 24px -16px rgba(0, 0, 0, 1);
+  box-shadow: 0px 20px 30px -16px ${blue_color};
   padding: 16px 15px;
 
   @media ${small_tablet_screen} {
@@ -56,36 +56,12 @@ export const PPHeader = styled.header`
     border-radius: 0 0 20px 20px;
   }
 `
-export const Title = styled.p`
-  font-size: 36px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${blue_color};
-  cursor: pointer;
-  transition: 0.3s;
-  & >span {
-    color: ${white_color};
-  }
-  &:hover {
-    color: ${white_color};
-    & span {
-      color: ${blue_color};
-    }
-  }
 
-  @media ${small_tablet_screen} {
-    font-size: 32px;
-  }
-
-  @media ${mobile_screen} {
-    font-size: 28px;
-  }
-`
-
-export const TitleText = styled.h1`
+export const TitleText = styled.h1<{ darkTheme: boolean }>`
   width: 100%;
   font-size: 45px;
   margin: 70px 0 30px 0;
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
 
   @media ${small_tablet_screen} {
     font-size: 36px;

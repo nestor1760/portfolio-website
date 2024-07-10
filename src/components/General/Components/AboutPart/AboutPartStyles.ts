@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { blue_color, dark_gradient, light_gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, dark_gradient, gray_text, light_gradient, small_tablet_screen, tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const AboutContainer = styled.section`
   width: 100%;
@@ -80,4 +80,10 @@ export const AboutTitle = styled.p`
   @media ${small_tablet_screen} {
     font-size: 24px;
   }
+`
+
+export const AboutDescription = styled.p<{ darkTheme: boolean }>`
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
 `

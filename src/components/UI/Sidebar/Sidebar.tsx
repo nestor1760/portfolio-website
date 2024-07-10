@@ -12,11 +12,12 @@ import Select from '../Select/Select';
 import { useNavMenu } from '../../../hooks/useNavMenu';
 import { Container } from '../../../styledTags/Container/Container';
 import { Switcher } from '../ThemeSwitcher/ThemeSwitcher';
-import { white_color } from '../../../GlobalStyles';
+import { gray_text, white_color } from '../../../GlobalStyles';
 
 const Sidebar = () => {
   const dispatch = useAppDispatch()
   const { sidebar, scroll } = useAppSelector(state => state.modal)
+  const { switcher } = useAppSelector(state => state.switcher)
   const { language, handleLanguage, t } = useLanguage()
   const { scrollToPart, closeMenu } = useNavMenu()
 
@@ -52,7 +53,7 @@ const Sidebar = () => {
         onClick={e => e.stopPropagation()}
       >
         <SidebarHeader>
-          <CloseBtn onClick={closeMenu}>
+          <CloseBtn darkTheme={switcher} onClick={closeMenu}>
             <IoCloseSharp size={28} />
           </CloseBtn>
           <Switcher />
@@ -68,19 +69,29 @@ const Sidebar = () => {
         </SidebarHeader>
         <Container width='100%' height='50%' margin='50px 0 30px 0' justify='center' direction='column'>
           {menuData.map(({ label, part, icon: Icon }) =>
-            <SidebarItem onClick={() => scrollToPart(part)} key={part}>
+            <SidebarItem darkTheme={switcher} onClick={() => scrollToPart(part)} key={part}>
               <Icon size={24} /><Span>{label}</Span>
             </SidebarItem>
           )}
         </Container>
-        <Container direction='column' padding='0 10px' margin='auto 0 10px 0'>
+        <Container
+          direction='column'
+          padding='0 10px'
+          margin='auto 0 10px 0'
+        >
           <StyledLink
             to="/privacy-policy"
             onClick={() => dispatch(setSidebar({ sidebar: false, scroll: false }))}
+            style={{ color: switcher ? white_color : gray_text }}
           >
             {t("footer.title")}
           </StyledLink>
-          <p style={{ color: white_color, fontSize: '18px' }}>&copy; 2024 {t("footer.text")}</p>
+          <p style={{
+            color: switcher ? white_color : gray_text,
+            fontSize: '18px'
+          }}>
+            &copy; 2024 {t("footer.text")}
+          </p>
         </Container>
       </SidebarMenu>
     </SidebarOverlay>

@@ -1,18 +1,12 @@
 import styled from "styled-components";
-import { blue_color, white_color } from "../../../../../GlobalStyles";
+import { blue_color, gray_text, white_color } from "../../../../../GlobalStyles";
 
-export const ListContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-export const FooterLink = styled.a`
+export const FooterLink = styled.a<{ darkTheme: boolean }>`
   width: 30px;
   height: 30px;
   margin: auto 10px;
   cursor: pointer;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   transition: 0.3s;
 
   &:hover {
@@ -20,7 +14,7 @@ export const FooterLink = styled.a`
   }
 `
 
-export const FooterBtn = styled.button`
+export const FooterBtn = styled.button<{ darkTheme: boolean }>`
   width: 30px;
   height: 30px;
   border: none;
@@ -28,7 +22,7 @@ export const FooterBtn = styled.button`
   background: transparent;
   margin: auto 10px;
   cursor: pointer;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   transition: 0.3s;
 
   &:hover {

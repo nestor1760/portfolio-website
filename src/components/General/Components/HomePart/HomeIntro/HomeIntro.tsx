@@ -39,7 +39,6 @@ const HomeIntro = () => {
     <>
       <IntroContainer darkTheme={switcher} id="home">
         <StyledText
-          darkTheme={switcher}
           size={sizeTitle}
           margin="0 0 10px 0"
           weight="600"
@@ -74,7 +73,10 @@ const HomeIntro = () => {
             custom={10}
             onClick={showModal}
             height="44px"
+            hoverBack="transparent"
+            hoverColor={blue_color}
             margin={windowWidth > 480 ? '0 10px 0 0' : '0 0 15px 0'}
+            hoverBorder={`2px solid ${blue_color}`}
           >
             {t("intro.button")}
           </MButton>
@@ -87,9 +89,8 @@ const HomeIntro = () => {
             height="44px"
             color={blue_color}
             background={white_color}
-            hoverColor={white_color}
             hoverBack='transparent'
-            border='2px solid white'
+            hoverBorder={`2px solid ${blue_color}`}
           >
             {t("intro.downloadButton")}
             <MdOutlineFileDownload size={30} />

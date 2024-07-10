@@ -1,14 +1,13 @@
 import styled from "styled-components";
-import { blue_color, mobile_screen, white_color } from "../../../../GlobalStyles";
+import { blue_color, gray_text, mobile_screen, white_color } from "../../../../GlobalStyles";
 import { Link } from "react-router-dom";
 
-export const FooterContainer = styled.footer`
+export const FooterContainer = styled.footer<{ darkTheme: boolean }>`
   width: 80%;
   height: 160px;
   margin: 150px 0 0 0;
   overflow: hidden;
-  border-top: 2px solid white;
-  color: ${white_color};
+  border-top: ${({ darkTheme }) => (darkTheme ? '2px solid white' : `2px solid ${gray_text}`)};
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -27,31 +26,13 @@ export const FooterMenu = styled.div`
   }
 `
 
-export const Label = styled.p`
-  font-size: 36px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: ${blue_color};
-  cursor: pointer;
-  transition: 0.3s;
-  & >span {
-    color: ${white_color};
-  }
-  &:hover {
-    color: ${white_color};
-    & span {
-      color: ${blue_color};
-    }
-  }
-`
-
-export const PrivacyPolicyContainer = styled.div`
+export const PrivacyPolicyContainer = styled.div<{ darkTheme: boolean }>`
   display: flex;
   align-self: flex-end;
   align-items: flex-end;
   justify-content: center;
   flex-direction: column;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   font-size: 14px;
 
   @media ${mobile_screen} {

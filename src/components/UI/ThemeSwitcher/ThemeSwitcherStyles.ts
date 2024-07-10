@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { blue_color } from "../../../GlobalStyles";
 
 export const SwitcherBox = styled.div`
   width: 50px;
   height: 30px;
-  background-color: blue;
+  background-color: ${blue_color};
   display: flex;
   justify-content: flex-start;
   align-items: center;

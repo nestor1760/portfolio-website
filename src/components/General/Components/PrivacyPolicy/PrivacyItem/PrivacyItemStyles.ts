@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { blue_color, mobile_screen, small_tablet_screen, white_color } from "../../../../../GlobalStyles"
+import { black_color, blue_color, gray_text, mobile_screen, small_tablet_screen, white_color } from "../../../../../GlobalStyles"
 
-export const ItemBox = styled.div`
-border: 1px solid black;
+export const ItemBox = styled.div<{ darkTheme: boolean }>`
+  border: ${({ darkTheme }) => (darkTheme ? `1px solid ${black_color}` : `1px solid ${white_color}`)};
   width: 70%;
   display: flex;
   align-items: flex-start;
@@ -12,7 +12,7 @@ border: 1px solid black;
   margin: 40px 0 20px 0;
   padding: 20px;
   color: ${white_color};
-  box-shadow: 0px 26px 24px -16px rgba(0, 0, 0, 1);
+  box-shadow: 0px 20px 30px -16px ${blue_color};
   border-radius: 20px;
 
   @media ${small_tablet_screen} {
@@ -44,10 +44,11 @@ export const PPTitle = styled.p`
   }
 `
 
-export const PPText = styled.p`
+export const PPText = styled.p<{ darkTheme: boolean }>`
   font-size: 20px;
   font-weight: 400;
   margin: 10px 0;
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
 
   @media ${small_tablet_screen} {
     font-size: 18px;

@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { blue_color, dark_gradient, gray_text, light_gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
+import { blue_color, dark_gradient, light_gradient, mobile_screen, small_tablet_screen, tablet_screen, white_color } from "../../../../../GlobalStyles";
 import { IAnimatedItem } from "./interface";
 
 export const ImageContainer = styled.div`
@@ -53,7 +53,7 @@ export const AnimatedItem = styled.div<IAnimatedItem>`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
+  color: ${white_color};
   font-size: 24px;
   position: absolute;
   overflow: hidden;

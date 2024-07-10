@@ -1,4 +1,4 @@
-import { MAboutContainer, MInfoContainer, MTitle, fadeIn, leftAnimation, rightAnimation } from "../../../../animation"
+import { MAboutContainer, MDescription, MInfoContainer, MTitle, fadeIn, leftAnimation, rightAnimation } from "../../../../animation"
 import { useLanguage } from "../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../hooks/useWindowWidth"
 import { Container } from "../../../../styledTags/Container/Container"
@@ -7,8 +7,7 @@ import { PersonalInfo, Photo, StyledLink } from "./AboutPartStyles"
 import { FaFacebookSquare } from "react-icons/fa"
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithubSquare } from "react-icons/fa"
-import { FaTelegram } from "react-icons/fa";
-import { motion } from 'framer-motion'
+import { FaTelegram } from "react-icons/fa"
 import { useAppSelector } from "../../../../hook"
 
 const AboutPart = () => {
@@ -47,7 +46,7 @@ const AboutPart = () => {
             {t("aboutPart.navItem")}
           </MNavigationItem>
           <MTitle variants={leftAnimation} custom={1}>{t("aboutPart.slogan")}</MTitle>
-          <motion.p variants={leftAnimation} custom={2}>{t("aboutPart.description")}</motion.p>
+          <MDescription darkTheme={switcher} variants={leftAnimation} custom={2}>{t("aboutPart.description")}</MDescription>
         </Container>
       </Container>
     </MAboutContainer>

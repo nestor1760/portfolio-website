@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { blue_color, white_color } from "../../../GlobalStyles"
+import { blue_color, gray_text, white_color } from "../../../GlobalStyles"
 import { Link } from "react-router-dom"
 
 export const SidebarOverlay = styled.div`
@@ -75,10 +75,10 @@ export const SidebarHeader = styled.div`
   color: ${white_color};
 `
 
-export const CloseBtn = styled.button`
+export const CloseBtn = styled.button<{ darkTheme: boolean }>`
   border: none;
   background: transparent;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   cursor: pointer;
   transition: 0.2s;
   margin-right: 10px;
@@ -87,7 +87,7 @@ export const CloseBtn = styled.button`
   }
 `
 
-export const SidebarItem = styled.div`
+export const SidebarItem = styled.div<{ darkTheme: boolean }>`
   height: 50px;
   display: flex;
   align-items: center;
@@ -99,7 +99,7 @@ export const SidebarItem = styled.div`
   border-radius: 12px;
   border: none;
   cursor: pointer;
-  color: ${white_color};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   transition: 0.2s;
   &:hover {
     color: ${blue_color};

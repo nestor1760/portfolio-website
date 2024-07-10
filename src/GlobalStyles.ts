@@ -3,10 +3,10 @@ export const blue_color = '#2365FF'
 export const black_color = '#000000'
 export const white_color = '#FFFFFF'
 export const gray_color = '#787878'
-export const gray_text = '2E2E2E'
+export const gray_text = '#2E2E2E'
 
 export const dark_back_color = '#262626'
-export const light_back_color = '#dafdff'
+export const light_back_color = '#9DCDF7'
 
 
 //gradient for background

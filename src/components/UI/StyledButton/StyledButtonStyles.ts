@@ -17,10 +17,11 @@ export const StyledButton = styled.button<IButtonProps>`
   font-weight: 600;
   cursor: pointer;
   border: ${props => props.border || 'none'};
-  transition: 0.2s;
+  transition: 0.3s;
   &:hover {
-    background: ${props => props.hoverBack || white_color};;
-    color: ${props => props.hoverColor || blue_color};;
+    background: ${props => props.hoverBack || white_color};
+    color: ${props => props.hoverColor || blue_color};
+    border: ${props => props.hoverBorder || 'none'};
   }
 
   @media ${small_tablet_screen} {
