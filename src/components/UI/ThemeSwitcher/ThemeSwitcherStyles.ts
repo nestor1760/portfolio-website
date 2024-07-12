@@ -26,3 +26,4 @@ export const Handle = styled.div`
   background-color: white;
   border-radius: 40px;
 `
+

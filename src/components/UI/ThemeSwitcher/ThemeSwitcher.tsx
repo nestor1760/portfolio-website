@@ -19,7 +19,7 @@ export const Switcher = () => {
 
   return (
     <SwitcherBox onClick={toogleSwitch} className={switcher ? 'switchOn' : ''}>
-      <MHandle layout transition={spring} />
+      <MHandle layout transition={spring} aria-label="Switch theme mode" />
     </SwitcherBox>
   );
 }
