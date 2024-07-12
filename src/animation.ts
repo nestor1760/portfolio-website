@@ -10,6 +10,7 @@ import { FooterContainer, PrivacyPolicyContainer } from "./components/General/Co
 import { FooterBtn, FooterLink } from "./components/General/Components/Footer/FooterList/FooterListStyles"
 import { PPContainer, PPHeader, TitleText } from "./components/General/Components/PrivacyPolicy/PPStyles"
 import { Handle } from "./components/UI/ThemeSwitcher/ThemeSwitcherStyles"
+import { CookiesBox } from "./cookies/CookiesStyle"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -41,6 +42,8 @@ export const MHeader = motion(PPHeader)
 export const MTitleText = motion(TitleText)
 //For ThemeSwitcher.tsx
 export const MHandle = motion(Handle)
+//For Cookies.tsx
+export const MCookiesBox = motion(CookiesBox)
 
 export const leftAnimation = {
   hidden: {

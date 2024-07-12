@@ -5,6 +5,7 @@ import AboutPart from '../AboutPart/AboutPart'
 import SkillsPart from '../SkillsPart/SkillsPart'
 import Projects from '../Projects/Projects'
 import { ProgressBar } from '../../../UI/ProgressBar/ProgressBar'
+import Cookies from '../../../../cookies/Cookies'
 
 
 const Layout = () => {
@@ -17,6 +18,7 @@ const Layout = () => {
       <SkillsPart />
       <Projects />
       <Footer />
+      <Cookies />
     </>
   )
 }

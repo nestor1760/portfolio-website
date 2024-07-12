@@ -8,7 +8,7 @@ export const StyledButton = styled.button<IButtonProps>`
   justify-content: center;
   min-width: ${props => props.width || '190px'};
   height: ${props => props.height || 'auto'};
-  border-radius: 20px;
+  border-radius: ${props => props.radius || '20px'};
   background: ${props => props.background || blue_color};
   color: ${props => props.color || white_color};
   margin: ${props => props.margin || '0'};
