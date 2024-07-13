@@ -1,3 +1,5 @@
+import { TItem } from "../data/interface"
+
 //for modalSlice.ts
 export interface ISidebarState {
   scroll: boolean,
@@ -9,7 +11,27 @@ export interface IModalFormState {
   scroll: boolean,
 }
 
+export type ModalState = {
+  scroll: boolean,
+  sidebar: boolean,
+  show: boolean
+}
+
+
 //for switcherSlice.ts
 export interface ISwitcherState {
   switcher: boolean,
 }
+
+//for technologySlice.ts
+
+export type TechState = {
+  data: TItem[],
+  loading: boolean,
+  error: boolean | string,
+}
+
+//for cookieModalSlice.ts
+export type TCookieConsentState = {
+  content: boolean | null,
+};

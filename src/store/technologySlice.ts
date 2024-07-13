@@ -1,11 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { TItem } from "../data/interface";
+import { TechState } from "./interfaces";
 
-type TechState = {
-  data: TItem[],
-  loading: boolean,
-  error: boolean | string,
-}
 
 const initialState: TechState = {
   data: [],

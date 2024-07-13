@@ -1,11 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { IModalFormState, ISidebarState } from "./interfaces";
-
-type ModalState = {
-  scroll: boolean,
-  sidebar: boolean,
-  show: boolean
-}
+import { IModalFormState, ISidebarState, ModalState } from "./interfaces";
 
 const initialState: ModalState = {
   scroll: false,
