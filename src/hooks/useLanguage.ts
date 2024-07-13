@@ -30,6 +30,6 @@ export const useLanguage = () => {
     setLanguage(selectedLanguage)
     saveToLocalStorage(selectedLanguage)
   }
-  
+
   return { language, handleLanguage, t }
 }

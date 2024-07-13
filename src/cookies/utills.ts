@@ -31,3 +31,19 @@ window.onload = function () {
     setTheme('true');
   }
 }
+
+//fix modal slice and logical for setCookie MODAL
+
+export function setModalCookie(modalCookie: string) {
+  document.body.className = modalCookie + "-modalCookie";
+  setCookie('modalCookie', modalCookie, 7);
+}
+
+window.onload = function () {
+  const modal = getCookie('modalCookie');
+  if (modal) {
+    setModalCookie(modal);
+  } else {
+    setModalCookie('true');
+  }
+}

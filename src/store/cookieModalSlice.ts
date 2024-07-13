@@ -3,17 +3,13 @@ import { getSessionItem, removeSessionItem, setSessionItem } from "./utills";
 import { TCookieConsentState } from "./interfaces";
 
 const initialState: TCookieConsentState = {
-  content: getSessionItem('cookieModal') === 'true' ? true : (getSessionItem('cookieModal') === 'false' ? false : true),
+  content: (getSessionItem('cookieModal') === 'false' ? false : true),
 };
 
 const cookieConsentSlice = createSlice({
   name: 'cookieModal',
   initialState,
   reducers: {
-    acceptCookiesModal: (state) => {
-      state.content = true;
-      setSessionItem('cookieModal', 'true');
-    },
     rejectCookiesModal: (state) => {
       state.content = false;
       setSessionItem('cookieModal', 'false');
@@ -25,5 +21,5 @@ const cookieConsentSlice = createSlice({
   },
 });
 
-export const { acceptCookiesModal, rejectCookiesModal, resetCookiesModal } = cookieConsentSlice.actions;
+export const { rejectCookiesModal, resetCookiesModal } = cookieConsentSlice.actions;
 export default cookieConsentSlice.reducer;

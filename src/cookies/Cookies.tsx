@@ -7,7 +7,7 @@ import { useWindowWidth } from "../hooks/useWindowWidth"
 import { rejectCookiesModal } from "../store/cookieModalSlice"
 import { Container } from "../styledTags/Container/Container"
 import { SLink } from "./CookiesStyle"
-import { setTheme } from "./utills"
+import { setModalCookie, setTheme } from "./utills"
 
 const Cookies = () => {
   const { switcher } = useAppSelector(state => state.switcher)
@@ -18,9 +18,15 @@ const Cookies = () => {
   const { t } = useLanguage()
 
   const themeCookieValue = switcher === true ? 'true' : 'false'
+  const contentCookieValue = content === true ? 'true' : 'false'
 
-  console.log(content);
+  console.log(themeCookieValue, contentCookieValue);
 
+
+  const handleCookie = () => {
+    setTheme(themeCookieValue)
+    setModalCookie(contentCookieValue)
+  }
 
   return (
     <MCookiesBox
@@ -51,7 +57,7 @@ const Cookies = () => {
         >{t("cookies.btn_reject")}</Button>
         <Button
           radius='10px'
-          onClick={() => setTheme(themeCookieValue)}
+          onClick={handleCookie}
         >
           {t("cookies.btn_accept")}
         </Button>
