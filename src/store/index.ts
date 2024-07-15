@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import modalSlice from "./modalSlice";
 import technologySlice from "./technologySlice";
 import switcherSlices from "./switcherSlices";
-import cookieModalSlice from "./cookieModalSlice";
+// import cookieModalSlice from "./cookieModalSlice";
 
 
 const store = configureStore({
@@ -10,7 +10,7 @@ const store = configureStore({
     modal: modalSlice,
     technology: technologySlice,
     switcher: switcherSlices,
-    cookieModal: cookieModalSlice,
+    // cookieModal: cookieModalSlice,
   }
 })
 
