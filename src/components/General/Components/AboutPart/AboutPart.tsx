@@ -16,9 +16,6 @@ const AboutPart = () => {
   const github = import.meta.env.VITE_GIT_URL;
   const telegram = import.meta.env.VITE_TELEGRAM_URL;
 
-  console.log(telegram);
-
-
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
 
