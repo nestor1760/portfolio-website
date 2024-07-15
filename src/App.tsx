@@ -7,7 +7,7 @@ import ReactGA from 'react-ga4'
 
 function App() {
   const { pathname } = useLocation()
-  const TRACKING_ID = import.meta.env.VITE_PRIVATE_GOOGLE_ID
+  const TRACKING_ID = import.meta.env.VITE_TRACKING_ID
 
   // useEffect(() => {
   //   ReactGA.initialize(TRACKING_ID)
@@ -19,7 +19,7 @@ function App() {
       ReactGA.initialize(TRACKING_ID);
       ReactGA.send({ hitType: "pageview", page: pathname, title: document.title });
     } else {
-      console.error("Google Analytics Measurement ID is missing.");
+      console.log("Google Analytics Measurement ID is missing.");
     }
   }, [pathname, TRACKING_ID]);
 
