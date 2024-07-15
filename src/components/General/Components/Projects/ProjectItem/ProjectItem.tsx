@@ -13,7 +13,6 @@ const ProjectItem = forwardRef<HTMLDivElement, IProjectItem>(({ project }, ref) 
   const { name, description, image_path, preview_link, tech, github_link, git_label, preview_label } = project
   const { switcher } = useAppSelector(state => state.switcher)
 
-
   return (
     <ItemContainer darkTheme={switcher} ref={ref}>
       <Image src={image_path} alt={name} />
