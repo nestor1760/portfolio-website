@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     ReactGA.initialize(TRACKING_ID)
-    ReactGA.send({ hitType: "pageview", page: pathname, title: "Home page" })
+    ReactGA.send({ page: pathname })
   }, [])
 
   useEffect(() => {
