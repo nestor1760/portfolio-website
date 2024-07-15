@@ -9,10 +9,19 @@ function App() {
   const { pathname } = useLocation()
   const TRACKING_ID = import.meta.env.VITE_PRIVATE_GOOGLE_ID
 
+  // useEffect(() => {
+  //   ReactGA.initialize(TRACKING_ID)
+  //   ReactGA.send({ hitType: "pageview", page: pathname, title: "Home page" })
+  // }, [])
+
   useEffect(() => {
-    ReactGA.initialize(TRACKING_ID)
-    ReactGA.send({ hitType: "pageview", page: "/", title: "Home page" })
-  }, [])
+    if (TRACKING_ID) {
+      ReactGA.initialize(TRACKING_ID);
+      ReactGA.send({ hitType: "pageview", page: pathname, title: document.title });
+    } else {
+      console.error("Google Analytics Measurement ID is missing.");
+    }
+  }, [pathname, TRACKING_ID]);
 
   useEffect(() => {
     window.scrollTo(0, 0)
