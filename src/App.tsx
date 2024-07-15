@@ -7,7 +7,7 @@ import ReactGA from 'react-ga4'
 
 function App() {
   const { pathname } = useLocation()
-  const TRACKING_ID = import.meta.env.VITE_TRACKING_ID
+  const TRACKING_ID = 'G-SQ5CC1RFMT'
 
   // useEffect(() => {
   //   ReactGA.initialize(TRACKING_ID)
