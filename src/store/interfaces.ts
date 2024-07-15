@@ -30,8 +30,3 @@ export type TechState = {
   loading: boolean,
   error: boolean | string,
 }
-
-//for cookieModalSlice.ts
-export type TCookieConsentState = {
-  content: boolean | null,
-};
