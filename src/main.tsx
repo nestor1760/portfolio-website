@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import store from './store/index.ts'
 import i18next from 'i18next'
 
+
 import global_en from './translation/en/global.json'
 import global_pl from './translation/pl/global.json'
 import global_ua from './translation/ua/global.json'
@@ -13,7 +14,7 @@ import { I18nextProvider } from 'react-i18next'
 
 i18next.init({
   lng: 'en',
-  interpolation: {escapeValue: false},
+  interpolation: { escapeValue: false },
   fallbackLng: 'en',
   resources: {
     en: {
