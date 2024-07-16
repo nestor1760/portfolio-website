@@ -222,11 +222,5 @@
         ]
       }
     ]
-  },
-  "cookies": {
-    "body": "We use cookies to enhance your browsing experience and analyze site traffic. By continuing to use our site, you agree to our use of cookies in accordance with our ",
-    "link_label": "Privacy policy",
-    "btn_accept": "Accept",
-    "btn_reject": "Reject"
   }
 }
