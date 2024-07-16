@@ -3,16 +3,10 @@ import { Wrapper } from "./styledTags/Wrapper/Wrapper"
 import Layout from "./components/General/Components/Layout/Layout"
 import PrivacyPolicy from "./components/General/Components/PrivacyPolicy/PrivacyPolicy"
 import { useEffect } from "react"
-import ReactGA from 'react-ga4'
+// import ReactGA from 'react-ga4'
 
 function App() {
   const { pathname } = useLocation()
-  const TRACKING_ID = 'G-WXPBPW49ML'
-
-  useEffect(() => {
-    ReactGA.initialize(TRACKING_ID)
-    ReactGA.send({ page: pathname })
-  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0)

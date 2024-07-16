@@ -112,8 +112,8 @@ export const Span = styled.span`
 `
 
 export const StyledLink = styled(Link)`
-  font-size: 18px;
-  margin: 0 0 10px 0;
+  font-size: 16px;
+  margin: 0 0 5px 0;
   color: ${white_color};
   transition: 0.3s;
 

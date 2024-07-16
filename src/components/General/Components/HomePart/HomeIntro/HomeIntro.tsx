@@ -57,7 +57,7 @@ const HomeIntro = () => {
           whileInView="visible"
           viewport={{ amount: 0.2, once: true }}
           variants={leftAnimation}
-          custom={10}
+          custom={12}
           size={sizeText}
           margin="0 0 50px 0"
           weight="600"
@@ -70,7 +70,7 @@ const HomeIntro = () => {
             whileInView="visible"
             viewport={{ amount: 0.2, once: true }}
             variants={upAnimation}
-            custom={10}
+            custom={12}
             onClick={showModal}
             height="44px"
             hoverBack="transparent"
@@ -85,7 +85,7 @@ const HomeIntro = () => {
             whileInView="visible"
             viewport={{ amount: 0.2, once: true }}
             variants={upAnimation}
-            custom={12}
+            custom={14}
             height="44px"
             color={blue_color}
             background={white_color}

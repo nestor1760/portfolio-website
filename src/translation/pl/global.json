@@ -10,8 +10,8 @@
     "greeting": "Część, nazywam się",
     "name": "Roman Nesterchuk",
     "description": {
-      "firstPart": "Jestem młody i ambitny",
-      "span": "Frontend Deweloper.",
+      "firstPart": "Jestem młodym i ambitnym",
+      "span": "Frontend Deweloperem.",
       "secondPart": "Moim celem jest tworzenie imponujących i innowacyjnych aplikacji webowych."
     },
     "button": "Napisz do mnie",

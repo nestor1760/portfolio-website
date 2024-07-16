@@ -10,7 +10,7 @@ export const StyledWrapper = styled.section<{ darkTheme: boolean }>`
   justify-content: flex-start;
   z-index: 0;
   flex-direction: column;
-  overflow: hidden;
   background: ${({ darkTheme }) => (darkTheme ? dark_back_color : light_back_color)};
+  
 `
 

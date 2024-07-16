@@ -41,13 +41,13 @@ const elevateAnimation = keyframes`
     transform: translateY(0);
   }
   25% {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
   75% {
-    transform: translateY(5px);
+    transform: translateY(2px);
   }
   100% {
     transform: translateY(0);
@@ -56,7 +56,7 @@ const elevateAnimation = keyframes`
 
 export const AnimatedLetter = styled.span`
   display: inline-block;
-  animation: ${elevateAnimation} 200ms ease-in;
+  animation: ${elevateAnimation} 0.2s ease-in;
 `;
 
 export const BtnContainer = styled.div`

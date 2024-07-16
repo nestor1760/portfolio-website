@@ -88,7 +88,7 @@ const Sidebar = () => {
           </StyledLink>
           <p style={{
             color: switcher ? white_color : gray_text,
-            fontSize: '18px'
+            fontSize: '14px'
           }}>
             &copy; 2024 {t("footer.text")}
           </p>

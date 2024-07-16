@@ -11,7 +11,7 @@ const IntroUtills = () => {
     newArr.forEach((char, index) => {
       const timeout = setTimeout(() => {
         setLetters(prev => [...prev, char]);
-      }, 300 * index);
+      }, 200 * index);
       timeouts.push(timeout);
     });
 

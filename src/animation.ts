@@ -10,6 +10,7 @@ import { FooterContainer, PrivacyPolicyContainer } from "./components/General/Co
 import { FooterBtn, FooterLink } from "./components/General/Components/Footer/FooterList/FooterListStyles"
 import { PPContainer, PPHeader, TitleText } from "./components/General/Components/PrivacyPolicy/PPStyles"
 import { Handle } from "./components/UI/ThemeSwitcher/ThemeSwitcherStyles"
+import { keyframes } from "styled-components"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -100,3 +101,14 @@ export const fadeIn = {
   }),
 }
 
+export const dropAndScale = keyframes`
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(15px) scale(1.25);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+`;
