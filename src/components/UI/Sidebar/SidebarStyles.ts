@@ -48,7 +48,7 @@ const closeAnimation = keyframes`
 
 export const SidebarMenu = styled.div`
   width: 300px;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
