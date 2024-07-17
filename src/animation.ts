@@ -11,6 +11,7 @@ import { FooterBtn, FooterLink } from "./components/General/Components/Footer/Fo
 import { PPContainer, PPHeader, TitleText } from "./components/General/Components/PrivacyPolicy/PPStyles"
 import { Handle } from "./components/UI/ThemeSwitcher/ThemeSwitcherStyles"
 import { keyframes } from "styled-components"
+import { LoaderItem } from "./components/UI/Loader/LoaderStyles"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -42,6 +43,8 @@ export const MHeader = motion(PPHeader)
 export const MTitleText = motion(TitleText)
 //For ThemeSwitcher.tsx
 export const MHandle = motion(Handle)
+//For Loader.tsx
+export const MLoaderItem = motion(LoaderItem)
 
 export const leftAnimation = {
   hidden: {
@@ -112,3 +115,15 @@ export const dropAndScale = keyframes`
     transform: translateY(0) scale(1);
   }
 `;
+
+export const loaderVariants = {
+  animationOne: (custom: number) => ({
+    y: [0, -20, 0],
+    transition: {
+      repeat: Infinity,
+      duration: 0.6,
+      delay: custom * 0.5,
+      ease: 'easeOut'
+    }
+  })
+}
