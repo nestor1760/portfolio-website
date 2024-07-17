@@ -2,14 +2,13 @@ import { useEffect } from "react"
 import { useLanguage } from "../../../../../hooks/useLanguage"
 import { useWindowWidth } from "../../../../../hooks/useWindowWidth"
 import { AnimatedLetter, BtnContainer, IntroContainer, StyledText } from "./HomeIntroStyles"
-import { useAppDispatch, useAppSelector } from "../../../../../hook"
-import { setShow } from "../../../../../store/modalSlice"
+import { useAppSelector } from "../../../../../hook"
 import Modal from "../../../../UI/Modal/Modal"
 import Contact from "../../Contact/Contact"
 import IntroUtills from "./utills"
 import { MButton } from "../../../../UI/StyledButton/StyledButton"
 import { MStyledText, upAnimation, leftAnimation } from "../../../../../animation"
-import { MdOutlineFileDownload } from "react-icons/md";
+import { MdOutlineFileDownload } from "react-icons/md"
 import { blue_color, white_color } from "../../../../../GlobalStyles"
 
 const HomeIntro = () => {
@@ -17,18 +16,9 @@ const HomeIntro = () => {
   const { t } = useLanguage()
   const { show } = useAppSelector(state => state.modal)
   const { switcher } = useAppSelector(state => state.switcher)
-  const dispatch = useAppDispatch()
-  const { animatedString, letters } = IntroUtills()
-
-  const sizeTitle = windowWidth > 889 ? '28px' : '22px';
-  const sizeName = windowWidth > 889 ? '40px' : '30px';
-  const sizeText = windowWidth > 889 ? '24px' : '18px';
+  const { animatedString, letters, sizeName, sizeText, sizeTitle, showModal } = IntroUtills()
 
   const name = t("intro.name");
-
-  const showModal = (): void => {
-    dispatch(setShow({ show: true, scroll: true }))
-  }
 
   useEffect(() => {
     const clearTimers = animatedString(name);

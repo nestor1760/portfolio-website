@@ -12,6 +12,8 @@ import { PPContainer, PPHeader, TitleText } from "./components/General/Component
 import { Handle } from "./components/UI/ThemeSwitcher/ThemeSwitcherStyles"
 import { keyframes } from "styled-components"
 import { LoaderItem } from "./components/UI/Loader/LoaderStyles"
+import { StyledMenuItem } from "./components/General/Components/Header/MenuItem/MenuItemStyles"
+import { Line } from "./components/General/Components/Header/ActiveLine/ActiveLineStyles"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -45,6 +47,9 @@ export const MTitleText = motion(TitleText)
 export const MHandle = motion(Handle)
 //For Loader.tsx
 export const MLoaderItem = motion(LoaderItem)
+//For Header.tsx
+export const MMenuItem = motion(StyledMenuItem)
+export const MLine = motion(Line)
 
 export const leftAnimation = {
   hidden: {

@@ -1,18 +1,14 @@
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-// import Home from '../HomePart/Home'
-// import AboutPart from '../AboutPart/AboutPart'
-// import SkillsPart from '../SkillsPart/SkillsPart'
-// import Projects from '../Projects/Projects'
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import Loader from '../../../UI/Loader/Loader';
-import { ProgressBar } from '../../../UI/ProgressBar/ProgressBar'
-import { lazy, Suspense } from 'react'
+import { ProgressBar } from '../../../UI/ProgressBar/ProgressBar';
+import { lazy, Suspense } from 'react';
+import Section from './Section';
 
 const Home = lazy(() => import('../HomePart/Home'));
 const AboutPart = lazy(() => import('../AboutPart/AboutPart'));
 const SkillsPart = lazy(() => import('../SkillsPart/SkillsPart'));
 const Projects = lazy(() => import('../Projects/Projects'));
-
 
 const Layout = () => {
   return (
@@ -20,14 +16,22 @@ const Layout = () => {
       <Header />
       <Suspense fallback={<Loader />}>
         <ProgressBar />
-        <Home />
-        <AboutPart />
-        <SkillsPart />
-        <Projects />
+        <Section id="home">
+          <Home />
+        </Section>
+        <Section id="about_me">
+          <AboutPart />
+        </Section>
+        <Section id="skills">
+          <SkillsPart />
+        </Section>
+        <Section id="projects">
+          <Projects />
+        </Section>
       </Suspense>
       <Footer />
     </>
-  )
+  );
 }
 
-export default Layout
+export default Layout;

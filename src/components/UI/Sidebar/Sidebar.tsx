@@ -1,8 +1,8 @@
 import { IoCloseSharp } from 'react-icons/io5';
-import { FaAddressBook } from 'react-icons/fa';
-import { BiFolder } from "react-icons/bi";
-import { BiCodeAlt } from "react-icons/bi";
-import { FaHome } from "react-icons/fa";
+// import { FaAddressBook } from 'react-icons/fa';
+// import { BiFolder } from "react-icons/bi";
+// import { BiCodeAlt } from "react-icons/bi";
+// import { FaHome } from "react-icons/fa";
 import { CloseBtn, SidebarHeader, SidebarItem, SidebarMenu, SidebarOverlay, Span, StyledLink } from './SidebarStyles';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hook';
@@ -13,6 +13,7 @@ import { useNavMenu } from '../../../hooks/useNavMenu';
 import { Container } from '../../../styledTags/Container/Container';
 import { Switcher } from '../ThemeSwitcher/ThemeSwitcher';
 import { gray_text, white_color } from '../../../GlobalStyles';
+import { SidebarUtills } from './sidebarUtills';
 
 const Sidebar = () => {
   const dispatch = useAppDispatch()
@@ -20,6 +21,7 @@ const Sidebar = () => {
   const { switcher } = useAppSelector(state => state.switcher)
   const { language, handleLanguage, t } = useLanguage()
   const { scrollToPart, closeMenu } = useNavMenu()
+  const { menuData } = SidebarUtills(t)
 
   useEffect(() => {
     if (scroll) {
@@ -30,18 +32,6 @@ const Sidebar = () => {
       document.body.style.overflowX = 'auto';
     }
   }, [scroll])
-
-  const HomeIcon = ({ size }: { size: number }) => <FaHome size={size} />;
-  const AboutIcon = ({ size }: { size: number }) => <FaAddressBook size={size} />;
-  const SkillsIcon = ({ size }: { size: number }) => <BiCodeAlt size={size} />;
-  const ProjectIcon = ({ size }: { size: number }) => <BiFolder size={size} />;
-
-  const menuData = [
-    { label: t("header.home"), part: 'home', icon: HomeIcon },
-    { label: t("header.about"), part: 'about_me', icon: AboutIcon },
-    { label: t("header.skills"), part: 'skills', icon: SkillsIcon },
-    { label: t("header.work"), part: 'projects', icon: ProjectIcon }
-  ];
 
   return (
     <SidebarOverlay

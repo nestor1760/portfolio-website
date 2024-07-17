@@ -3,11 +3,11 @@ import { blue_color, gray_text, small_tablet_screen, tablet_screen, white_color 
 
 export const StyledContainer = styled.header<{ scrolled: number, windowWidth: number, darkTheme: boolean }>`
   width: ${({ scrolled, windowWidth }) => (windowWidth > 959) ? (scrolled > 95 ? '100%' : '1110px') : '100%'};
+  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: ${({ darkTheme }) => (darkTheme ? white_color : gray_text)};
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,8 +23,7 @@ export const StyledContainer = styled.header<{ scrolled: number, windowWidth: nu
     border-top: none;
     top: 0;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 16px 8%;
     border-radius: 0 0 20px 20px;
   };
 

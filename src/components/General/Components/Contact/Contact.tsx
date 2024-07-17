@@ -23,9 +23,9 @@ const Contact = () => {
   const req_title = t("contactForm.req_title");
   const req_text = t("contactForm.req_text");
 
-  const [nameState, setNameState] = useState('')
-  const [mailState, setMailState] = useState('')
-  const [messageState, setMessageState] = useState('')
+  const [nameState, setNameState] = useState<string>('')
+  const [mailState, setMailState] = useState<string>('')
+  const [messageState, setMessageState] = useState<string>('')
   const [checked, setChecked] = useState<boolean>(false)
 
   const { switcher } = useAppSelector(state => state.switcher)
