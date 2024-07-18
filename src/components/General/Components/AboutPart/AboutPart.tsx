@@ -23,7 +23,7 @@ const AboutPart = () => {
 
   return (
     <MAboutContainer initial="hidden" whileInView="visible" viewport={{ amount: 0.2, once: true }}>
-      <Container align={windowWidth > 998 ? "flex-end" : "center"} justify="center" wrap="wrap" direction={windowWidth > 768 ? "row" : "column"}>
+      <Container align="center" justify="center" wrap="wrap" direction={windowWidth > 768 ? "row" : "column"}>
         <MInfoContainer variants={rightAnimation} custom={1}>
           <Photo src="/media/iphone_avatar.png" alt="iphone_avatar" />
           <PersonalInfo darkTheme={switcher}>
