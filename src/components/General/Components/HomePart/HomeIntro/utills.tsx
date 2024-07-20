@@ -33,7 +33,16 @@ const IntroUtills = () => {
     dispatch(setShow({ show: true, scroll: true }))
   }
 
-  return { animatedString, letters, sizeName, sizeText, sizeTitle, showModal }
+  const getCV = () => {
+    const link = document.createElement('a')
+    link.href = '/public/cv/Roman Nesterchuk CV - fronted developer.pdf'
+    link.download = 'roman_nesterchuk_front.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  return { animatedString, letters, sizeName, sizeText, sizeTitle, showModal, getCV }
 }
 
 export default IntroUtills

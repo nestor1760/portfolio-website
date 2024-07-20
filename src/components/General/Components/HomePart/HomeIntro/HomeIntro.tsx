@@ -16,7 +16,7 @@ const HomeIntro = () => {
   const { t } = useLanguage()
   const { show } = useAppSelector(state => state.modal)
   const { switcher } = useAppSelector(state => state.switcher)
-  const { animatedString, letters, sizeName, sizeText, sizeTitle, showModal } = IntroUtills()
+  const { animatedString, letters, sizeName, sizeText, sizeTitle, showModal, getCV } = IntroUtills()
 
   const name = t("intro.name");
 
@@ -81,6 +81,7 @@ const HomeIntro = () => {
             background={white_color}
             hoverBack='transparent'
             hoverBorder={`2px solid ${blue_color}`}
+            onClick={getCV}
           >
             {t("intro.downloadButton")}
             <MdOutlineFileDownload size={30} />
