@@ -14,6 +14,7 @@ import { keyframes } from "styled-components"
 import { LoaderItem } from "./components/UI/Loader/LoaderStyles"
 import { StyledMenuItem } from "./components/General/Components/Header/MenuItem/MenuItemStyles"
 import { Line } from "./components/General/Components/Header/ActiveLine/ActiveLineStyles"
+import { CookieBox } from "./components/General/Components/Cookie/CookieStyles"
 
 //For HomeImg.tsx
 export const MImageContainer = motion(ImageContainer)
@@ -50,6 +51,8 @@ export const MLoaderItem = motion(LoaderItem)
 //For Header.tsx
 export const MMenuItem = motion(StyledMenuItem)
 export const MLine = motion(Line)
+//For Cookie.tsx
+export const MCookieBox = motion(CookieBox)
 
 export const leftAnimation = {
   hidden: {

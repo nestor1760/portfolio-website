@@ -16,10 +16,10 @@ export const Switcher = () => {
   const toogleSwitch = () => {
     dispatch(toggleSwitcher())
   }
-  
+
   return (
     <SwitcherBox onClick={toogleSwitch} className={switcher ? 'switchOn' : ''}>
-      <MHandle layout transition={spring} aria-label="Switch theme mode" />
+      <MHandle layout transition={spring} />
     </SwitcherBox>
   );
 }

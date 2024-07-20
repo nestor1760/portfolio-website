@@ -4,6 +4,7 @@ import Loader from '../../../UI/Loader/Loader';
 import { ProgressBar } from '../../../UI/ProgressBar/ProgressBar';
 import { lazy, Suspense } from 'react';
 import Section from './Section';
+import Cookie from '../Cookie/Cookie';
 
 const Home = lazy(() => import('../HomePart/Home'));
 const AboutPart = lazy(() => import('../AboutPart/AboutPart'));
@@ -29,6 +30,7 @@ const Layout = () => {
           <Projects />
         </Section>
       </Suspense>
+      <Cookie />
       <Footer />
     </>
   );

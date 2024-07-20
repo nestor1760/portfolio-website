@@ -1,15 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { getCookie, setCookie } from "../cookies/utills";
 import { ISwitcherState } from "./interfaces";
+import { getCookie, setCookie } from "../components/General/Components/Cookie/utills";
 
-// const getSwitcherFromCookies = () => {
-//   const switcherValue = getCookie('theme')
-//   return switcherValue === 'true' ? true : false
-// }
+const getSwitcherFromCookies = () => {
+  const switcherValue = getCookie('theme')
+  return switcherValue === 'true' ? true : false
+}
 
 const initialState: ISwitcherState = {
-  // switcher: getSwitcherFromCookies()
-  switcher: true
+  switcher: getSwitcherFromCookies()
 }
 
 const switcherSlice = createSlice({
@@ -18,7 +17,7 @@ const switcherSlice = createSlice({
   reducers: {
     toggleSwitcher: (state) => {
       state.switcher = !state.switcher;
-      // setCookie('theme', state.switcher.toString(), 7);
+      setCookie('theme', state.switcher.toString(), 7);
     }
   },
 });

@@ -222,5 +222,11 @@
         ]
       }
     ]
+  },
+  "cookies": {
+    "body": "Używamy plików cookie w celu poprawy komfortu przeglądania naszej witryny oraz analizy ruchu. Kontynuując korzystanie z naszej witryny, zgadzasz się na używanie przez nas plików cookie zgodnie z naszą ",
+    "link_label": "Polityką prywatności",
+    "btn_accept": "Zaakceptuj",
+    "btn_reject": "Odrzuć"
   }
 }

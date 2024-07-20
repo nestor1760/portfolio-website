@@ -17,7 +17,6 @@ export type ModalState = {
   show: boolean
 }
 
-
 //for switcherSlice.ts
 export interface ISwitcherState {
   switcher: boolean,
@@ -30,3 +29,8 @@ export type TechState = {
   loading: boolean,
   error: boolean | string,
 }
+
+//for cookie slice
+export type TCookieConsentState = {
+  showCookie: boolean | null,
+};
