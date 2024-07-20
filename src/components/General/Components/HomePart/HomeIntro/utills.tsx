@@ -36,7 +36,7 @@ const IntroUtills = () => {
   const getCV = () => {
     const link = document.createElement('a')
     link.href = '/public/cv/Roman Nesterchuk CV - fronted developer.pdf'
-    link.download = 'roman_nesterchuk_front.pdf'
+    link.download = 'Roman Nesterchuk CV - fronted developer.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
