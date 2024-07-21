@@ -7,7 +7,6 @@ import { Container } from "../../../../styledTags/Container/Container"
 import Button from "../../../UI/StyledButton/StyledButton"
 import { SLink } from "./CookieStyles"
 
-
 const Cookie = () => {
   const { switcher } = useAppSelector(state => state.switcher)
   const { windowWidth } = useWindowWidth()
