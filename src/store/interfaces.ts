@@ -23,14 +23,14 @@ export interface ISwitcherState {
 }
 
 //for technologySlice.ts
-
 export type TechState = {
   data: TItem[],
   loading: boolean,
   error: boolean | string,
 }
 
-//for cookie slice
-export type TCookieConsentState = {
-  showCookie: boolean | null,
-};
+//for modalCookieSlice.ts
+export interface IModalCookieState {
+  modalCookie: boolean,
+  consent: boolean,
+}

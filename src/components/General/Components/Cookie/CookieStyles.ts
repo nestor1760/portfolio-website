@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { dark_gradient, light_gradient, mobile_screen, small_tablet_screen, white_color } from "../../../../GlobalStyles";
+import { dark_gradient, gray_text, light_gradient, mobile_screen, small_tablet_screen, white_color } from "../../../../GlobalStyles";
 
 export const CookieBox = styled.section<{ darkTheme: boolean }>`
   position: fixed;
@@ -30,4 +30,9 @@ export const CookieBox = styled.section<{ darkTheme: boolean }>`
 
 export const SLink = styled(Link)`
   color: ${white_color};
+  transition; 0.3s;
+
+  &:hover {
+    color: ${gray_text};
+  }
 `

@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from "../../../hook";
-import { toggleSwitcher } from "../../../store/switcherSlices";
+import { acceptCookieSwitcher, toggleSwitcher } from "../../../store/switcherSlices";
 import { SwitcherBox } from "./ThemeSwitcherStyles";
 import { MHandle } from "../../../animation";
 
@@ -11,10 +11,15 @@ const spring = {
 
 export const Switcher = () => {
   const { switcher } = useAppSelector(state => state.switcher)
+  const { consent } = useAppSelector(state => state.modalCookie)
   const dispatch = useAppDispatch()
 
   const toogleSwitch = () => {
-    dispatch(toggleSwitcher())
+    (consent === true)
+      ?
+      dispatch(acceptCookieSwitcher())
+      :
+      dispatch(toggleSwitcher())
   }
 
   return (
