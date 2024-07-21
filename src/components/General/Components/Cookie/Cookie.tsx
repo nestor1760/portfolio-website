@@ -13,8 +13,6 @@ const Cookie = () => {
   const { windowWidth } = useWindowWidth()
   const { t } = useLanguage()
 
-  // const { showCookie } = useAppSelector(state => state.cookie)
-
   return (
     <>
       <MCookieBox
