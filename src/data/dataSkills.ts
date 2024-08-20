@@ -75,5 +75,15 @@ export const dataSkills: TItem[] = [
     id: 15,
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
     title: 'Git'
+  },
+  {
+    id: 16,
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/storybook/storybook-original.svg",
+    title: 'Storybook'
+  },
+  {
+    id: 17,
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg",
+    title: 'Framer motion'
   }
 ]
