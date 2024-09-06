@@ -16,7 +16,14 @@ export const useNavMenu = () => {
   const scrollToPart = (id: string) => {
     const navItem = document.getElementById(id);
     if (navItem) {
-      navItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const offset = 100;
+      const elementPosition = navItem.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
     dispatch(setSidebar({ sidebar: false, scroll: false }))
   };
